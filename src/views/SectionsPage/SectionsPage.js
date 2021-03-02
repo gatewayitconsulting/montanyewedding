@@ -102,7 +102,7 @@ export default function SectionsPage() {
         <SectionTestimonials id="testimonials" />
         <SectionContacts id="contacts" /> */}
       </div>
-      <nav id="cd-vertical-nav">
+      <nav id="cd-vertical-nav" className="d-none">
         <ul>
           <li>
             <a

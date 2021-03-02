@@ -39,7 +39,7 @@ export default function LoginPage() {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit PRO React"
+        brand="Montanye Wedding"
         links={<HeaderLinks dropdownHoverColor="info" />}
       />
       <div

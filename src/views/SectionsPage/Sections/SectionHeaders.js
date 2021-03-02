@@ -29,7 +29,7 @@ export default function SectionHeaders({ ...rest }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false
+    autoplay: true
   };
   return (
     // we've set the className to cd-section so we can make smooth scroll to it
@@ -47,7 +47,7 @@ export default function SectionHeaders({ ...rest }) {
               <div className={classes.container}>
                 <GridContainer>
                   <GridItem xs={12} sm={6} md={6}>
-                    <h1 className={classes.title}>Material Kit PRO React</h1>
+                    <h1 className={classes.title}>Montanye Wedding</h1>
                     <h4>
                       Dolce & Gabbana is a luxury Italian fashion house founded
                       in 1985 in Legnano by Italian designers Domenico Dolce and
@@ -91,7 +91,7 @@ export default function SectionHeaders({ ...rest }) {
                       classes.textCenter
                     )}
                   >
-                    <h1 className={classes.title}>Material Kit PRO React</h1>
+                    <h1 className={classes.title}>Montanye Wedding</h1>
                     <h4>
                       Dolce & Gabbana is a luxury Italian fashion house founded
                       in 1985 in Legnano by Italian designers Domenico Dolce and

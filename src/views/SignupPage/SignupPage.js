@@ -56,7 +56,7 @@ export default function SignUpPage({ ...rest }) {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit PRO React"
+        brand="Montanye Wedding"
         links={<HeaderLinks dropdownHoverColor="rose" />}
         {...rest}
       />

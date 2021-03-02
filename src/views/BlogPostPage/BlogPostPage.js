@@ -35,7 +35,7 @@ export default function BlogPostPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Montanye Wedding"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"

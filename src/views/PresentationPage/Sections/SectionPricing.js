@@ -27,7 +27,7 @@ export default function SectionPricing() {
             className={classNames(classes.mlAuto, classes.mrAuto)}
           >
             <h2 className={classes.title}>
-              Ready to grab Material Kit PRO React?
+              Ready to grab Montanye Wedding?
             </h2>
             <Button
               href="https://www.creative-tim.com/product/material-kit-pro-react?ref=mkpr-presentation"

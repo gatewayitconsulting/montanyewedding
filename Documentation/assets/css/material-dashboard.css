@@ -1,7 +1,7 @@
 /*!
 
 =========================================================
-* Material Kit PRO React - v1.9.0
+* Montanye Wedding - v1.9.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-kit-pro-react
