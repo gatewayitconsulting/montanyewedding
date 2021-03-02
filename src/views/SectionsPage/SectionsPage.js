@@ -93,11 +93,12 @@ export default function SectionsPage() {
       />
       <div className={classes.main}>
         <SectionHeaders id="headers" />
-        <SectionFeatures id="features" />
-        {/* 
-        <SectionBlogs id="blogs" />
-        <SectionTeams id="teams" />
+        {/* <SectionFeatures id="features" /> */}
+        
+        {/* <SectionBlogs id="blogs" /> */}
+        {/* <SectionTeams id="teams" /> */}
         <SectionProjects id="projects" />
+        {/*
         <SectionPricing id="pricing" />
         <SectionTestimonials id="testimonials" />
         <SectionContacts id="contacts" /> */}

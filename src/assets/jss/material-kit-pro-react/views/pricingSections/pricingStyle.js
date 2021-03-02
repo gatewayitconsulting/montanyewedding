@@ -1,3 +1,4 @@
+import { blackColor } from "assets/jss/material-kit-pro-react";
 import {
   mrAuto,
   mlAuto,
@@ -13,9 +14,9 @@ const pricingStyle = {
   cardTitle,
   cardTitleWhite: {
     ...cardTitle,
-    color: whiteColor + " !important",
+    color: blackColor + " !important",
     "& small": {
-      color: "rgba(" + hexToRgb(whiteColor) + ",0.8)!important"
+      color: "rgba(" + hexToRgb(blackColor) + ",0.8)!important"
     }
   },
   textCenter: {

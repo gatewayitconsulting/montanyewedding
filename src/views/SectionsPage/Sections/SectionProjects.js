@@ -2,10 +2,9 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import Build from "@material-ui/icons/Build";
-import Subject from "@material-ui/icons/Subject";
 import FormatPaint from "@material-ui/icons/FormatPaint";
 import Code from "@material-ui/icons/Code";
 import Dashboard from "@material-ui/icons/Dashboard";
@@ -14,299 +13,26 @@ import Group from "@material-ui/icons/Group";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import NavPills from "components/NavPills/NavPills.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-import CardHeader from "components/Card/CardHeader.js";
 import Button from "components/CustomButtons/Button.js";
-import Muted from "components/Typography/Muted.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import Badge from "components/Badge/Badge.js";
+import Popover from "@material-ui/core/Popover";
 
 import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
-import office2 from "assets/img/examples/office2.jpg";
-import cardBlog3 from "assets/img/examples/card-blog3.jpg";
-import cardProject1 from "assets/img/examples/card-project1.jpg";
 import cardProject2 from "assets/img/examples/card-project2.jpg";
-import cardProject3 from "assets/img/examples/card-project3.jpg";
-import cardProject4 from "assets/img/examples/card-project4.jpg";
 import cardProject5 from "assets/img/examples/card-project5.jpg";
-import cardProject6 from "assets/img/examples/card-project6.jpg";
 
 const useStyles = makeStyles(projectsStyle);
 
 export default function SectionProjects({ ...rest }) {
   const classes = useStyles();
+  const [anchorElTop, setAnchorElTop] = React.useState(null);
+
   return (
     <div className="cd-section" {...rest}>
-      {/* Project 1 START */}
-      <div className={classes.projects}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem
-              xs={12}
-              sm={8}
-              md={8}
-              className={
-                classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
-              }
-            >
-              <h2 className={classes.title}>
-                Some of Our Awesome Products - 1
-              </h2>
-              <NavPills
-                alignCenter
-                color="rose"
-                tabs={[
-                  { tabButton: "All", tabContent: "" },
-                  { tabButton: "Marketing", tabContent: "" },
-                  { tabButton: "Development", tabContent: "" },
-                  { tabButton: "Productivity", tabContent: "" },
-                  { tabButton: "Web Design", tabContent: "" }
-                ]}
-              />
-              <div className={classes.tabSpace} />
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={6} md={6}>
-              <Card
-                raised
-                background
-                style={{ backgroundImage: `url(${office2})` }}
-              >
-                <CardBody background>
-                  <h6 className={classes.cardCategory}>PRODUCTIVITY</h6>
-                  <a href="#pablito" onClick={e => e.preventDefault()}>
-                    <h3 className={classes.cardTitleWhite}>
-                      The Best Productivity Apps on Market
-                    </h3>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth And I love you like Kanye
-                    loves Kanye I love Rick Owens’ bed design but the back is...
-                  </p>
-                  <Button round color="danger">
-                    <Icon>content_copy</Icon> View App
-                  </Button>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={6} md={6}>
-              <Card
-                raised
-                background
-                style={{ backgroundImage: `url(${cardBlog3})` }}
-              >
-                <CardBody background>
-                  <h6 className={classes.cardCategory}>DESIGN</h6>
-                  <a href="#pablito" onClick={e => e.preventDefault()}>
-                    <h3 className={classes.cardTitleWhite}>
-                      The Sculpture Where Details Matter
-                    </h3>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth And I love you like Kanye
-                    loves Kanye I love Rick Owens’ bed design but the back is...
-                  </p>
-                  <Button round color="info">
-                    <Build />
-                    View Project
-                  </Button>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={12} md={12}>
-              <Card
-                raised
-                background
-                style={{ backgroundImage: `url(${cardProject6})` }}
-              >
-                <CardBody background>
-                  <h6 className={classes.cardCategory}>MARKETING</h6>
-                  <a href="#pablito" onClick={e => e.preventDefault()}>
-                    <h3 className={classes.cardTitleWhite}>
-                      0 to 100.000 Customers in 6 months
-                    </h3>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth And I love you like Kanye
-                    loves Kanye I love Rick Owens’ bed design but the back is...
-                  </p>
-                  <Button round color="warning">
-                    <Subject /> Case study
-                  </Button>
-                </CardBody>
-              </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </div>
-      {/* Project 1 END */}
-      {/* Project 2 START */}
-      <div className={classes.projects}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem
-              xs={12}
-              sm={8}
-              md={8}
-              className={
-                classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
-              }
-            >
-              <Muted>
-                <h6>OUR WORK</h6>
-              </Muted>
-              <h2 className={classes.title}>
-                Some of Our Awesome Products - 2
-              </h2>
-              <h5 className={classes.description}>
-                This is the paragraph where you can write more details about
-                your projects. Keep you user engaged by providing meaningful
-                information.
-              </h5>
-              <div className={classes.sectionSpace} />
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={4} md={4}>
-              <Card plain className={classes.card2}>
-                <a
-                  href="https://www.creative-tim.com/product/material-kit-react?ref=mkpr-projects-section-sections"
-                  target="_blank"
-                >
-                  <CardHeader image plain>
-                    <img
-                      src={
-                        "https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?1525851474"
-                      }
-                      alt="..."
-                    />
-                    <div
-                      className={classes.coloredShadow}
-                      style={{
-                        backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/83/original/opt_mk_react_thumbnail.jpg?1525851474')",
-                        opacity: "1"
-                      }}
-                    />
-                  </CardHeader>
-                </a>
-                <CardBody plain>
-                  <a
-                    href="https://www.creative-tim.com/product/material-kit-react?ref=mkpr-projects-section-sections"
-                    target="_blank"
-                  >
-                    <h4 className={classes.cardTitle}>
-                      Material Kit Free React
-                    </h4>
-                  </a>
-                  <h6 className={classes.description}>FREE UI KIT</h6>
-                  <p
-                    className={classes.description + " " + classes.marginTop20}
-                  >
-                    Material Kit is a Free Material-UI Kit with a fresh, new
-                    design inspired by Google's material design. It{"'"}s a
-                    great pleasure to introduce to you the material concepts in
-                    an easy to use and beautiful set of components.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={4} md={4}>
-              <Card plain className={classes.card2}>
-                <a
-                  href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=mkpr-projects-section-sections"
-                  target="_blank"
-                >
-                  <CardHeader image plain>
-                    <img
-                      src="https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?1509466309"
-                      alt="..."
-                    />
-                    <div
-                      className={classes.coloredShadow}
-                      style={{
-                        backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/66/thumb/opt_lbdp_react_thumbnail.jpg?1509466309')",
-                        opacity: "1"
-                      }}
-                    />
-                  </CardHeader>
-                </a>
-                <CardBody plain>
-                  <a
-                    href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react?ref=mkpr-projects-section-sections"
-                    target="_blank"
-                  >
-                    <h4 className={classes.cardTitle}>
-                      Light Bootstrap Dashboard PRO React
-                    </h4>
-                  </a>
-                  <h6 className={classes.description}>Premium Template</h6>
-                  <p
-                    className={classes.description + " " + classes.marginTop20}
-                  >
-                    Light Bootstrap Dashboard PRO is a Bootstrap 3 Admin Theme
-                    designed to look simple and beautiful. Forget about boring
-                    dashboards and grab yourself a copy to kickstart new
-                    project!
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={4} md={4}>
-              <Card plain className={classes.card2}>
-                <a
-                  href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react?ref=mkpr-projects-section-sections"
-                  target="_blank"
-                >
-                  <CardHeader image plain>
-                    <img
-                      src="https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?1518533306"
-                      alt="..."
-                    />
-                    <div
-                      className={classes.coloredShadow}
-                      style={{
-                        backgroundImage:
-                          "url('https://s3.amazonaws.com/creativetim_bucket/products/73/original/opt_nudp_react_thumbnail.jpg?1518533306')",
-                        opacity: "1"
-                      }}
-                    />
-                  </CardHeader>
-                </a>
-                <CardBody plain>
-                  <a
-                    href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react?ref=mkpr-projects-section-sections"
-                    target="_blank"
-                  >
-                    <h4 className={classes.cardTitle}>
-                      Now UI Dashboard PRO React
-                    </h4>
-                  </a>
-                  <h6 className={classes.description}>Premium Template</h6>
-                  <p
-                    className={classes.description + " " + classes.marginTop20}
-                  >
-                    Now UI Dashboard React is an admin dashboard template
-                    designed by Invision and coded by Creative Tim. It is built
-                    on top of Reactstrap, using Now UI Dashboard and it is fully
-                    responsive.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </div>
-      {/* Project 2 END */}
-      {/* Project 3 START */}
       <div
         className={
           classes.projects + " " + classes.sectionDark + " " + classes.projects3
@@ -322,99 +48,105 @@ export default function SectionProjects({ ...rest }) {
                 classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
               }
             >
-              <Muted>
-                <h6>OUR WORK</h6>
-              </Muted>
               <h2 className={classes.title}>
-                Some of Our Awesome Products - 3
+                <i>October 15th, 2022</i>
               </h2>
-            </GridItem>
+              <a href="https://www.google.com/maps/dir//321+N+10th+St,+St.+Louis,+MO+63101/@38.6298125,-90.1966413,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x87d8b318505f92d9:0xc70fcf24f124ecec!2m2!1d-90.1944526!2d38.6298125!3e0?hl=en" target="_blank">
+                Willow Wedding Venue
+                <br/>
+                321 N 10th St, St. Louis, MO 63101
+              </a>
+              <h3 className={classes.title}>
+                01 yrs 07 mts 10 wks 28 days 10 hrs 05 mins 50 secs
+              </h3>
+              </GridItem>
           </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
-              <Card plain className={classes.card2}>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <CardHeader plain image>
-                    <img src={cardProject1} alt="..." />
-                  </CardHeader>
-                </a>
-                <CardBody>
-                  <h6 className={classes.cardCategory}>WEB DESIGN</h6>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <h4 className={classes.cardTitle}>
-                      Famous Website Redesign
-                    </h4>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mrAuto}>
-              <Card plain className={classes.card2}>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <CardHeader plain image>
-                    <img src={cardProject2} alt="..." />
-                  </CardHeader>
-                </a>
-                <CardBody>
-                  <h6 className={classes.cardCategory}>PRODUCTIVITY TOOLS</h6>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <h4 className={classes.cardTitle}>
-                      Beautiful Desktop for Designers
-                    </h4>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
-              <Card plain className={classes.card2}>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <CardHeader plain image>
-                    <img src={cardProject3} alt="..." />
-                  </CardHeader>
-                </a>
-                <CardBody>
-                  <h6 className={classes.cardCategory}>ANDROID APP</h6>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <h4 className={classes.cardTitle}>Analytics for Android</h4>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mrAuto}>
-              <Card plain className={classes.card2}>
-                <a href="#pablo" onClick={e => e.preventDefault()}>
-                  <CardHeader plain image>
-                    <img src={cardProject4} alt="..." />
-                  </CardHeader>
-                </a>
-                <CardBody>
-                  <h6 className={classes.cardCategory}>WEBSITE</h6>
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    <h4 className={classes.cardTitle}>Behance Redesign</h4>
-                  </a>
-                  <p className={classes.cardDescription}>
-                    Don{"'"}t be scared of the truth because we need to restart
-                    the human foundation in truth.
-                  </p>
-                </CardBody>
-              </Card>
-            </GridItem>
-          </GridContainer>
+          <div
+            className={classNames(
+              classes.socialLine,
+              classes.textCenter,
+              classes.dark,
+              classes.bigIcons
+            )}
+          >
+            <div className={classes.container}>
+              <GridContainer justify="center">
+                <GridItem xs={12} sm={8} md={8} className={classes.border}>
+                  <h4 className={classes.title}>Save the date to your calendar!</h4>
+                </GridItem>
+              </GridContainer>
+              <GridContainer justify="center">
+                <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <Button
+                    color="white"
+                    justIcon
+                    simple
+                    href="#outlook"
+                    title="Save the date to Outlook calendar"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fab fa-microsoft" />
+                    {/* <Popover
+                      classes={{
+                        paper: classes.popover
+                      }}
+                      open={Boolean(anchorElTop)}
+                      anchorEl={anchorElTop}
+                      onClose={() => setAnchorElTop(null)}
+                      anchorOrigin={{
+                        vertical: "top",
+                        horizontal: "center"
+                      }}
+                      transformOrigin={{
+                        vertical: "bottom",
+                        horizontal: "center"
+                      }}
+                    >
+                      <h3 className={classes.popoverHeader}>Save the date to outlook</h3>
+                    </Popover> */}
+                  </Button>
+                </GridItem>
+                <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <Button
+                    color="white"
+                    justIcon
+                    simple
+                    href="#apple"
+                    title="Save the date to Apple calendar"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fab fa-apple" />
+                  </Button>
+                </GridItem>
+                <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <Button
+                    color="white"
+                    justIcon
+                    simple
+                    href="#pablo"
+                    title="Save the date to Google calendar"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fab fa-google" />
+                  </Button>
+                </GridItem>
+                <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <Button
+                    color="white"
+                    justIcon
+                    simple
+                    href="#pablo"
+                    title="Save the date to Yahoo calendar"
+                    onClick={e => e.preventDefault()}
+                  >
+                    <i className="fab fa-yahoo" />
+                  </Button>
+                </GridItem>
+              </GridContainer>
+            </div>
+          </div>
         </div>
       </div>
-      {/* Project 3 END */}
       {/* Project 4 START */}
       <div className={classes.projects + " " + classes.projects4}>
         <div className={classes.container}>

@@ -7,11 +7,15 @@ import {
   description,
   coloredShadow,
   whiteColor,
+  blackColor,
   sectionDark,
   hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 
+import javascriptStyles from "assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.js";
+
 const projectsSection = {
+  ...javascriptStyles,
   container,
   mlAuto,
   mrAuto,
@@ -28,6 +32,18 @@ const projectsSection = {
   tabSpace: {
     padding: "20px 0 50px 0px"
   },
+  bigIcons: {
+    "& a": {
+      margin: 0,
+      width: "100% !important",
+      paddingTop: "45px",
+      paddingBottom: "45px"
+    },
+    "& button i.fab, & a i.fab": {
+      fontSize: "25px !important",
+      lineHeight: "90px !important"
+    }
+  },
   cardCategory: {
     color: "rgba(" + hexToRgb(whiteColor) + ", 0.7) !important",
     marginTop: "10px"
@@ -43,6 +59,15 @@ const projectsSection = {
   sectionSpace: {
     height: "70px",
     display: "block"
+  },
+  socialLine: {
+    padding: ".9375rem 0px",
+    "& $border": {
+      borderRight: "1px solid rgba(" + hexToRgb(whiteColor) + ",0.12)"
+    },
+    "& $border:last-child": {
+      border: 0
+    }
   },
   marginTop20: {
     marginTop: "20px"
@@ -64,10 +89,6 @@ const projectsSection = {
     }
   },
   projects3: {
-    "& $title": {
-      marginBottom: "80px",
-      marginTop: "5px"
-    },
     "& h6": {
       marginBottom: "5px"
     }

@@ -386,12 +386,22 @@ const section = {
 };
 
 const sectionDark = {
-  backgroundColor: grayColor[3],
+  backgroundColor: blackColor,
   background:
     "radial-gradient(ellipse at center," +
-    grayColor[4] +
+    blackColor +
     " 0," +
-    grayColor[5] +
+    blackColor +
+    " 100%)"
+};
+
+const sectionGray = {
+  backgroundColor: blackColor,
+  background:
+    "radial-gradient(ellipse at center," +
+    blackColor +
+    " 0," +
+    blackColor +
     " 100%)"
 };
 
