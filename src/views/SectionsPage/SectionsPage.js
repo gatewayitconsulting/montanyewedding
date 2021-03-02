@@ -86,20 +86,21 @@ export default function SectionsPage() {
   return (
     <div>
       <Header
-        color="info"
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
+        color="dark"
+        brand="Montanye Wedding"
+        links={<HeaderLinks dropdownHoverColor="dark" />}
         fixed
       />
       <div className={classes.main}>
         <SectionHeaders id="headers" />
         <SectionFeatures id="features" />
+        {/* 
         <SectionBlogs id="blogs" />
         <SectionTeams id="teams" />
         <SectionProjects id="projects" />
         <SectionPricing id="pricing" />
         <SectionTestimonials id="testimonials" />
-        <SectionContacts id="contacts" />
+        <SectionContacts id="contacts" /> */}
       </div>
       <nav id="cd-vertical-nav">
         <ul>

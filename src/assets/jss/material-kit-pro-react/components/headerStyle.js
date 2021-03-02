@@ -20,7 +20,6 @@ const headerStyle = theme => ({
   appBar: {
     display: "flex",
     border: "0",
-    borderRadius: "3px",
     padding: "0.625rem 0",
     marginBottom: "20px",
     color: grayColor[15],
@@ -142,12 +141,12 @@ const headerStyle = theme => ({
   },
   dark: {
     color: whiteColor,
-    backgroundColor: grayColor[9] + " !important",
+    backgroundColor: blackColor + " !important",
     boxShadow:
       "0 4px 20px 0px rgba(" +
       hexToRgb(blackColor) +
       ", 0.14), 0 7px 12px -5px rgba(" +
-      hexToRgb(grayColor[9]) +
+      hexToRgb(blackColor) +
       ", 0.46)"
   },
   white: {
@@ -166,6 +165,8 @@ const headerStyle = theme => ({
   drawerPaper: {
     border: "none",
     bottom: "0",
+    backgroundColor: blackColor,
+    color: whiteColor,
     transitionProperty: "top, bottom, width",
     transitionDuration: ".2s, .2s, .35s",
     transitionTimingFunction: "linear, linear, ease",
