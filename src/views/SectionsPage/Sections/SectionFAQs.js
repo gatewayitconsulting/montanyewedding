@@ -35,11 +35,11 @@ export default function SectionFAQs({ ...rest }) {
     <div className="cd-section" {...rest}>
       <div
         className={
-          classes.saveTheDate + " " + classes.sectionDark + " " + classes.projects3
+          classes.faqs + " " + classes.sectionDark + " " + classes.projects3
         }
       >
         <div className={classes.container}>
-            <div className={classes.saveTheDate + " " + classes.projects4}>
+            <div className={classes.faqs + " " + classes.projects4}>
                 <div className={classes.container}>
                     <GridContainer>
                         <GridItem

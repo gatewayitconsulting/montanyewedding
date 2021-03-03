@@ -28,6 +28,9 @@ const styles = {
     padding: 0,
     top: 10
   },
+  rsvp: {
+    padding: "80px 0"
+  },
   socialLine: {
     padding: ".9375rem 0px",
     "& $border": {

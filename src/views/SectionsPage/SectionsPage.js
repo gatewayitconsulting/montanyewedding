@@ -12,6 +12,7 @@ import SectionBlogs from "./Sections/SectionBlogs.js";
 import SectionTeams from "./Sections/SectionTeams.js";
 import SectionSaveTheDate from "./Sections/SectionSaveTheDate.js";
 import SectionFAQs from "./Sections/SectionFAQs.js";
+import SectionRSVP from "./Sections/SectionRSVP.js";
 import SectionFooter from "./Sections/SectionFooter.js";
 import SectionPricing from "./Sections/SectionPricing.js";
 import SectionTestimonials from "./Sections/SectionTestimonials.js";
@@ -95,23 +96,16 @@ export default function SectionsPage() {
       />
       <div className={classes.main}>
         <SectionHeaders id="toTop" />
-        {/* <SectionFeatures id="features" /> */}
-        
-        {/* <SectionBlogs id="blogs" /> */}
-        {/* <SectionTeams id="teams" /> */}
         <SectionSaveTheDate id="saveTheDate" />
         <SectionFAQs id="faqs" />
+        <SectionRSVP id="rsvp" />
         <SectionFooter id="footer" />
-        {/*
-        <SectionPricing id="pricing" />
-        <SectionTestimonials id="testimonials" />
-        <SectionContacts id="contacts" /> */}
       </div>
       <nav id="cd-vertical-nav" className="d-none">
         <ul>
           <li>
             <a
-              href="#headers"
+              href="#toTop"
               data-number="1"
               className="is-selected"
               onClick={e => {
@@ -122,81 +116,18 @@ export default function SectionsPage() {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll("headers");
+                  smoothScroll("toTop");
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Headers</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#features"
-              data-number="2"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("features");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Features</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#blogs"
-              data-number="3"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("blogs");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Blogs</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#teams"
-              data-number="4"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("teams");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Teams</span>
+              <span className="cd-label">Home</span>
             </a>
           </li>
           <li>
             <a
               href="#saveTheDate"
-              data-number="5"
+              data-number="2"
               className=""
               onClick={e => {
                 var isMobile = navigator.userAgent.match(
@@ -211,13 +142,13 @@ export default function SectionsPage() {
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Projects</span>
+              <span className="cd-label">Save the Date</span>
             </a>
           </li>
           <li>
             <a
-              href="#pricing"
-              data-number="6"
+              href="#faqs"
+              data-number="3"
               className=""
               onClick={e => {
                 var isMobile = navigator.userAgent.match(
@@ -227,18 +158,18 @@ export default function SectionsPage() {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll("pricing");
+                  smoothScroll("faqs");
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Pricing</span>
+              <span className="cd-label">FAQs</span>
             </a>
           </li>
           <li>
             <a
-              href="#testimonials"
-              data-number="7"
+              href="#rsvp"
+              data-number="4"
               className=""
               onClick={e => {
                 var isMobile = navigator.userAgent.match(
@@ -248,18 +179,18 @@ export default function SectionsPage() {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll("testimonials");
+                  smoothScroll("rsvp");
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Testimonials</span>
+              <span className="cd-label">RSVP</span>
             </a>
           </li>
           <li>
             <a
-              href="#contacts"
-              data-number="8"
+              href="#footer"
+              data-number="5"
               className=""
               onClick={e => {
                 var isMobile = navigator.userAgent.match(
@@ -269,12 +200,12 @@ export default function SectionsPage() {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll("contacts");
+                  smoothScroll("footer");
                 }
               }}
             >
               <span className="cd-dot" />
-              <span className="cd-label">Contact Us</span>
+              <span className="cd-label">Footer</span>
             </a>
           </li>
         </ul>
