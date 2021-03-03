@@ -15,9 +15,9 @@ import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-import dg1 from "assets/img/dg1.jpg";
-import dg2 from "assets/img/dg2.jpg";
-import dg3 from "assets/img/dg3.jpg";
+import storeImage from "assets/img/johnlauren/store.JPG";
+import proposalImage from "assets/img/johnlauren/proposal.JPG";
+import ringImage from "assets/img/johnlauren/ring.JPG";
 
 const useStyles = makeStyles(headersStyle);
 
@@ -42,10 +42,45 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${dg1}")` }}
+              style={{ backgroundImage: `url("${proposalImage}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>
+                  <GridItem
+                    xs={12}
+                    sm={8}
+                    md={8}
+                    className={classNames(
+                      classes.mlAuto,
+                      classes.mrAuto,
+                      classes.textCenter
+                    )}
+                  >
+                    <h1 className={classes.title}>Wedding Coming 2022</h1>
+                    <h4>
+                      We can't wait to share this wonderful day with friends and family.
+                    </h4>
+                    <br />
+                    <h6>Connect with us on:</h6>
+                    <div>
+                      <Button color="white" simple size="lg" justIcon>
+                        <i className="fab fa-instagram" />
+                      </Button>
+                    </div>
+                  </GridItem>
+                </GridContainer>
+              </div>
+            </div>
+          </div>
+          {/* Carousel 1 END */}
+          {/* Carousel 2 START */}
+          <div>
+            <div
+              className={classes.pageHeader}
+              style={{ backgroundImage: `url("${storeImage}")` }}
+            >
+              <div className={classes.container}>
+                {/* <GridContainer>
                   <GridItem xs={12} sm={6} md={6}>
                     <h1 className={classes.title}>Montanye Wedding</h1>
                     <h4>
@@ -68,54 +103,7 @@ export default function SectionHeaders({ ...rest }) {
                       <i className="fab fa-get-pocket" />
                     </Button>
                   </GridItem>
-                </GridContainer>
-              </div>
-            </div>
-          </div>
-          {/* Carousel 1 END */}
-          {/* Carousel 2 START */}
-          <div>
-            <div
-              className={classes.pageHeader}
-              style={{ backgroundImage: `url("${dg2}")` }}
-            >
-              <div className={classes.container}>
-                <GridContainer>
-                  <GridItem
-                    xs={12}
-                    sm={8}
-                    md={8}
-                    className={classNames(
-                      classes.mlAuto,
-                      classes.mrAuto,
-                      classes.textCenter
-                    )}
-                  >
-                    <h1 className={classes.title}>Montanye Wedding</h1>
-                    <h4>
-                      Dolce & Gabbana is a luxury Italian fashion house founded
-                      in 1985 in Legnano by Italian designers Domenico Dolce and
-                      Stefano Gabbana. The two met in Milan in 1980 and designed
-                      for the same fashion house.
-                    </h4>
-                    <br />
-                    <h6>Connect with us on:</h6>
-                    <div>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-twitter" />
-                      </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-facebook-square" />
-                      </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-google-plus-g" />
-                      </Button>
-                      <Button color="white" simple size="lg" justIcon>
-                        <i className="fab fa-instagram" />
-                      </Button>
-                    </div>
-                  </GridItem>
-                </GridContainer>
+                </GridContainer> */}
               </div>
             </div>
           </div>
@@ -124,10 +112,10 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${dg3}")` }}
+              style={{ backgroundImage: `url("${ringImage}")` }}
             >
               <div className={classes.container}>
-                <GridContainer>
+                {/* <GridContainer>
                   <GridItem
                     xs={12}
                     sm={7}
@@ -151,7 +139,7 @@ export default function SectionHeaders({ ...rest }) {
                       </Button>
                     </div>
                   </GridItem>
-                </GridContainer>
+                </GridContainer> */}
               </div>
             </div>
           </div>
