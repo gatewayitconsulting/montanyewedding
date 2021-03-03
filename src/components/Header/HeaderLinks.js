@@ -65,12 +65,12 @@ export default function HeaderLinks(props) {
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
         <Button
-          href="#"
+          href="#saveTheDate"
           className={classes.navLink}
           onClick={e => e.preventDefault()}
           color="transparent"
         >
-          Upcoming
+          When &amp; Where
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

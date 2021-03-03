@@ -3,13 +3,15 @@ import {
   mlAuto,
   mrAuto,
   title,
+  link,
   cardTitle,
   description,
   coloredShadow,
   whiteColor,
   blackColor,
   sectionDark,
-  hexToRgb
+  hexToRgb,
+  borderRight
 } from "assets/jss/material-kit-pro-react.js";
 
 import javascriptStyles from "assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.js";
@@ -20,9 +22,11 @@ const projectsSection = {
   mlAuto,
   mrAuto,
   title,
+  link,
   description,
   coloredShadow,
   cardTitle,
+  borderRight,
   textCenter: {
     textAlign: "center"
   },

@@ -309,6 +309,13 @@ const cardHeader = {
   padding: "15px"
 };
 
+const borderRight = {
+  borderRight: "0",
+  "@media (min-width: 576px)": {
+    borderRight: "grayColor[0] 1px solid"
+  }
+};
+
 const defaultBoxShadow = {
   border: "0",
   borderRadius: "3px",
@@ -332,6 +339,16 @@ const title = {
   marginBottom: "25px",
   minHeight: "32px",
   fontFamily: `"Roboto Slab", "Times New Roman", serif`
+};
+
+const link = {
+  color: whiteColor,
+  textDecoration: "underline",
+  cursor: "pointer",
+  "&:hover, &:focus, &:active": {
+    color: whiteColor,
+    textDecoration: "underline"
+  }
 };
 
 const cardTitle = {
@@ -480,6 +497,7 @@ export {
   warningBoxShadow,
   dangerBoxShadow,
   roseBoxShadow,
+  borderRight,
   warningCardHeader,
   successCardHeader,
   dangerCardHeader,
@@ -490,6 +508,7 @@ export {
   cardHeader,
   defaultBoxShadow,
   title,
+  link,
   cardTitle,
   description,
   cardLink,
