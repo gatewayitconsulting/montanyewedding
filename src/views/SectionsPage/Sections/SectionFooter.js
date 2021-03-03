@@ -50,26 +50,6 @@ export default function SectionFooter() {
                 heavy lifting in the backend.{" "}
               </p>
             </GridItem>
-            <GridItem xs={12} sm={6} md={6}>
-              <h5>Social Feed</h5>
-              <div className={classes.socialFeed}>
-                <div>
-                  <i className="fab fa-twitter" />
-                  <p>How to handle ethical disagreements with your clients.</p>
-                </div>
-                <div>
-                  <i className="fab fa-twitter" />
-                  <p>The tangible benefits of designing at 1x pixel density.</p>
-                </div>
-                <div>
-                  <i className="fab fa-facebook-square" />
-                  <p>
-                    A collection of 25 stunning sites that you can use for
-                    inspiration.
-                  </p>
-                </div>
-              </div>
-            </GridItem>
           </GridContainer>
         </Footer>
       </div>

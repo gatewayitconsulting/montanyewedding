@@ -94,9 +94,9 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="#"
+          href="#rsvp"
+          aria-label="Scroll to RSVP section"
           className={classes.navLink}
-          onClick={e => e.preventDefault()}
           color="transparent"
         >
           RSVP

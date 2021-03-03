@@ -28,7 +28,7 @@ import {
       textAlign: "center"
     },
     saveTheDate: {
-      padding: "80px 0"
+      padding: "40px 0"
     },
     tabSpace: {
       padding: "20px 0 50px 0px"
