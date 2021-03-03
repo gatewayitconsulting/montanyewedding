@@ -11,6 +11,7 @@ import SectionFeatures from "./Sections/SectionFeatures.js";
 import SectionBlogs from "./Sections/SectionBlogs.js";
 import SectionTeams from "./Sections/SectionTeams.js";
 import SectionSaveTheDate from "./Sections/SectionSaveTheDate.js";
+import SectionFooter from "./Sections/SectionFooter.js";
 import SectionPricing from "./Sections/SectionPricing.js";
 import SectionTestimonials from "./Sections/SectionTestimonials.js";
 import SectionContacts from "./Sections/SectionContacts.js";
@@ -98,6 +99,7 @@ export default function SectionsPage() {
         {/* <SectionBlogs id="blogs" /> */}
         {/* <SectionTeams id="teams" /> */}
         <SectionSaveTheDate id="saveTheDate" />
+        <SectionFooter id="footer" />
         {/*
         <SectionPricing id="pricing" />
         <SectionTestimonials id="testimonials" />
