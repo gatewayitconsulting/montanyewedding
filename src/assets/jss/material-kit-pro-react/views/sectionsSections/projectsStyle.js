@@ -15,10 +15,10 @@ import {
   imageCenter,
 } from "assets/jss/material-kit-pro-react.js";
 
-import javascriptStyles from "assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.js";
+import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 
 const projectsSection = {
-  ...javascriptStyles,
+  ...tooltipsStyle,
   container,
   mlAuto,
   mrAuto,

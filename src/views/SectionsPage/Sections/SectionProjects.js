@@ -18,10 +18,12 @@ import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import Badge from "components/Badge/Badge.js";
-import Popover from "@material-ui/core/Popover";
+import Tooltip from "@material-ui/core/Tooltip";
+
 // Plugins
 import DateCountdown from 'react-date-countdown-timer';
 
+// Styles
 import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
 import cardProject2 from "assets/img/examples/card-project2.jpg";
@@ -109,28 +111,17 @@ export default function SectionProjects({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    title="Save the date to your Outlook calendar"
+                    ariaLabel="Save the date to your Outlook calendar"
                     download
                   >
-                    <i className="fab fa-microsoft" />
-                    {/* <Popover
-                      classes={{
-                        paper: classes.popover
-                      }}
-                      open={Boolean(anchorElTop)}
-                      anchorEl={anchorElTop}
-                      onClose={() => setAnchorElTop(null)}
-                      anchorOrigin={{
-                        vertical: "top",
-                        horizontal: "center"
-                      }}
-                      transformOrigin={{
-                        vertical: "bottom",
-                        horizontal: "center"
-                      }}
+                    <Tooltip
+                      id="tooltip-bottom"
+                      title="Save the date to your Outlook calendar"
+                      placement="bottom"
+                      classes={{ tooltip: classes.tooltip }}
                     >
-                      <h3 className={classes.popoverHeader}>Save the date to outlook</h3>
-                    </Popover> */}
+                    <i className="fab fa-microsoft" />
+                    </Tooltip>
                   </Button>
                 </GridItem>
                 <GridItem xs={12} sm={2} md={2} className={classes.border}>
@@ -140,10 +131,17 @@ export default function SectionProjects({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    title="Save the date to your Apple calendar"
+                    ariaLabel="Save the date to your Apple calendar"
                     download
                   >
+                    <Tooltip
+                      id="tooltip-bottom"
+                      title="Save the date to your Apple calendar"
+                      placement="bottom"
+                      classes={{ tooltip: classes.tooltip }}
+                    >
                     <i className="fab fa-apple" />
+                    </Tooltip>
                   </Button>
                 </GridItem>
                 <GridItem xs={12} sm={2} md={2} className={classes.border}>
@@ -153,9 +151,16 @@ export default function SectionProjects({ ...rest }) {
                     simple
                     href="https://calendar.google.com/calendar/r/eventedit?text=Montanye+Wedding+2022&dates=20221015T210000Z/20221015T280000Z&details=Join+us+at+the+wedding+venue!&location=321+N+10th+St+-+St+Louis,+MO+63101"
                     target="_blank"
-                    title="Save the date to your Google calendar"
+                    ariaLabel="Save the date to your Google calendar"
                   >
-                    <i className="fab fa-google" />
+                    <Tooltip
+                      id="tooltip-bottom"
+                      title="Save the date to your Google calendar"
+                      placement="bottom"
+                      classes={{ tooltip: classes.tooltip }}
+                    >
+                      <i className="fab fa-google" />
+                    </Tooltip>
                   </Button>
                 </GridItem>
                 <GridItem xs={12} sm={2} md={2} className={classes.border}>
@@ -165,10 +170,17 @@ export default function SectionProjects({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    title="Save the date to your Yahoo calendar"
+                    ariaLabel="Save the date to your Yahoo calendar"
                     download
                   >
-                    <i className="fab fa-yahoo" />
+                    <Tooltip
+                      id="tooltip-bottom"
+                      title="Save the date to your Yahoo calendar"
+                      placement="bottom"
+                      classes={{ tooltip: classes.tooltip }}
+                    >
+                      <i className="fab fa-yahoo" />
+                    </Tooltip>
                   </Button>
                 </GridItem>
               </GridContainer>
