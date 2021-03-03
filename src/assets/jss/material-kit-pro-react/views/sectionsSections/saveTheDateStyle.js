@@ -17,7 +17,7 @@ import {
 
 import tooltipsStyle from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
 
-const projectsSection = {
+const saveTheDateStyle = {
   ...tooltipsStyle,
   container,
   mlAuto,
@@ -32,7 +32,7 @@ const projectsSection = {
   textCenter: {
     textAlign: "center"
   },
-  projects: {
+  saveTheDate: {
     padding: "80px 0"
   },
   tabSpace: {
@@ -121,4 +121,4 @@ const projectsSection = {
   }
 };
 
-export default projectsSection;
+export default saveTheDateStyle;

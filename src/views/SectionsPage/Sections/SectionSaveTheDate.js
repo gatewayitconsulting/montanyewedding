@@ -24,16 +24,16 @@ import Tooltip from "@material-ui/core/Tooltip";
 import DateCountdown from 'react-date-countdown-timer';
 
 // Styles
-import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
+import saveTheDateStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/saveTheDateStyle.js";
 
 import cardProject2 from "assets/img/examples/card-project2.jpg";
 import cardProject5 from "assets/img/examples/card-project5.jpg";
 import branchGraphic from "assets/img/flowers.png";
 import emailEvent from "assets/email/montanye-wedding-2022.ics";
 
-const useStyles = makeStyles(projectsStyle);
+const useStyles = makeStyles(saveTheDateStyle);
 
-export default function SectionProjects({ ...rest }) {
+export default function SectionSaveTheDate({ ...rest }) {
   const classes = useStyles();
   const [anchorElTop, setAnchorElTop] = React.useState(null);
 
@@ -41,7 +41,7 @@ export default function SectionProjects({ ...rest }) {
     <div className="cd-section" {...rest}>
       <div
         className={
-          classes.projects + " " + classes.sectionDark + " " + classes.projects3
+          classes.saveTheDate + " " + classes.sectionDark + " " + classes.projects3
         }
         id="saveTheDate"
       >
@@ -189,7 +189,7 @@ export default function SectionProjects({ ...rest }) {
         </div>
       </div>
       {/* Project 4 START */}
-      <div className={classes.projects + " " + classes.projects4}>
+      <div className={classes.saveTheDate + " " + classes.projects4}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem

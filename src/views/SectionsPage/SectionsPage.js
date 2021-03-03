@@ -10,7 +10,7 @@ import SectionHeaders from "./Sections/SectionHeaders.js";
 import SectionFeatures from "./Sections/SectionFeatures.js";
 import SectionBlogs from "./Sections/SectionBlogs.js";
 import SectionTeams from "./Sections/SectionTeams.js";
-import SectionProjects from "./Sections/SectionProjects.js";
+import SectionSaveTheDate from "./Sections/SectionSaveTheDate.js";
 import SectionPricing from "./Sections/SectionPricing.js";
 import SectionTestimonials from "./Sections/SectionTestimonials.js";
 import SectionContacts from "./Sections/SectionContacts.js";
@@ -97,7 +97,7 @@ export default function SectionsPage() {
         
         {/* <SectionBlogs id="blogs" /> */}
         {/* <SectionTeams id="teams" /> */}
-        <SectionProjects id="projects" />
+        <SectionSaveTheDate id="saveTheDate" />
         {/*
         <SectionPricing id="pricing" />
         <SectionTestimonials id="testimonials" />
@@ -191,7 +191,7 @@ export default function SectionsPage() {
           </li>
           <li>
             <a
-              href="#projects"
+              href="#saveTheDate"
               data-number="5"
               className=""
               onClick={e => {
@@ -202,7 +202,7 @@ export default function SectionsPage() {
                   // if we are on mobile device the scroll into view will be managed by the browser
                 } else {
                   e.preventDefault();
-                  smoothScroll("projects");
+                  smoothScroll("saveTheDate");
                 }
               }}
             >
