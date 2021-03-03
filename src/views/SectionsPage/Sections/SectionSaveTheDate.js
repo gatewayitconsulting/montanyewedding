@@ -3,21 +3,10 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
-import Icon from "@material-ui/core/Icon";
-// @material-ui/icons
-import FormatPaint from "@material-ui/icons/FormatPaint";
-import Code from "@material-ui/icons/Code";
-import Dashboard from "@material-ui/icons/Dashboard";
-import Timeline from "@material-ui/icons/Timeline";
-import Group from "@material-ui/icons/Group";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
-import Badge from "components/Badge/Badge.js";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // Plugins
@@ -26,8 +15,6 @@ import DateCountdown from 'react-date-countdown-timer';
 // Styles
 import saveTheDateStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/saveTheDateStyle.js";
 
-import cardProject2 from "assets/img/examples/card-project2.jpg";
-import cardProject5 from "assets/img/examples/card-project5.jpg";
 import branchGraphic from "assets/img/flowers.png";
 import emailEvent from "assets/email/montanye-wedding-2022.ics";
 
@@ -42,7 +29,6 @@ export default function SectionSaveTheDate({ ...rest }) {
         className={
           classes.saveTheDate + " " + classes.sectionDark + " " + classes.projects3
         }
-        id="saveTheDate"
       >
         <div className={classes.container}>
           <GridContainer>
@@ -83,7 +69,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                 <DateCountdown 
                   dateTo='October 15, 2022 00:00:00 GMT-06:00'
                   mostSignificantFigure="day"
-                  numberOfFigures="4">
+                  numberOfFigures={4}>
                 </DateCountdown>
               </h3>
               </GridItem>
@@ -110,7 +96,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    ariaLabel="Save the date to your Outlook calendar"
+                    aria-label="Save the date to your Outlook calendar"
                     download
                   >
                     <Tooltip
@@ -130,7 +116,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    ariaLabel="Save the date to your Apple calendar"
+                    aria-label="Save the date to your Apple calendar"
                     download
                   >
                     <Tooltip
@@ -150,7 +136,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                     simple
                     href="https://calendar.google.com/calendar/r/eventedit?text=Montanye+Wedding+2022&dates=20221015T210000Z/20221015T280000Z&details=Join+us+at+the+wedding+venue!&location=321+N+10th+St+-+St+Louis,+MO+63101"
                     target="_blank"
-                    ariaLabel="Save the date to your Google calendar"
+                    aria-label="Save the date to your Google calendar"
                   >
                     <Tooltip
                       id="tooltip-bottom"
@@ -169,7 +155,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                     simple
                     href={emailEvent}
                     target="_blank"
-                    ariaLabel="Save the date to your Yahoo calendar"
+                    aria-label="Save the date to your Yahoo calendar"
                     download
                   >
                     <Tooltip

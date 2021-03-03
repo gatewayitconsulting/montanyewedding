@@ -52,12 +52,10 @@ export default function SectionFAQs({ ...rest }) {
                         }
                         >
                         <h2 className={classes.title}>
-                            Some of Our Awesome Products - 4
+                            FAQs
                         </h2>
                         <h5 className={classes.description}>
-                            This is the paragraph where you can write more details about
-                            your projects. Keep you user engaged by providing meaningful
-                            information.
+                            Here you can find information about the wedding event and day.
                         </h5>
                         <div className={classes.sectionSpace} />
                         </GridItem>

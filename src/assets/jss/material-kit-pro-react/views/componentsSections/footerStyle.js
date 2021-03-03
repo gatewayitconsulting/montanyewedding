@@ -7,8 +7,7 @@ import {
   btnLink,
   twitterColor,
   dribbbleColor,
-  instagramColor,
-  blackColor,
+  instagramColor
 } from "assets/jss/material-kit-pro-react.js";
 
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Icon from "@material-ui/core/Icon";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -65,7 +64,18 @@ export default function HeaderLinks(props) {
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
         <Button
+          href="#toTop"
+          aria-label="Scroll to top of page"
+          className={classes.navLink}
+          color="transparent"
+        >
+          Home
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
           href="#saveTheDate"
+          aria-label="Scroll to Save the Date section"
           className={classes.navLink}
           color="transparent"
         >
@@ -74,9 +84,9 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="#"
+          href="#faqs"
+          aria-label="Scroll to FAQs section"
           className={classes.navLink}
-          onClick={e => e.preventDefault()}
           color="transparent"
         >
           FAQs
@@ -84,7 +94,7 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="#pablo"
+          href="#"
           className={classes.navLink}
           onClick={e => e.preventDefault()}
           color="transparent"

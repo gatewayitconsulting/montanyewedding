@@ -94,7 +94,7 @@ export default function SectionsPage() {
         fixed
       />
       <div className={classes.main}>
-        <SectionHeaders id="headers" />
+        <SectionHeaders id="toTop" />
         {/* <SectionFeatures id="features" /> */}
         
         {/* <SectionBlogs id="blogs" /> */}

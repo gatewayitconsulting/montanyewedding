@@ -8,7 +8,6 @@ import {
     description,
     coloredShadow,
     whiteColor,
-    blackColor,
     hexToRgb,
     borderRight,
     imageCenter,

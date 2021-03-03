@@ -5,9 +5,6 @@ import classNames from "classnames";
 import Carousel from "react-slick";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/icons
-import Share from "@material-ui/icons/Share";
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
 // core components
 import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -29,7 +26,9 @@ export default function SectionHeaders({ ...rest }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: false
   };
   return (
     // we've set the className to cd-section so we can make smooth scroll to it
