@@ -11,7 +11,8 @@ import {
   blackColor,
   sectionDark,
   hexToRgb,
-  borderRight
+  borderRight,
+  imageCenter,
 } from "assets/jss/material-kit-pro-react.js";
 
 import javascriptStyles from "assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.js";
@@ -27,6 +28,7 @@ const projectsSection = {
   coloredShadow,
   cardTitle,
   borderRight,
+  imageCenter,
   textCenter: {
     textAlign: "center"
   },

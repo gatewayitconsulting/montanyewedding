@@ -438,6 +438,11 @@ const mrAuto = {
   marginRight: "auto"
 };
 
+const imageCenter = {
+  paddingLeft: "20rem",
+  paddingRight: "20rem"
+};
+
 const btnLink = {
   backgroundColor: "transparent",
   boxShdow: "none",
@@ -498,6 +503,7 @@ export {
   dangerBoxShadow,
   roseBoxShadow,
   borderRight,
+  imageCenter,
   warningCardHeader,
   successCardHeader,
   dangerCardHeader,

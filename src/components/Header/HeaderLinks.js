@@ -67,7 +67,6 @@ export default function HeaderLinks(props) {
         <Button
           href="#saveTheDate"
           className={classes.navLink}
-          onClick={e => e.preventDefault()}
           color="transparent"
         >
           When &amp; Where

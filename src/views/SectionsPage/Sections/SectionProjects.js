@@ -19,11 +19,15 @@ import Button from "components/CustomButtons/Button.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import Badge from "components/Badge/Badge.js";
 import Popover from "@material-ui/core/Popover";
+// Plugins
+import DateCountdown from 'react-date-countdown-timer';
 
 import projectsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
 import cardProject2 from "assets/img/examples/card-project2.jpg";
 import cardProject5 from "assets/img/examples/card-project5.jpg";
+import branchGraphic from "assets/img/flowers.png";
+import emailEvent from "assets/email/montanye-wedding-2022.ics";
 
 const useStyles = makeStyles(projectsStyle);
 
@@ -41,6 +45,18 @@ export default function SectionProjects({ ...rest }) {
       >
         <div className={classes.container}>
           <GridContainer>
+          <GridItem
+                xs={12}
+                sm={12}
+                md={12}
+              >
+              <img
+                src={branchGraphic}
+                alt="Branch graphic."
+                className={classes.imgRounded + " " + classes.mlAuto + " " + classes.mrAuto + " " + classes.imageCenter}
+                width="100%"
+              />
+            </GridItem>
             <GridItem
               xs={12}
               sm={8}
@@ -63,7 +79,11 @@ export default function SectionProjects({ ...rest }) {
                 321 N 10th St, St. Louis, MO 63101
               </a>
               <h3 className={classes.title}>
-                01 yrs 07 mts 10 wks 28 days 10 hrs 05 mins 50 secs
+                <DateCountdown 
+                  dateTo='October 15, 2022 00:00:00 GMT-06:00'
+                  mostSignificantFigure="day"
+                  numberOfFigures="4">
+                </DateCountdown>
               </h3>
               </GridItem>
           </GridContainer>
@@ -87,9 +107,10 @@ export default function SectionProjects({ ...rest }) {
                     color="white"
                     justIcon
                     simple
-                    href="#outlook"
-                    title="Save the date to Outlook calendar"
-                    onClick={e => e.preventDefault()}
+                    href={emailEvent}
+                    target="_blank"
+                    title="Save the date to your Outlook calendar"
+                    download
                   >
                     <i className="fab fa-microsoft" />
                     {/* <Popover
@@ -117,9 +138,10 @@ export default function SectionProjects({ ...rest }) {
                     color="white"
                     justIcon
                     simple
-                    href="#apple"
-                    title="Save the date to Apple calendar"
-                    onClick={e => e.preventDefault()}
+                    href={emailEvent}
+                    target="_blank"
+                    title="Save the date to your Apple calendar"
+                    download
                   >
                     <i className="fab fa-apple" />
                   </Button>
@@ -129,9 +151,9 @@ export default function SectionProjects({ ...rest }) {
                     color="white"
                     justIcon
                     simple
-                    href="#pablo"
-                    title="Save the date to Google calendar"
-                    onClick={e => e.preventDefault()}
+                    href="https://calendar.google.com/calendar/r/eventedit?text=Montanye+Wedding+2022&dates=20221015T210000Z/20221015T280000Z&details=Join+us+at+the+wedding+venue!&location=321+N+10th+St+-+St+Louis,+MO+63101"
+                    target="_blank"
+                    title="Save the date to your Google calendar"
                   >
                     <i className="fab fa-google" />
                   </Button>
@@ -141,9 +163,10 @@ export default function SectionProjects({ ...rest }) {
                     color="white"
                     justIcon
                     simple
-                    href="#pablo"
-                    title="Save the date to Yahoo calendar"
-                    onClick={e => e.preventDefault()}
+                    href={emailEvent}
+                    target="_blank"
+                    title="Save the date to your Yahoo calendar"
+                    download
                   >
                     <i className="fab fa-yahoo" />
                   </Button>
