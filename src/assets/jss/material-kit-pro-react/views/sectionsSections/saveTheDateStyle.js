@@ -117,6 +117,14 @@ const saveTheDateStyle = {
       margin: "70px auto",
       maxWidth: "970px"
     }
+  },
+  branchCustomGraphic: {
+    width: "55%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    "@media (min-width: 768px)": {
+      width: "23%"
+    }
   }
 };
 

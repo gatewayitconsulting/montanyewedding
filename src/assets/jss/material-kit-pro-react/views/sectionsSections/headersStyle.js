@@ -90,9 +90,12 @@ const headersSection = theme => ({
     margin: "0 !important"
   },
   branchGraphic: {
-    width: "23%",
+    width: "35%",
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
+    "@media (min-width: 768px)": {
+      width: "23%"
+    }
   }
 });
 

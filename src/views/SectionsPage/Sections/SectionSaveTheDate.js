@@ -15,7 +15,7 @@ import DateCountdown from 'react-date-countdown-timer';
 // Styles
 import saveTheDateStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/saveTheDateStyle.js";
 
-import branchGraphic from "assets/img/flowers.png";
+import branchGraphic from "assets/img/branches.png";
 import emailEvent from "assets/email/montanye-wedding-2022.ics";
 
 const useStyles = makeStyles(saveTheDateStyle);
@@ -33,16 +33,20 @@ export default function SectionSaveTheDate({ ...rest }) {
         <div className={classes.container}>
           <div className={classes.container}>
             <GridContainer>
-            <GridItem
+              <GridItem
                   xs={12}
                   sm={12}
                   md={12}
+                  className={classNames(
+                    classes.mlAuto,
+                    classes.mrAuto,
+                    classes.textCenter
+                  )}
                 >
                 <img
                   src={branchGraphic}
                   alt="Branch graphic."
-                  className={classes.imgRounded + " " + classes.mlAuto + " " + classes.mrAuto + " " + classes.imageCenter}
-                  width="100%"
+                  className={classes.branchCustomGraphic}
                 />
               </GridItem>
               <GridItem
