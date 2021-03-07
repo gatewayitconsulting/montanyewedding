@@ -23,68 +23,68 @@ import sectionsPageStyle from "assets/jss/material-kit-pro-react/views/sectionsP
 const useStyles = makeStyles(sectionsPageStyle);
 
 export default function SectionsPage() {
-  React.useEffect(() => {
-    var href = window.location.href.substring(
-      window.location.href.lastIndexOf("#") + 1
-    );
-    if (window.location.href.lastIndexOf("#") > 0) {
-      document.getElementById(href).scrollIntoView();
-    }
-    window.addEventListener("scroll", updateView);
-    updateView();
-    return function cleanup() {
-      window.removeEventListener("scroll", updateView);
-    };
-  });
-  const updateView = () => {
-    var contentSections = document.getElementsByClassName("cd-section");
-    var navigationItems = document
-      .getElementById("cd-vertical-nav")
-      .getElementsByTagName("a");
+  // React.useEffect(() => {
+  //   var href = window.location.href.substring(
+  //     window.location.href.lastIndexOf("#") + 1
+  //   );
+  //   if (window.location.href.lastIndexOf("#") > 0) {
+  //     document.getElementById(href).scrollIntoView();
+  //   }
+  //   window.addEventListener("scroll", updateView);
+  //   updateView();
+  //   return function cleanup() {
+  //     window.removeEventListener("scroll", updateView);
+  //   };
+  // });
+  // const updateView = () => {
+  //   var contentSections = document.getElementsByClassName("cd-section");
+  //   var navigationItems = document
+  //     .getElementById("cd-vertical-nav")
+  //     .getElementsByTagName("a");
 
-    for (let i = 0; i < contentSections.length; i++) {
-      var activeSection =
-        parseInt(navigationItems[i].getAttribute("data-number"), 10) - 1;
-      if (
-        contentSections[i].offsetTop - window.innerHeight / 2 <
-          window.pageYOffset &&
-        contentSections[i].offsetTop +
-          contentSections[i].scrollHeight -
-          window.innerHeight / 2 >
-          window.pageYOffset
-      ) {
-        navigationItems[activeSection].classList.add("is-selected");
-      } else {
-        navigationItems[activeSection].classList.remove("is-selected");
-      }
-    }
-  };
-  const easeInOutQuad = (t, b, c, d) => {
-    t /= d / 2;
-    if (t < 1) return (c / 2) * t * t + b;
-    t--;
-    return (-c / 2) * (t * (t - 2) - 1) + b;
-  };
-  const smoothScroll = target => {
-    var targetScroll = document.getElementById(target);
-    scrollGo(document.documentElement, targetScroll.offsetTop, 1250);
-  };
-  const scrollGo = (element, to, duration) => {
-    var start = element.scrollTop,
-      change = to - start,
-      currentTime = 0,
-      increment = 20;
+  //   for (let i = 0; i < contentSections.length; i++) {
+  //     var activeSection =
+  //       parseInt(navigationItems[i].getAttribute("data-number"), 10) - 1;
+  //     if (
+  //       contentSections[i].offsetTop - window.innerHeight / 2 <
+  //         window.pageYOffset &&
+  //       contentSections[i].offsetTop +
+  //         contentSections[i].scrollHeight -
+  //         window.innerHeight / 2 >
+  //         window.pageYOffset
+  //     ) {
+  //       navigationItems[activeSection].classList.add("is-selected");
+  //     } else {
+  //       navigationItems[activeSection].classList.remove("is-selected");
+  //     }
+  //   }
+  // };
+  // const easeInOutQuad = (t, b, c, d) => {
+  //   t /= d / 2;
+  //   if (t < 1) return (c / 2) * t * t + b;
+  //   t--;
+  //   return (-c / 2) * (t * (t - 2) - 1) + b;
+  // };
+  // const smoothScroll = target => {
+  //   var targetScroll = document.getElementById(target);
+  //   scrollGo(document.documentElement, targetScroll.offsetTop, 1250);
+  // };
+  // const scrollGo = (element, to, duration) => {
+  //   var start = element.scrollTop,
+  //     change = to - start,
+  //     currentTime = 0,
+  //     increment = 20;
 
-    var animateScroll = function() {
-      currentTime += increment;
-      var val = easeInOutQuad(currentTime, start, change, duration);
-      element.scrollTop = val;
-      if (currentTime < duration) {
-        setTimeout(animateScroll, increment);
-      }
-    };
-    animateScroll();
-  };
+  //   var animateScroll = function() {
+  //     currentTime += increment;
+  //     var val = easeInOutQuad(currentTime, start, change, duration);
+  //     element.scrollTop = val;
+  //     if (currentTime < duration) {
+  //       setTimeout(animateScroll, increment);
+  //     }
+  //   };
+  //   animateScroll();
+  // };
   const classes = useStyles();
   return (
     <div>
@@ -101,115 +101,6 @@ export default function SectionsPage() {
         <SectionRSVP id="rsvp" />
         <SectionFooter id="footer" />
       </div>
-      <nav id="cd-vertical-nav" className="d-none">
-        <ul>
-          <li>
-            <a
-              href="#toTop"
-              data-number="1"
-              className="is-selected"
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("toTop");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Home</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#saveTheDate"
-              data-number="2"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("saveTheDate");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Save the Date</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#faqs"
-              data-number="3"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("faqs");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">FAQs</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#rsvp"
-              data-number="4"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("rsvp");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">RSVP</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#footer"
-              data-number="5"
-              className=""
-              onClick={e => {
-                var isMobile = navigator.userAgent.match(
-                  /(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i
-                );
-                if (isMobile) {
-                  // if we are on mobile device the scroll into view will be managed by the browser
-                } else {
-                  e.preventDefault();
-                  smoothScroll("footer");
-                }
-              }}
-            >
-              <span className="cd-dot" />
-              <span className="cd-label">Footer</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
     </div>
   );
 }

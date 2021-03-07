@@ -18,7 +18,7 @@ const headersSection = theme => ({
     ...container,
     zIndex: "2",
     position: "relative",
-    "& h1, & h4, & h6": {
+    "& h1, & h3, & h4, & h6": {
       color: whiteColor
     }
   },
@@ -26,7 +26,7 @@ const headersSection = theme => ({
     ...container,
     zIndex: "2",
     position: "relative",
-    "& h1, & h4, & h6": {
+    "& h1, & h3, & h4, & h6": {
       color: whiteColor
     },
     paddingTop: "25vh"
@@ -88,6 +88,11 @@ const headersSection = theme => ({
   },
   button: {
     margin: "0 !important"
+  },
+  branchGraphic: {
+    width: "23%",
+    marginLeft: "auto",
+    marginRight: "auto"
   }
 });
 
