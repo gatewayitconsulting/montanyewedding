@@ -1,3 +1,4 @@
+import { blackColor } from "assets/jss/material-kit-pro-react";
 import {
   primaryColor,
   warningColor,
@@ -51,14 +52,16 @@ const infoStyle = {
   title: {
     ...title,
     margin: "1.75rem 0 0.875rem !important",
-    minHeight: "unset"
+    minHeight: "unset",
+    fontSize: "1.2em",
+    fontWeight: "700"
   },
   description: {
-    color: grayColor[0],
+    color: blackColor,
     overflow: "hidden",
     marginTop: "0px",
     "& p": {
-      color: grayColor[0],
+      color: blackColor,
       fontSize: "14px"
     }
   },
