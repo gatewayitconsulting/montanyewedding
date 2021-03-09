@@ -58,10 +58,10 @@ export default function SectionHeaders({ ...rest }) {
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
                     />
-                    <h3>
+                    <h3 className={classes.subText}>
                       We invite you to
                     </h3>
-                    <h1 className={classes.title}>Save the Date</h1>
+                    <h1 className={classes.title + " " + classes.customTitle}>Save the Date</h1>
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}
@@ -94,10 +94,10 @@ export default function SectionHeaders({ ...rest }) {
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
                     />
-                    <h3>
+                    <h3 className={classes.subText}>
                       The wedding celebration of
                     </h3>
-                    <h1 className={classes.title}>John &amp; Lauren</h1>
+                    <h1 className={classes.title + " " + classes.customTitle}>John &amp; Lauren</h1>
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}
@@ -130,10 +130,10 @@ export default function SectionHeaders({ ...rest }) {
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
                     />
-                    <h3>
+                    <h3 className={classes.subText}>
                       Keep an eye out!
                     </h3>
-                    <h1 className={classes.title}>Formal Invitation to Follow</h1>
+                    <h1 className={classes.title + " " + classes.customTitle}>Formal Invitation to Follow</h1>
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}

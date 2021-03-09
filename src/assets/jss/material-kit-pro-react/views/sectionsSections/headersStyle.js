@@ -96,6 +96,13 @@ const headersSection = theme => ({
     "@media (min-width: 768px)": {
       width: "23%"
     }
+  },
+  subText: {
+    fontFamily: `"Alex Brush", cursive`,
+    fontSize: "2.5rem"
+  },
+  customTitle: {
+    fontSize: "4.25rem"
   }
 });
 

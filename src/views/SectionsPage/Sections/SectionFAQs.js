@@ -48,8 +48,8 @@ export default function SectionFAQs({ ...rest }) {
                             classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
                         }
                         >
-                        <h2 className={classes.title}>
-                            FAQs
+                        <h2 className={classes.title + " " + classes.customTitle}>
+                            What to Expect
                         </h2>
                         <h5 className={classes.description}>
                             Here you can find information about the wedding event and day.

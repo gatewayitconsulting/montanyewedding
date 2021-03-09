@@ -100,6 +100,9 @@ import {
         margin: "70px auto",
         maxWidth: "970px"
       }
+    },
+    customTitle: {
+      fontSize: "3rem !important"
     }
   };
   

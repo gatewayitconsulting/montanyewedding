@@ -98,7 +98,7 @@ export default function SectionsPage() {
         <SectionHeaders id="toTop" />
         <SectionSaveTheDate id="saveTheDate" />
         <SectionFAQs id="faqs" />
-        <SectionRSVP id="rsvp" />
+        {/* <SectionRSVP id="rsvp" /> */}
         <SectionFooter id="footer" />
       </div>
     </div>

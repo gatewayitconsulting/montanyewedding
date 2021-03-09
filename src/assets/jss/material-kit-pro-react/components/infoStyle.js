@@ -53,8 +53,9 @@ const infoStyle = {
     ...title,
     margin: "1.75rem 0 0.875rem !important",
     minHeight: "unset",
-    fontSize: "1.2em",
-    fontWeight: "700"
+    fontSize: "1.5em",
+    fontWeight: "500",
+    fontFamily: `"Charm", cursive`
   },
   description: {
     color: blackColor,

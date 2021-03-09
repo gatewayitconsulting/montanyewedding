@@ -340,12 +340,13 @@ const title = {
   marginTop: "30px",
   marginBottom: "25px",
   minHeight: "32px",
-  fontFamily: `"Abhaya Libre", serif`
+  // fontFamily: `"Abhaya Libre", serif`
   // fontFamily: `"Cardo", serif`
   // fontFamily: `"Charm", cursive`
   // fontFamily: `"Charmonman", cursive`
-  // fontFamily: `"Alex Brush", cursive`
+  fontFamily: `"Alex Brush", cursive`
   // fontFamily: `"IM Fell Double Pica SC", serif`
+  // fontFamily: `"Almendra Display", cursive`
   // fontFamily: `"Roboto Slab", "Times New Roman", serif`
 };
 
