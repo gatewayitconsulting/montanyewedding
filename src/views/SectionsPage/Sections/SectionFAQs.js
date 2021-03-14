@@ -5,11 +5,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import FormatPaint from "@material-ui/icons/FormatPaint";
-import Code from "@material-ui/icons/Code";
 import Theaters from "@material-ui/icons/Theaters";
-import Face from "@material-ui/icons/Face";
-import Commute from "@material-ui/icons/Commute";
+import BeachAccess from "@material-ui/icons/BeachAccess";
+import LocalBar from "@material-ui/icons/LocalBar";
+import ChildCare from "@material-ui/icons/ChildCare";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -23,8 +22,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 // Styles
 import FAQsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/FAQsStyle.js";
 
-import cardProject2 from "assets/img/examples/card-project2.jpg";
-import cardProject5 from "assets/img/examples/card-project5.jpg";
+import treeGraphic from "assets/img/johnlauren/tree.png";
 
 const useStyles = makeStyles(FAQsStyle);
 
@@ -58,28 +56,50 @@ export default function SectionFAQs({ ...rest }) {
                         </GridItem>
                     </GridContainer>
                     <GridContainer>
-                        <GridItem xs={12} sm={10} md={10}>
+                        <GridItem xs={12} md={8}>
                         <InfoArea
                             className={classes.info4}
-                            title="What to wear"
-                            description="We've created the design of the website using modern Technologies like Sketch. It was a very interesting collaboration."
+                            title="What should I wear?"
+                            description="The dress code for our wedding is formal attire."
                             icon={Theaters}
-                            iconColor="info"
+                            iconColor="dark"
                         />
                         <InfoArea
                             className={classes.info4}
-                            title="Sorry, no children"
-                            description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
-                            icon={Face}
-                            iconColor="primary"
+                            title="Will the ceremony and reception be indoors or outdoors?"
+                            description="Both the ceremony and the reception will be held inside at the Willow."
+                            icon={BeachAccess}
+                            iconColor="dark"
                         />
                         <InfoArea
                             className={classes.info4}
-                            title="Parking"
-                            description="There is also a Fully Customizable CMS Admin Dashboard for this product."
-                            icon={Commute}
-                            iconColor="danger"
+                            title="What happens after the ceremony?"
+                            description="After the ceremony, the bridal party will be taking pictures nearby for about an hour while the guests enjoy a few drinks."
+                            icon={LocalBar}
+                            iconColor="dark"
                         />
+                        <InfoArea
+                            className={classes.info4}
+                            title="May I bring my children?"
+                            description="
+                                Respectfully we have chosen to make our wedding day child free. While we love your little ones, 
+                                our wedding is going to be an adults only event so that everyone can relax and enjoy the evening. 
+                                We appreciate you making arrangements ahead of time and leaving the kids at home so that you can 
+                                celebrate with us. 
+                            "
+                            icon={ChildCare}
+                            iconColor="dark"
+                        />
+                        </GridItem>
+                        <GridItem
+                            xs={12}
+                            md={4}
+                            >
+                            <img
+                            src={treeGraphic}
+                            alt="Branch graphic."
+                            className={classes.treeCustomGraphic}
+                            />
                         </GridItem>
                     </GridContainer>
                 </div>

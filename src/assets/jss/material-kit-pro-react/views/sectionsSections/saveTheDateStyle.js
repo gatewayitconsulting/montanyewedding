@@ -1,3 +1,4 @@
+import { defaultFont } from "assets/jss/material-kit-pro-react";
 import {
   container,
   mlAuto,
@@ -117,6 +118,10 @@ const saveTheDateStyle = {
       margin: "70px auto",
       maxWidth: "970px"
     }
+  },
+  customTitle: {
+    ...defaultFont,
+    fontSize: "1.25em"
   },
   branchCustomGraphic: {
     width: "55%",

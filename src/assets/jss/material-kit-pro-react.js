@@ -185,8 +185,19 @@ const card = {
 };
 
 const defaultFont = {
-  // fontFamily: '"Alex Brush", serif',
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  fontWeight: "300",
+  lineHeight: "1.5em"
+};
+
+const customHeaderFont = {
+  fontFamily: '"Alex Brush", cursive',
+  fontWeight: "300",
+  lineHeight: "1.5em"
+};
+
+const customSecondaryHeaderFont = {
+  fontFamily: '"Charm", cursive',
   fontWeight: "300",
   lineHeight: "1.5em"
 };
@@ -335,19 +346,11 @@ const defaultBoxShadow = {
 const title = {
   color: grayColor[1],
   textDecoration: "none",
-  // fontWeight: "700",
   fontWeight: "500",
   marginTop: "30px",
   marginBottom: "25px",
   minHeight: "32px",
-  // fontFamily: `"Abhaya Libre", serif`
-  // fontFamily: `"Cardo", serif`
-  // fontFamily: `"Charm", cursive`
-  // fontFamily: `"Charmonman", cursive`
   fontFamily: `"Alex Brush", cursive`
-  // fontFamily: `"IM Fell Double Pica SC", serif`
-  // fontFamily: `"Almendra Display", cursive`
-  // fontFamily: `"Roboto Slab", "Times New Roman", serif`
 };
 
 const link = {
@@ -484,6 +487,8 @@ export {
   boxShadow,
   card,
   defaultFont,
+  customHeaderFont,
+  customSecondaryHeaderFont,
   primaryColor,
   secondaryColor,
   warningColor,

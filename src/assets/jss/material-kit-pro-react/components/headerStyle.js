@@ -1,6 +1,6 @@
 import {
   container,
-  defaultFont,
+  customHeaderFont,
   primaryColor,
   infoColor,
   successColor,
@@ -55,10 +55,10 @@ const headerStyle = theme => ({
   title: {
     letterSpacing: "unset",
     "&,& a": {
-      ...defaultFont,
+      ...customHeaderFont,
       minWidth: "unset",
       lineHeight: "30px",
-      fontSize: "18px",
+      fontSize: "34px",
       borderRadius: "3px",
       textTransform: "none",
       whiteSpace: "nowrap",

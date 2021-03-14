@@ -103,6 +103,20 @@ import {
     },
     customTitle: {
       fontSize: "3rem !important"
+    },
+    treeCustomGraphic: {
+      width: "80%",
+      marginLeft: "1em",
+      marginTop: "2em",
+      "@media (min-width: 768px)": {
+        marginLeft: "5em",
+        marginTop: "3em",
+        width: "75%"
+      },
+      "@media (min-width: 960px)": {
+        marginTop: "0",
+        width: "100%"
+      },
     }
   };
   

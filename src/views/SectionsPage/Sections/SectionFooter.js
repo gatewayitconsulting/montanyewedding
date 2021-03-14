@@ -37,7 +37,7 @@ export default function SectionFooter() {
           }
         >
           <GridContainer>
-            <GridItem xs={12} sm={6} md={6}>
+            <GridItem xs={12} md={6}>
               <h5>About Us</h5>
               <p>
                 This website has been created by Lauren and John. Lauren used her

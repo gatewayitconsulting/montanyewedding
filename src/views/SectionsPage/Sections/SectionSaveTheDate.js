@@ -90,7 +90,7 @@ export default function SectionSaveTheDate({ ...rest }) {
               <div className={classes.container}>
                 <GridContainer justify="center">
                   <GridItem xs={12} sm={8} md={8}>
-                    <h4 className={classes.title}>Save the date to your calendar!</h4>
+                    <h4 className={classes.title + " " + classes.customTitle}>Save the date to your calendar!</h4>
                   </GridItem>
                 </GridContainer>
                 <GridContainer justify="center">

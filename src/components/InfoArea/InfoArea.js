@@ -62,7 +62,8 @@ InfoArea.propTypes = {
     "success",
     "info",
     "rose",
-    "gray"
+    "gray",
+    "dark"
   ]),
   vertical: PropTypes.bool,
   className: PropTypes.string
