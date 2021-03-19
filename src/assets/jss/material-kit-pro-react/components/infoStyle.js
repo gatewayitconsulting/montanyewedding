@@ -55,7 +55,8 @@ const infoStyle = {
     minHeight: "unset",
     fontSize: "1.5em",
     fontWeight: "500",
-    fontFamily: `"Charm", cursive`
+    fontFamily: `"Charm", cursive`,
+    lineHeight: "1.25em"
   },
   description: {
     color: blackColor,
