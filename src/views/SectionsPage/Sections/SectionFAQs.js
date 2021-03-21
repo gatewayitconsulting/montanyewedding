@@ -49,9 +49,9 @@ export default function SectionFAQs({ ...rest }) {
                         <h2 className={classes.title + " " + classes.customTitle}>
                             What to Expect
                         </h2>
-                        <h5 className={classes.description}>
+                        <p className={classes.description} style={{fontSize: "17px"}}>
                             Here you can find information about the wedding event and day.
-                        </h5>
+                        </p>
                         <div className={classes.sectionSpace} />
                         </GridItem>
                     </GridContainer>

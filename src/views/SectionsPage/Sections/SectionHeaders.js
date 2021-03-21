@@ -57,6 +57,7 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
+                      alt="Top branch graphic."
                     />
                     <h3 className={classes.subText}>
                       We invite you to
@@ -65,6 +66,7 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}
+                      alt="Bottomm branch graphic."
                     />
                   </GridItem>
                 </GridContainer>

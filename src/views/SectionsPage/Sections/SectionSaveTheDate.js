@@ -64,6 +64,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                   className={classes.link}
                   href="https://www.google.com/maps/dir//321+N+10th+St,+St.+Louis,+MO+63101/@38.6298125,-90.1966413,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x87d8b318505f92d9:0xc70fcf24f124ecec!2m2!1d-90.1944526!2d38.6298125!3e0?hl=en"
                   target="_blank"
+                  rel="noopener"
                   title="Directions to Willow Wedding Venue"
                   aria-label="Directions to Willow Wedding Venue">
                     Willow Wedding Venue
@@ -101,6 +102,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                       simple
                       href={emailEvent}
                       target="_blank"
+                      rel="noopener"
                       aria-label="Save the date to your Outlook calendar"
                       download
                     >
@@ -121,6 +123,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                       simple
                       href={emailEvent}
                       target="_blank"
+                      rel="noopener"
                       aria-label="Save the date to your Apple calendar"
                       download
                     >
@@ -141,6 +144,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                       simple
                       href="https://calendar.google.com/calendar/r/eventedit?text=Montanye+Wedding+2022&dates=20221015T210000Z/20221015T280000Z&details=Join+us+at+the+wedding+venue!&location=321+N+10th+St+-+St+Louis,+MO+63101"
                       target="_blank"
+                      rel="noopener"
                       aria-label="Save the date to your Google calendar"
                     >
                       <Tooltip
@@ -160,6 +164,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                       simple
                       href={emailEvent}
                       target="_blank"
+                      rel="noopener"
                       aria-label="Save the date to your Yahoo calendar"
                       download
                     >
