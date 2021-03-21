@@ -10,6 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
 import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(styles);
 
@@ -32,6 +33,11 @@ export default function SectionFooter() {
                   Gateway IT Consulting
                 </a>{" "}
                 All Rights Reserved.
+              </div>
+              <div className={classes.right}>
+                <Link to="/privacy-policy" title="To privacy policy page">
+                    Privacy Policy
+                </Link>
               </div>
             </div>
           }

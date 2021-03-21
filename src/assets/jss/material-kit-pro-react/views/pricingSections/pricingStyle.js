@@ -3,6 +3,7 @@ import {
   mrAuto,
   mlAuto,
   cardTitle,
+  defaultFont,
   whiteColor,
   infoColor,
   hexToRgb
@@ -12,6 +13,7 @@ const pricingStyle = {
   mrAuto,
   mlAuto,
   cardTitle,
+  defaultFont,
   cardTitleWhite: {
     ...cardTitle,
     color: blackColor + " !important",
@@ -27,6 +29,12 @@ const pricingStyle = {
   },
   textInfo: {
     color: infoColor[0] + " !important"
+  },
+  title: {
+    ...defaultFont
+  },
+  description: {
+    ...defaultFont
   }
 };
 

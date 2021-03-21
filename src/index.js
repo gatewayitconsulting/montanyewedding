@@ -17,7 +17,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router";
+import { Router, Route, Switch, Redirect } from "react-router";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
@@ -38,6 +38,7 @@ import SectionsPage from "views/SectionsPage/SectionsPage.js";
 import ShoppingCartPage from "views/ShoppingCartPage/ShoppingCartPage.js";
 import SignupPage from "views/SignupPage/SignupPage.js";
 import ErrorPage from "views/ErrorPage/ErrorPage.js";
+import SectionPricing from "views/SectionsPage/Sections/SectionPricing";
 
 var hist = createBrowserHistory();
 
@@ -52,14 +53,14 @@ ReactDOM.render(
       {/* <Route path="/ecommerce-page" component={EcommercePage} /> */}
       {/* <Route path="/landing-page" component={LandingPage} /> */}
       {/* <Route path="/login-page" component={LoginPage} /> */}
-      {/* <Route path="/pricing" component={PricingPage} /> */}
+      <Route path="/privacy-policy" component={PricingPage} />
       {/* <Route path="/profile-page" component={ProfilePage} /> */}
       {/* <Route path="/product-page" component={ProductPage} /> */}
       {/* <Route path="/sections" component={SectionsPage} /> */}
       {/* <Route path="/shopping-cart-page" component={ShoppingCartPage} /> */}
       {/* <Route path="/signup-page" component={SignupPage} /> */}
       <Route path="/" component={SectionsPage} />
-      <Route path="" component={ErrorPage} />
+      <Route path="*" component={ErrorPage} />
     </Switch>
   </Router>,
   document.getElementById("root")
