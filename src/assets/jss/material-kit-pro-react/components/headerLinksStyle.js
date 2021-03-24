@@ -95,6 +95,15 @@ const headerLinksStyle = theme => ({
       height: "20px"
     }
   },
+  navLinkCustom: {
+    color: "inherit",
+    fontWeight: "400",
+    fontSize: "12px",
+    textTransform: "uppercase",
+    "&:hover,&:focus": {
+      color: "inherit"
+    }
+  },
   navLinkJustIcon: {
     "& .fab,& .far,& .fal,& .fas,& .material-icons": {
       marginRight: "0px"

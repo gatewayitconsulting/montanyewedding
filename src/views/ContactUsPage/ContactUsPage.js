@@ -34,7 +34,7 @@ const CustomSkinMap = withScriptjs(
   withGoogleMap(() => (
     <GoogleMap
       defaultZoom={14}
-      defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
+      defaultCenter={{ lat: 38.6298146, lng: -90.1944767 }}
       defaultOptions={{
         scrollwheel: false,
         zoomControl: true,
@@ -100,12 +100,13 @@ const CustomSkinMap = withScriptjs(
         ]
       }}
     >
-      <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
+      <Marker position={{ lat: 38.6298146, lng: -90.1944767 }} />
     </GoogleMap>
   ))
 );
 
 const useStyles = makeStyles(contactUsStyle);
+const API_KEY = process.env.MAPS_API_KEY;
 
 export default function ContactUsPage() {
   React.useEffect(() => {
@@ -123,7 +124,7 @@ export default function ContactUsPage() {
       />
       <div className={classes.bigMap}>
         <CustomSkinMap
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgAGtvR0417DJdKsdU1-UohznYCBeC5ec"
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={
             <div
@@ -139,7 +140,7 @@ export default function ContactUsPage() {
       </div>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
-          <div className={classes.container}>
+          {/* <div className={classes.container}>
             <h2 className={classes.title}>Send us a message</h2>
             <GridContainer>
               <GridItem md={6} sm={6}>
@@ -229,6 +230,10 @@ export default function ContactUsPage() {
               </GridItem>
             </GridContainer>
           </div>
+        </div> */}          
+        <div className={classes.container}>
+          <h1>RSVP Coming Soon</h1>
+        </div>
         </div>
       </div>
       <Footer

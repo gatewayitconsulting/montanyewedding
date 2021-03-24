@@ -106,7 +106,7 @@ import {
     },
     treeCustomGraphic: {
       width: "80%",
-      marginLeft: "1em",
+      marginLeft: "2em",
       marginTop: "2em",
       "@media (min-width: 768px)": {
         marginLeft: "5em",

@@ -49,7 +49,7 @@ ReactDOM.render(
       {/* <Route path="/blog-post" component={BlogPostPage} /> */}
       {/* <Route path="/blog-posts" component={BlogPostsPage} /> */}
       {/* <Route path="/components" component={ComponentsPage} /> */}
-      {/* <Route path="/contact-us" component={ContactUsPage} /> */}
+      <Route path="/rsvp" component={ContactUsPage} />
       {/* <Route path="/ecommerce-page" component={EcommercePage} /> */}
       {/* <Route path="/landing-page" component={LandingPage} /> */}
       {/* <Route path="/login-page" component={LoginPage} /> */}
