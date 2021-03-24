@@ -187,6 +187,7 @@ export default function PricingPage() {
                 <a
                   href="https://gatewayitconsulting.com"
                   target="_blank"
+                  rel="noopener"
                   className={classes.aClasses}
                 >
                   Gateway IT Consulting

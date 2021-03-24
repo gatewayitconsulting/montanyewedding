@@ -11,8 +11,8 @@ import {
 } from "react-google-maps";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import { Link } from "react-router-dom";
+
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 import PinDrop from "@material-ui/icons/PinDrop";
@@ -28,6 +28,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import Footer from "components/Footer/Footer.js";
 
+import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
 
 const CustomSkinMap = withScriptjs(
@@ -140,11 +141,21 @@ export default function ContactUsPage() {
       </div>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
-          {/* <div className={classes.container}>
-            <h2 className={classes.title}>Send us a message</h2>
+          <div className={classes.container}>
+            <h2>RSVP Coming Soon</h2>
             <GridContainer>
               <GridItem md={6} sm={6}>
                 <p>
+                  Check back soon to RSVP for the wedding.
+                </p>
+                <p>
+                  We will be sending out reminders through our Save the Date emails.
+                </p>
+                <p>
+                  If you have any questions in the meantime, please contact us by
+                  <a href="mailto:gatewayitconsulting@outlook.com" title="Email us at Gateway IT Consulting."> email</a>.
+                </p>
+                {/* <p>
                   You can contact us with anything related to our Products. We
                   {"'"}ll get in touch with you as soon as possible.
                   <br />
@@ -188,9 +199,9 @@ export default function ContactUsPage() {
                       Contact us
                     </Button>
                   </div>
-                </form>
+                </form> */}
               </GridItem>
-              <GridItem md={4} sm={4} className={classes.mlAuto}>
+              {/* <GridItem md={4} sm={4} className={classes.mlAuto}>
                 <InfoArea
                   className={classes.info}
                   title="Find us at the office"
@@ -227,68 +238,51 @@ export default function ContactUsPage() {
                   icon={BusinessCenter}
                   iconColor="primary"
                 />
-              </GridItem>
+              </GridItem> */}
             </GridContainer>
           </div>
-        </div> */}          
-        <div className={classes.container}>
-          <h1>RSVP Coming Soon</h1>
-        </div>
         </div>
       </div>
       <Footer
+        theme="dark"
         content={
           <div>
             <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-contact-us"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-contact-us"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-contact-us"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
+              Copyright &copy; {1900 + new Date().getYear()}{" "}
+              <a
+                href="https://gatewayitconsulting.com"
+                target="_blank"
+                rel="noopener"
+                className={classes.aClasses}
+              >
+                Gateway IT Consulting
+              </a>{" "}
+              All Rights Reserved.
             </div>
             <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-contact-us"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
+              <Link to="/privacy-policy" title="To privacy policy page">
+                Privacy Policy
+              </Link>
             </div>
           </div>
         }
-      />
+      >
+        <GridContainer>
+          <GridItem xs={12} md={6}>
+            <h5>About Us</h5>
+            <p>
+              This website has been created by Lauren and John. Lauren used her
+              design eye and John used his skills in web development to create
+              this website.{" "}
+            </p>
+            <p>
+              <b>Technology used:</b> Creative Tim Material Design theme customized
+              using React, HTML5, SASS, and some 3rd parties to handle the
+              heavy lifting in the backend.{" "}
+            </p>
+          </GridItem>
+        </GridContainer>
+      </Footer>
     </div>
   );
 }
