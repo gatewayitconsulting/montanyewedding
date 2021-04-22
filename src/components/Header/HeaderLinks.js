@@ -83,24 +83,25 @@ export default function HeaderLinks(props) {
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="/#faqs"
-          aria-label="Scroll to FAQs section"
-          className={classes.navLink}
-          color="transparent"
-        >
-          What to Expect
-        </Button>
+        <Link to={"/faqs"} className={classes.navLinkCustom}>
+          <Button
+            aria-label="Navigate to FAQs page"
+            className={classes.navLink}
+            color="transparent"
+          >
+            What to Expect
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-      <Link to={"/rsvp"} className={classes.navLinkCustom}>
-        <Button
-          aria-label="Scroll to RSVP section"
-          className={classes.navLink}
-          color="transparent"
-        >
-          RSVP
-        </Button>
+        <Link to={"/rsvp"} className={classes.navLinkCustom}>
+          <Button
+            aria-label="Navigate to RSVP page"
+            className={classes.navLink}
+            color="transparent"
+          >
+            RSVP
+          </Button>
         </Link>
       </ListItem>
     </List>

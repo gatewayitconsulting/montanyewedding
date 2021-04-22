@@ -27,6 +27,7 @@ import BlogPostPage from "views/BlogPostPage/BlogPostPage.js";
 import BlogPostsPage from "views/BlogPostsPage/BlogPostsPage.js";
 import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
+import FAQsPage from "views/FAQsPage/FAQsPage.js";
 import EcommercePage from "views/EcommercePage/EcommercePage.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
@@ -49,6 +50,7 @@ ReactDOM.render(
       {/* <Route path="/blog-post" component={BlogPostPage} /> */}
       {/* <Route path="/blog-posts" component={BlogPostsPage} /> */}
       {/* <Route path="/components" component={ComponentsPage} /> */}
+      <Route path="/faqs" component={FAQsPage} />
       <Route path="/rsvp" component={ContactUsPage} />
       {/* <Route path="/ecommerce-page" component={EcommercePage} /> */}
       {/* <Route path="/landing-page" component={LandingPage} /> */}
