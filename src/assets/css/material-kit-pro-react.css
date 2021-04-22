@@ -1720,3 +1720,30 @@ button.slick-arrow.slick-next {
     background-color: #e91e63; }
   .react-tagsinput .react-tagsinput-tag.default {
     background-color: #999; }
+
+.vertical-timeline-element-date:first-child,
+.vertical-timeline-element-date:nth-child(even) {
+  text-align: left !important; }
+
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle,
+.vertical-timeline-element-copy,
+.vertical-timeline-element-date {
+  color: #000000; }
+
+.vertical-timeline-element-image {
+  width: 80%;
+  margin-left: 2em;
+  margin-top: 2em; }
+  @media (min-width: 768px) {
+    .vertical-timeline-element-image {
+      margin-left: 5em;
+      margin-top: 3em;
+      width: 75%; } }
+  @media (min-width: 960px) {
+    .vertical-timeline-element-image {
+      margin-top: 0;
+      width: 100%; } }
+
+.d-none {
+  display: none !important; }

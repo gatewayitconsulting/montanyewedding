@@ -1,0 +1,23 @@
+.vertical-timeline-element:first-child {
+    .vertical-timeline-element-date {
+        text-align: left !important;
+    }
+}
+.vertical-timeline-element-date:nth-child(even) {
+    text-align: left !important;
+}
+
+.vertical-timeline-element {
+    .vertical-timeline-element-title,
+    .vertical-timeline-element-subtitle,
+    .vertical-timeline-element-copy,
+    .vertical-timeline-element-date {
+        color: $black;
+        opacity: 1;
+    }
+    
+    .vertical-timeline-element-image {
+        width: 100%;
+        margin-top: 1em;
+    }
+}

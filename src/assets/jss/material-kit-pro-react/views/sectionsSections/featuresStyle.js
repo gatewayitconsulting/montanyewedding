@@ -99,7 +99,10 @@ const features = {
     margin: "0 auto",
     padding: "10px 0 0px"
   },
-  infoArea5: {}
+  infoArea5: {},
+  customTitle: {
+    fontSize: "3rem !important"
+  }
 };
 
 export default features;
