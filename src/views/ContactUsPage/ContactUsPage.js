@@ -247,21 +247,20 @@ export default function ContactUsPage() {
         theme="dark"
         content={
           <div>
-            <div className={classes.left}>
+            <div className="footer-brand">
               Copyright &copy; {1900 + new Date().getYear()}{" "}
               <a
                 href="https://gatewayitconsulting.com"
                 target="_blank"
-                rel="noopener"
                 className={classes.aClasses}
               >
                 Gateway IT Consulting
               </a>{" "}
               All Rights Reserved.
             </div>
-            <div className={classes.right}>
+            <div className="footer-privacy-policy">
               <Link to="/privacy-policy" title="To privacy policy page">
-                Privacy Policy
+                  Privacy Policy
               </Link>
             </div>
           </div>

@@ -1,0 +1,15 @@
+.footer-brand {
+    text-align: left;
+    float: left;
+}
+
+.footer-privacy-policy {
+    text-align: left;
+    float: left;
+    margin-top: .5em;
+    @media (min-width: 768px) {
+        text-align: right;
+        float: right;
+        margin-top: 0;
+    }
+}

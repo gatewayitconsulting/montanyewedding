@@ -23,7 +23,7 @@ export default function SectionFooter() {
           theme="dark"
           content={
             <div>
-              <div className={classes.left}>
+              <div className="footer-brand">
                 Copyright &copy; {1900 + new Date().getYear()}{" "}
                 <a
                   href="https://gatewayitconsulting.com"
@@ -34,7 +34,7 @@ export default function SectionFooter() {
                 </a>{" "}
                 All Rights Reserved.
               </div>
-              <div className={classes.right}>
+              <div className="footer-privacy-policy">
                 <Link to="/privacy-policy" title="To privacy policy page">
                     Privacy Policy
                 </Link>
