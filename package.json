@@ -21,6 +21,7 @@
     "react-image-gallery": "1.0.7",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1",
+    "react-scroll-to-top": "^1.0.5",
     "react-slick": "0.26.1",
     "react-swipeable-views": "0.13.9",
     "react-tagsinput": "3.19.0",
