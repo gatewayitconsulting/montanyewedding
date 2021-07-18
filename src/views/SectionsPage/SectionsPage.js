@@ -14,6 +14,7 @@ import SectionFooter from "./Sections/SectionFooter.js";
 import sectionsPageStyle from "assets/jss/material-kit-pro-react/views/sectionsPageStyle.js";
 
 import ScrollToTop from "react-scroll-to-top";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(sectionsPageStyle);
 

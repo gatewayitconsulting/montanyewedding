@@ -104,6 +104,17 @@ export default function HeaderLinks(props) {
           </Button>
         </Link>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link to={"/404"} className={classes.navLinkCustom}>
+          <Button
+            aria-label="Navigate to 404 page"
+            className={classes.navLink}
+            color="transparent"
+          >
+            404 Test
+          </Button>
+        </Link>
+      </ListItem>
     </List>
   );
 }
