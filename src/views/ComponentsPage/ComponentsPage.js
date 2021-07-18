@@ -19,7 +19,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionTabs from "./Sections/SectionTabs.js";
-import SectionPills from "./Sections/SectionPills.js";
+import SectionWeddingParty from "./Sections/SectionWeddingParty.js";
 import SectionNotifications from "./Sections/SectionNotifications.js";
 import SectionPreFooter from "./Sections/SectionPreFooter.js";
 import SectionFooter from "./Sections/SectionFooter.js";
@@ -137,7 +137,7 @@ export default function Components() {
         <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
-        <SectionPills />
+        <SectionWeddingParty />
         <SectionNotifications />
         <div
           className={classNames(

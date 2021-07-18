@@ -150,6 +150,16 @@ const navPillsStyle = theme => ({
         ", 0.4)"
     }
   },
+  dark: {
+    color: whiteColor,
+    backgroundColor: blackColor,
+    background:
+      "radial-gradient(ellipse at center," +
+      blackColor +
+      " 0," +
+      blackColor +
+      " 100%)"
+  },
   alignCenter: {
     alignItems: "center",
     justifyContent: "center"

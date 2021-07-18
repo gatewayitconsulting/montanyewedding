@@ -1,4 +1,9 @@
-import { container, title } from "assets/jss/material-kit-pro-react.js";
+import { 
+  container,
+  title 
+} from "assets/jss/material-kit-pro-react.js";
+
+import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 
 const pillsStyle = {
   section: {
@@ -10,7 +15,15 @@ const pillsStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none"
-  }
+  },
+  customTitle: {
+    fontSize: "3rem !important",
+    textAlign: "center"
+  },
+  imageTitle: {
+    textAlign: "center"
+  },
+  ...imagesStyles
 };
 
 export default pillsStyle;
