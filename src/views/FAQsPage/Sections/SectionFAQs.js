@@ -2,8 +2,8 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import classNames from "classnames";
-import Icon from "@material-ui/core/Icon";
+// import classNames from "classnames";
+// import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Theaters from "@material-ui/icons/Theaters";
 import BeachAccess from "@material-ui/icons/BeachAccess";
@@ -12,12 +12,12 @@ import ChildCare from "@material-ui/icons/ChildCare";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import Button from "components/CustomButtons/Button.js";
+// import Card from "components/Card/Card.js";
+// import CardBody from "components/Card/CardBody.js";
+// import Button from "components/CustomButtons/Button.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
-import Badge from "components/Badge/Badge.js";
-import Tooltip from "@material-ui/core/Tooltip";
+// import Badge from "components/Badge/Badge.js";
+// import Tooltip from "@material-ui/core/Tooltip";
 
 // Styles
 import FAQsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/FAQsStyle.js";

@@ -64,7 +64,7 @@ export default function HeaderLinks(props) {
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
         <Button
-          href="/#toTop"
+          href="/"
           aria-label="Scroll to top of page"
           className={classes.navLink}
           color="transparent"
@@ -74,7 +74,7 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/#saveTheDate"
+          href="/whenAndWhere"
           aria-label="Scroll to Save the Date section"
           className={classes.navLink}
           color="transparent"

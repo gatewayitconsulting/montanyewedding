@@ -27,6 +27,7 @@ import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 // import BlogPostsPage from "views/BlogPostsPage/BlogPostsPage.js";
 // import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
+import WhenAndWherePage from "views/WhenAndWherePage/WhenAndWherePage.js";
 import FAQsPage from "views/FAQsPage/FAQsPage.js";
 // import EcommercePage from "views/EcommercePage/EcommercePage.js";
 // import LandingPage from "views/LandingPage/LandingPage.js";
@@ -59,6 +60,7 @@ ReactDOM.render(
       {/* <Route path="/shopping-cart-page" component={ShoppingCartPage} /> */}
       {/* <Route path="/signup-page" component={SignupPage} /> */}
       <Route path="/faqs" component={FAQsPage} />
+      <Route path="/whenAndWhere" component={WhenAndWherePage} />
       <Route path="/rsvp" component={ContactUsPage} />
       <Route path="/privacy-policy" component={PricingPage} />
       <Route path="/404" component={ErrorPage} />
