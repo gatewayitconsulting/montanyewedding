@@ -73,6 +73,10 @@ const contactUsStyle = {
     top: "3px",
     position: "relative"
   },
+  customTitle: {
+    fontSize: "3rem !important",
+    textAlign: "center"
+  },
   label: {
     color: "#585858",
     fontSize: ".85rem"

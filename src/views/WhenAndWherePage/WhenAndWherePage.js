@@ -158,6 +158,16 @@ export default function WhenAndWherePage() {
           </div>
         </div>
       </div>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.container}>
+            <h2 className={classes.title + " " + classes.customTitle} style={{textAlign: "center"}}>
+              Hotels
+            </h2>
+            <p>
+              Need a place to stay? Check out one of these hotels in walking distance of the venue!
+            </p>
+        </div>
+      </div>
       <Footer
         theme="dark"
         content={

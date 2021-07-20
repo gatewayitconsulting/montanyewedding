@@ -77,7 +77,9 @@ export default function ContactUsPage() {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
           <div className={classes.container}>
-            <h2>RSVP</h2>
+            <h2 className={classes.title + " " + classes.customTitle}>
+              RSVP
+            </h2>
             <GridContainer>
               <GridItem xs={12}>
               <Card className={classes.card1}>
@@ -164,7 +166,7 @@ export default function ContactUsPage() {
                       </GridContainer>
                     </div>
                     <CustomInput
-                      labelText="Food allergies or alternative diets? Let us know and we'll try to accommodate early on."
+                      labelText="Food allergies or alternative diets?"
                       id="food-information"
                       formControlProps={{
                         fullWidth: true
@@ -211,7 +213,8 @@ export default function ContactUsPage() {
           </GridContainer>
         </div>
       </div>
-      <Footer
+    </div>
+    <Footer
         theme="dark"
         content={
           <div>
@@ -250,7 +253,6 @@ export default function ContactUsPage() {
           </GridItem>
         </GridContainer>
       </Footer>
-    </div>
   </div>
   );
 }
