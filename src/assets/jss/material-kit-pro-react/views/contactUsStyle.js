@@ -7,12 +7,15 @@ import {
   description
 } from "assets/jss/material-kit-pro-react.js";
 
+import customCheckboxRadioSwitch from "assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
+
 const contactUsStyle = {
   main,
   mainRaised,
   title,
   mlAuto,
   description,
+  ...customCheckboxRadioSwitch,
   container: {
     ...container,
     maxWidth: "970px !important"
@@ -69,6 +72,10 @@ const contactUsStyle = {
     height: "18px",
     top: "3px",
     position: "relative"
+  },
+  label: {
+    color: "#585858",
+    fontSize: ".85rem"
   }
 };
 

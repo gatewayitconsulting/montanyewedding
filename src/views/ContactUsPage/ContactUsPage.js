@@ -13,108 +13,55 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-import PinDrop from "@material-ui/icons/PinDrop";
-import Phone from "@material-ui/icons/Phone";
-import BusinessCenter from "@material-ui/icons/BusinessCenter";
+import Check from "@material-ui/icons/Check";
+
+import Checkbox from "@material-ui/core/Checkbox";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+
+import Parallax from "components/Parallax/Parallax.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import CardFooter from "components/Card/CardFooter.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
+import Button from "components/CustomButtons/Button.js";
+
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
-import Button from "components/CustomButtons/Button.js";
 import Footer from "components/Footer/Footer.js";
+
+import backgroundImage from "../../assets/img/stock-photo-rsvp.jpeg";
 
 import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
 
-const CustomSkinMap = withScriptjs(
-  withGoogleMap(() => (
-    <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: 38.6298146, lng: -90.1944767 }}
-      defaultOptions={{
-        scrollwheel: false,
-        zoomControl: true,
-        styles: [
-          {
-            featureType: "water",
-            stylers: [
-              { saturation: 43 },
-              { lightness: -11 },
-              { hue: "#0088ff" }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.fill",
-            stylers: [
-              { hue: "#ff0000" },
-              { saturation: -100 },
-              { lightness: 99 }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }]
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }]
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }]
-          },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }]
-          },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }]
-          },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }]
-          }
-        ]
-      }}
-    >
-      <Marker position={{ lat: 38.6298146, lng: -90.1944767 }} />
-    </GoogleMap>
-  ))
-);
-
 const useStyles = makeStyles(contactUsStyle);
-const API_KEY = process.env.MAPS_API_KEY;
+
 
 export default function ContactUsPage() {
+  const [checked, setChecked] = React.useState([24, 22]);
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+  const handleGuest = value => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+      var guestInformation = document.getElementById("guestInformation");
+      guestInformation.style.display = "block";
+    } else {
+      newChecked.splice(currentIndex, 1);
+      var guestInformation = document.getElementById("guestInformation");
+      guestInformation.style.display = "none";
+    }
+    // setChecked(newChecked);
+  };
   return (
     <div>
       <Header
@@ -123,124 +70,145 @@ export default function ContactUsPage() {
         fixed
         color="dark"
       />
-      <div className={classes.bigMap}>
-        <CustomSkinMap
-          googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgAGtvR0417DJdKsdU1-UohznYCBeC5ec"
-          loadingElement={<div style={{ height: `100%` }} />}
-          containerElement={
-            <div
-              style={{
-                height: `100%`,
-                borderRadius: "6px",
-                overflow: "hidden"
-              }}
-            />
-          }
-          mapElement={<div style={{ height: `100%` }} />}
-        />
-      </div>
+      <Parallax image={backgroundImage} filter="dark">
+        <div className={classes.container}>
+        </div>
+      </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
           <div className={classes.container}>
-            <h2>RSVP Coming Soon</h2>
+            <h2>RSVP</h2>
             <GridContainer>
-              <GridItem md={6} sm={6}>
-                <p>
-                  Check back soon to RSVP for the wedding.
-                </p>
-                <p>
-                  We will be sending out reminders through our Save the Date emails.
-                </p>
-                <p>
-                  If you have any questions in the meantime, please contact us by
-                  <a href="mailto:gatewayitconsulting@outlook.com" title="Email us at Gateway IT Consulting."> email</a>.
-                </p>
-                {/* <p>
-                  You can contact us with anything related to our Products. We
-                  {"'"}ll get in touch with you as soon as possible.
-                  <br />
-                  <br />
-                </p>
+              <GridItem xs={12}>
+              <Card className={classes.card1}>
                 <form>
-                  <CustomInput
-                    labelText="Your Name"
-                    id="float"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                  <CustomInput
-                    labelText="Email address"
-                    id="float"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                  <CustomInput
-                    labelText="Phone"
-                    id="float"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                  <CustomInput
-                    labelText="Your message"
-                    id="float"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      multiline: true,
-                      rows: 6
-                    }}
-                  />
-                  <div className={classes.textCenter}>
-                    <Button color="primary" round>
-                      Contact us
+                  <CardBody>
+                    <GridContainer>
+                      <GridItem xs={12} sm={6} md={6}>
+                        <CustomInput
+                          labelText="First Name"
+                          id="first"
+                          formControlProps={{
+                            fullWidth: true
+                          }}
+                        />
+                      </GridItem>
+                      <GridItem xs={12} sm={6} md={6}>
+                        <CustomInput
+                          labelText="Last Name"
+                          id="last"
+                          formControlProps={{
+                            fullWidth: true
+                          }}
+                        />
+                      </GridItem>
+                    </GridContainer>
+                    <CustomInput
+                      labelText="Email Address"
+                      id="email-address"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                    />
+                    <div
+                      className={
+                        classes.checkboxAndRadio +
+                        " " +
+                        classes.checkboxAndRadioHorizontal
+                      }
+                      style={{ marginTop: ".15em" }}
+                    >
+                      <FormControlLabel
+                        control={
+                          <Checkbox
+                            tabIndex={-1}
+                            onClick={() => handleGuest(21)}
+                            checkedIcon={<Check className={classes.checkedIcon} />}
+                            icon={<Check className={classes.uncheckedIcon} />}
+                            classes={{
+                              checked: classes.checked,
+                              root: classes.checkRoot
+                            }}
+                          />
+                        }
+                        classes={{ label: classes.label, root: classes.labelRoot }}
+                        label="Bringing a guest?"
+                      />
+                    </div>
+                    <div id="guestInformation" className={classes.guestComing}>
+                      <GridContainer>
+                        <GridItem
+                          xs={12}
+                          sm={6}
+                        >
+                          <CustomInput
+                            labelText="Guest First Name"
+                            id="guest-first-name"
+                            formControlProps={{
+                              fullWidth: true
+                            }}
+                          />
+                        </GridItem>
+                        <GridItem
+                          xs={12}
+                          sm={6}
+                        >
+                          <CustomInput
+                            labelText="Guest Last Name"
+                            id="guest-last-name"
+                            formControlProps={{
+                              fullWidth: true
+                            }}
+                          />
+                        </GridItem>
+                      </GridContainer>
+                    </div>
+                    <CustomInput
+                      labelText="Food allergies or alternative diets? Let us know and we'll try to accommodate early on."
+                      id="food-information"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                    />
+                    <CustomInput
+                      labelText="Extra notes?"
+                      id="message"
+                      formControlProps={{
+                        fullWidth: true
+                      }}
+                      inputProps={{
+                        multiline: true,
+                        rows: 5
+                      }}
+                    />
+                  </CardBody>
+                  <CardFooter className={classes.justifyContentBetween}>
+                    {/* <FormControlLabel
+                      control={
+                        <Checkbox
+                          tabIndex={-1}
+                          onClick={() => handleToggle(1)}
+                          checkedIcon={
+                            <Check className={classes.checkedIcon} />
+                          }
+                          icon={<Check className={classes.uncheckedIcon} />}
+                          classes={{
+                            checked: classes.checked,
+                            root: classes.checkRoot
+                          }}
+                        />
+                      }
+                      classes={{ label: classes.label }}
+                      label="I'm not a robot"
+                    /> */}
+                    <Button color="dark" className={classes.pullRight}>
+                      Send RSVP
                     </Button>
-                  </div>
-                </form> */}
-              </GridItem>
-              {/* <GridItem md={4} sm={4} className={classes.mlAuto}>
-                <InfoArea
-                  className={classes.info}
-                  title="Find us at the office"
-                  description={
-                    <p>
-                      Bld Mihail Kogalniceanu, nr. 8, <br /> 7652 Bucharest,{" "}
-                      <br /> Romania
-                    </p>
-                  }
-                  icon={PinDrop}
-                  iconColor="primary"
-                />
-                <InfoArea
-                  className={classes.info}
-                  title="Give us a ring"
-                  description={
-                    <p>
-                      Michael Jordan <br /> +40 762 321 762 <br /> Mon - Fri,
-                      8:00-22:00
-                    </p>
-                  }
-                  icon={Phone}
-                  iconColor="primary"
-                />
-                <InfoArea
-                  className={classes.info}
-                  title="Legal Information"
-                  description={
-                    <p>
-                      Creative Tim Ltd. <br /> VAT · EN2341241 <br /> IBAN ·
-                      EN8732ENGB2300099123 <br /> Bank · Great Britain Bank
-                    </p>
-                  }
-                  icon={BusinessCenter}
-                  iconColor="primary"
-                />
-              </GridItem> */}
-            </GridContainer>
-          </div>
+                  </CardFooter>
+                </form>
+              </Card>
+            </GridItem>
+          </GridContainer>
         </div>
       </div>
       <Footer
@@ -283,5 +251,6 @@ export default function ContactUsPage() {
         </GridContainer>
       </Footer>
     </div>
+  </div>
   );
 }

@@ -20,7 +20,8 @@ import {
   dribbbleColor,
   redditColor,
   instagramColor,
-  hexToRgb
+  hexToRgb,
+  darkColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const buttonStyle = {
@@ -265,6 +266,16 @@ const buttonStyle = {
       backgroundColor: whiteColor,
       color: grayColor[0]
     }
+  },
+  dark: {
+    color: whiteColor,
+    backgroundColor: blackColor,
+    background:
+      "radial-gradient(ellipse at center," +
+      blackColor +
+      " 0," +
+      blackColor +
+      " 100%)"
   },
   twitter: {
     backgroundColor: twitterColor,
