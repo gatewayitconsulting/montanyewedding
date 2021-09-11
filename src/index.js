@@ -17,7 +17,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router";
+import { Router, Route, Switch } from "react-router";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 

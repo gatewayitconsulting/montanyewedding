@@ -20,8 +20,7 @@ import {
   dribbbleColor,
   redditColor,
   instagramColor,
-  hexToRgb,
-  darkColor
+  hexToRgb
 } from "assets/jss/material-kit-pro-react.js";
 
 const buttonStyle = {

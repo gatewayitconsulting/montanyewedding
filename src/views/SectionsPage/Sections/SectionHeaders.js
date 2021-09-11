@@ -33,10 +33,9 @@ export default function SectionHeaders({ ...rest }) {
     // we've set the className to cd-section so we can make smooth scroll to it
     <div className="cd-section" {...rest}>
       <div className={classes.sectionBlank} id="blanksection" />
-      {/* HEADER 3 START */}
       <div>
-        <Carousel {...settings} style={{backgroundColor: "black"}}>
-          {/* Carousel 2 START */}
+        <Carousel {...settings} style={{ backgroundColor: "black" }}>
+          {/* Carousel 1 START */}
           <div>
             <div
               className={classes.pageHeader}
@@ -73,8 +72,8 @@ export default function SectionHeaders({ ...rest }) {
               </div>
             </div>
           </div>
-          {/* Carousel 2 END */}
-          {/* Carousel 3 START */}
+          {/* Carousel 1 END */}
+          {/* Carousel 2 START */}
           <div>
             <div
               className={classes.pageHeader}
@@ -95,6 +94,7 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
+                      alt="Second slide top branch graphic."
                     />
                     <h3 className={classes.subText}>
                       The wedding celebration of
@@ -103,14 +103,15 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}
+                      alt="Second slide bottom branch graphic."
                     />
                   </GridItem>
                 </GridContainer>
               </div>
             </div>
           </div>
-          {/* Carousel 3 END */}
-          {/* Carousel 1 START */}
+          {/* Carousel 2 END */}
+          {/* Carousel 3 START */}
           <div>
             <div
               className={classes.pageHeader}
@@ -131,6 +132,7 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/top.png`)}
                       className={classes.branchGraphic}
+                      alt="Third slide top branch graphic."
                     />
                     <h3 className={classes.subText}>
                       Keep an eye out!
@@ -139,16 +141,16 @@ export default function SectionHeaders({ ...rest }) {
                     <img
                       src={require(`assets/img/johnlauren/bottom.png`)}
                       className={classes.branchGraphic}
+                      alt="Third slide bottom branch graphic."
                     />
                   </GridItem>
                 </GridContainer>
               </div>
             </div>
           </div>
-          {/* Carousel 1 END */}
+          {/* Carousel 3 END */}
         </Carousel>
       </div>
-      {/* HEADER 3 END */}
     </div>
   );
 }

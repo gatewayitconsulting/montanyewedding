@@ -46,7 +46,7 @@ export default function HeaderLinks(props) {
       currentTime = 0,
       increment = 20;
 
-    var animateScroll = function() {
+    var animateScroll = function () {
       currentTime += increment;
       var val = easeInOutQuad(currentTime, start, change, duration);
       element.scrollTop = val;
@@ -56,13 +56,19 @@ export default function HeaderLinks(props) {
     };
     animateScroll();
   };
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+  };
+
   var onClickSections = {};
 
   const { dropdownHoverColor } = props;
   const classes = useStyles();
   return (
     <List className={classes.list + " " + classes.mlAuto}>
-      <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem} onClick={scrollToTop}>
         <Link to={"/"} className={classes.navLinkCustom}>
           <Button
             aria-label="Navigate to Home page"
@@ -73,7 +79,7 @@ export default function HeaderLinks(props) {
           </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem} onClick={scrollToTop}>
         <Link to={"/whenAndWhere"} className={classes.navLinkCustom}>
           <Button
             aria-label="Navigate to When and Where page"
@@ -84,7 +90,7 @@ export default function HeaderLinks(props) {
           </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem} onClick={scrollToTop}>
         <Link to={"/faqs"} className={classes.navLinkCustom}>
           <Button
             aria-label="Navigate to FAQs page"
@@ -95,7 +101,7 @@ export default function HeaderLinks(props) {
           </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem} onClick={scrollToTop}>
         <Link to={"/rsvp"} className={classes.navLinkCustom}>
           <Button
             aria-label="Navigate to RSVP page"

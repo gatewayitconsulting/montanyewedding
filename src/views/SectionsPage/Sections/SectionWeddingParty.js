@@ -83,7 +83,7 @@ export default function SectionWeddingParty() {
                         <GridItem xs={12} sm={3}>
                           <img
                             src={image}
-                            alt="..."
+                            alt="Image1"
                             className={classes.imgRoundedCircle + " " + classes.imgFluid}
                           />
                           <h4 className={classes.imageTitle}>Circle Image</h4>
@@ -91,7 +91,7 @@ export default function SectionWeddingParty() {
                         <GridItem xs={12} sm={3}>
                           <img
                             src={image}
-                            alt="..."
+                            alt="Image2"
                             className={classes.imgRoundedCircle + " " + classes.imgFluid}
                           />
                           <h4 className={classes.imageTitle}>Circle Image</h4>
@@ -99,7 +99,7 @@ export default function SectionWeddingParty() {
                         <GridItem xs={12} sm={3}>
                           <img
                             src={image}
-                            alt="..."
+                            alt="Image3"
                             className={classes.imgRoundedCircle + " " + classes.imgFluid}
                           />
                           <h4 className={classes.imageTitle}>Circle Image</h4>
@@ -107,7 +107,7 @@ export default function SectionWeddingParty() {
                         <GridItem xs={12} sm={3}>
                           <img
                             src={image}
-                            alt="..."
+                            alt="Image4"
                             className={classes.imgRoundedCircle + " " + classes.imgFluid}
                           />
                           <h4 className={classes.imageTitle}>Circle Image</h4>
