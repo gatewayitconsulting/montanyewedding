@@ -23,6 +23,7 @@ import Footer from "components/Footer/Footer.js";
 import SectionSaveTheDate from "../SectionsPage/Sections/SectionSaveTheDate.js";
 import SectionHotel from "../WhenAndWherePage/Sections/SectionHotel.js";
 import SectionParking from "../WhenAndWherePage/Sections/SectionParking.js";
+import SectionFAQs from "../FAQsPage/Sections/SectionFAQs.js";
 import image from "assets/img/willow-event-venue.jpeg";
 
 // import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
@@ -162,8 +163,9 @@ export default function WhenAndWherePage() {
       </div>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionHotel />
-          <SectionParking />
+          <SectionFAQs />
+          {/* <SectionHotel /> */}
+          {/* <SectionParking /> */}
         </div>
       </div>
       <Footer
