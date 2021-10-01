@@ -91,13 +91,13 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem} onClick={scrollToTop}>
-        <Link to={"/faqs"} className={classes.navLinkCustom}>
+        <Link to={"/vendors"} className={classes.navLinkCustom}>
           <Button
-            aria-label="Navigate to FAQs page"
+            aria-label="Navigate to Vendors page"
             className={classes.navLink}
             color="transparent"
           >
-            What to Expect
+            Vendors
           </Button>
         </Link>
       </ListItem>

@@ -28,7 +28,8 @@ import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 // import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 import WhenAndWherePage from "views/WhenAndWherePage/WhenAndWherePage.js";
-import FAQsPage from "views/FAQsPage/FAQsPage.js";
+// import FAQsPage from "views/FAQsPage/FAQsPage.js";
+import VendorsPage from "views/VendorsPage/VendorsPage.js";
 // import EcommercePage from "views/EcommercePage/EcommercePage.js";
 // import LandingPage from "views/LandingPage/LandingPage.js";
 // import LoginPage from "views/LoginPage/LoginPage.js";
@@ -59,7 +60,8 @@ ReactDOM.render(
       {/* <Route path="/sections" component={SectionsPage} /> */}
       {/* <Route path="/shopping-cart-page" component={ShoppingCartPage} /> */}
       {/* <Route path="/signup-page" component={SignupPage} /> */}
-      <Route path="/faqs" component={FAQsPage} />
+      {/* <Route path="/faqs" component={FAQsPage} /> */}
+      <Route path="/vendors" component={VendorsPage} />
       <Route path="/whenAndWhere" component={WhenAndWherePage} />
       <Route path="/rsvp" component={ContactUsPage} />
       <Route path="/privacy-policy" component={PricingPage} />
