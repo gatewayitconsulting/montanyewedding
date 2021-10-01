@@ -19,7 +19,13 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
-import backgroundImage from "../../assets/img/stock-photo-rsvp.jpeg";
+import SectionFlorist from "./Sections/SectionFlorist.js";
+import SectionPhotographer from "./Sections/SectionPhotographer.js";
+// import SectionDJ from "./Sections/SectionDJ.js";
+
+// Makeup artist Set by Dren
+
+import backgroundImage from "../../assets/img/laurenjohn/vendors-preview.jpeg";
 
 // import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
@@ -51,10 +57,15 @@ export default function VendorsPage() {
                         <h2 className={classes.title + " " + classes.customTitle}>
                             Vendors
                         </h2>
+                        <p style={{ textAlign: "center" }}>
+                            Without these wonderful teams of people, we would have never been able to plan for or <br />celebrate our big day. Please go show them some love if you enjoyed their work!
+                        </p>
                         <GridContainer>
                             <GridItem xs={12}>
-                                <Card className={classes.card1}>
-                                </Card>
+                                <SectionFlorist style={{ marginBottom: "4rem" }} />
+                                <hr />
+                                <SectionPhotographer />
+                                {/* <SectionDJ /> */}
                             </GridItem>
                         </GridContainer>
                     </div>
