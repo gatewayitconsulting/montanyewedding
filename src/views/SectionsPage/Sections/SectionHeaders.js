@@ -11,9 +11,9 @@ import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-import fallImage from "assets/img/johnlauren/fall-image.jpg";
-import proposalImage from "assets/img/johnlauren/proposal.JPG";
-import engagementImage from "assets/img/johnlauren/engagement2.jpg";
+import fallImage from "assets/img/laurenjohn/fall-image.jpg";
+import proposalImage from "assets/img/laurenjohn/proposal.JPG";
+import engagementImage from "assets/img/laurenjohn/engagement2.jpg";
 
 const useStyles = makeStyles(headersStyle);
 
@@ -54,7 +54,7 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <img
-                      src={require(`assets/img/johnlauren/top.png`)}
+                      src={require(`assets/img/laurenjohn/top.png`)}
                       className={classes.branchGraphic}
                       alt="Top branch graphic."
                     />
@@ -63,7 +63,7 @@ export default function SectionHeaders({ ...rest }) {
                     </h3>
                     <h1 className={classes.title + " " + classes.customTitle}>Save the Date</h1>
                     <img
-                      src={require(`assets/img/johnlauren/bottom.png`)}
+                      src={require(`assets/img/laurenjohn/bottom.png`)}
                       className={classes.branchGraphic}
                       alt="Bottomm branch graphic."
                     />
@@ -92,7 +92,7 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <img
-                      src={require(`assets/img/johnlauren/top.png`)}
+                      src={require(`assets/img/laurenjohn/top.png`)}
                       className={classes.branchGraphic}
                       alt="Second slide top branch graphic."
                     />
@@ -101,7 +101,7 @@ export default function SectionHeaders({ ...rest }) {
                     </h3>
                     <h1 className={classes.title + " " + classes.customTitle}>John &amp; Lauren</h1>
                     <img
-                      src={require(`assets/img/johnlauren/bottom.png`)}
+                      src={require(`assets/img/laurenjohn/bottom.png`)}
                       className={classes.branchGraphic}
                       alt="Second slide bottom branch graphic."
                     />
@@ -130,7 +130,7 @@ export default function SectionHeaders({ ...rest }) {
                     )}
                   >
                     <img
-                      src={require(`assets/img/johnlauren/top.png`)}
+                      src={require(`assets/img/laurenjohn/top.png`)}
                       className={classes.branchGraphic}
                       alt="Third slide top branch graphic."
                     />
@@ -139,7 +139,7 @@ export default function SectionHeaders({ ...rest }) {
                     </h3>
                     <h1 className={classes.title + " " + classes.customTitle}>Formal Invitation to Follow</h1>
                     <img
-                      src={require(`assets/img/johnlauren/bottom.png`)}
+                      src={require(`assets/img/laurenjohn/bottom.png`)}
                       className={classes.branchGraphic}
                       alt="Third slide bottom branch graphic."
                     />

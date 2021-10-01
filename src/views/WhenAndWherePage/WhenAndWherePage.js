@@ -21,6 +21,8 @@ import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
 import SectionSaveTheDate from "../SectionsPage/Sections/SectionSaveTheDate.js";
+import SectionHotel from "../WhenAndWherePage/Sections/SectionHotel.js";
+import SectionParking from "../WhenAndWherePage/Sections/SectionParking.js";
 import image from "assets/img/willow-event-venue.jpeg";
 
 // import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
@@ -135,22 +137,22 @@ export default function WhenAndWherePage() {
         />
       </div>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.whenAndWhereContent} style={{backgroundColor: "black"}}>
+        <div className={classes.whenAndWhereContent} style={{ backgroundColor: "black" }}>
           <div className={classes.container}>
-            <h2 className={classes.title + " " + classes.customTitle} style={{color: "white", textAlign: "center"}}>
+            <h2 className={classes.title + " " + classes.customTitle} style={{ color: "white", textAlign: "center" }}>
               When &amp; Where
             </h2>
             <GridContainer>
-              <GridItem 
+              <GridItem
                 xs={12}
                 className={classes.blackBG}
-                style={{textAlign: "center"}}
+                style={{ textAlign: "center" }}
               >
                 <img
                   src={image}
                   alt="..."
                   className={classes.imgRounded + " " + classes.imgFluid}
-                  style={{textAlign: "center", width: "100%"}}
+                  style={{ textAlign: "center", width: "100%" }}
                 />
                 <SectionSaveTheDate id="saveTheDateWhenAndWhere" />
               </GridItem>
@@ -160,12 +162,8 @@ export default function WhenAndWherePage() {
       </div>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-            <h2 className={classes.title + " " + classes.customTitle} style={{textAlign: "center"}}>
-              Hotels
-            </h2>
-            <p>
-              Need a place to stay? Check out one of these hotels in walking distance of the venue!
-            </p>
+          <SectionHotel />
+          <SectionParking />
         </div>
       </div>
       <Footer
@@ -185,7 +183,7 @@ export default function WhenAndWherePage() {
             </div>
             <div className="footer-privacy-policy">
               <Link to="/privacy-policy" title="To privacy policy page">
-                  Privacy Policy
+                Privacy Policy
               </Link>
             </div>
           </div>

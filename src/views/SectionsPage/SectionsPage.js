@@ -33,8 +33,8 @@ export default function SectionsPage() {
         <ScrollToTop smooth />
         <SectionHeaders id="toTop" />
         <SectionSaveTheDate id="saveTheDate" />
-        <SectionFeatures id="timeline" />
         <SectionWeddingParty id="weddingParty" />
+        <SectionFeatures id="timeline" />
         <SectionFooter id="footer" />
       </div>
     </div>

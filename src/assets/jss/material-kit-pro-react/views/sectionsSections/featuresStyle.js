@@ -102,6 +102,12 @@ const features = {
   infoArea5: {},
   customTitle: {
     fontSize: "3rem !important"
+  },
+  leftAlign: {
+    textAlign: "left"
+  },
+  rightAlign: {
+    textAlign: "right"
   }
 };
 

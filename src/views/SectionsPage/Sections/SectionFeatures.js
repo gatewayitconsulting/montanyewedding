@@ -8,10 +8,14 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
 import featuresStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/featuresStyle.js";
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import laurenJohn from "assets/img/lauren-john.jpg";
+import laurenJohn from "assets/img/laurenjohn/timeline/lauren-john.jpg";
+import artMuseum from "assets/img/laurenjohn/timeline/art-musuem.jpg";
+import proposal from "assets/img/laurenjohn/timeline/proposal.jpg";
+import house from "assets/img/laurenjohn/timeline/house.jpg";
+import johnAsksLaurenOut from "assets/img/laurenjohn/timeline/johnAsksLaurenOut.jpg";
 
 const useStyles = makeStyles(featuresStyle);
 
@@ -29,7 +33,7 @@ export default function SectionFeatures({ ...rest }) {
               }
             >
               <h2 className={classes.title + " " + classes.customTitle}>
-                  How we Met
+                How we Met
               </h2>
               <h5 className={classes.description}>
                 Check out the timeline for history on how we met and some of
@@ -38,15 +42,17 @@ export default function SectionFeatures({ ...rest }) {
               <VerticalTimeline>
                 <VerticalTimelineElement
                   className="vertical-timeline-element--work"
-                  date="December 2017"
+                  date="December 9th, 2017"
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
                   icon={<Favorite />}
                 >
-                  <h3 className="vertical-timeline-element-title">The 1st Date</h3>
+                  <h3 className="vertical-timeline-element-title">First Date</h3>
                   <h4 className="vertical-timeline-element-subtitle">St. Louis Art Museum</h4>
-                  <p className="vertical-timeline-element-copy">
-                    Timeline point copy
-                  </p>
+                  <img
+                    className="vertical-timeline-element-image"
+                    src={artMuseum}
+                    alt=""
+                  />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className={
@@ -56,23 +62,66 @@ export default function SectionFeatures({ ...rest }) {
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
                   icon={<Favorite />}
                 >
-                  <h3 className="vertical-timeline-element-title">John asks Lauren out</h3>
+                  <h3 className="vertical-timeline-element-title">Beginning of Relationship</h3>
                   <h4 className="vertical-timeline-element-subtitle">Granite City</h4>
-                  <p className="vertical-timeline-element-copy">
-                    Timeline point copy
-                  </p>
+                  <img
+                    className="vertical-timeline-element-image"
+                    src={johnAsksLaurenOut}
+                    alt=""
+                  />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
+                  className={
+                    classes.rightAligned + "vertical-timeline-element--work"
+                  }
                   date="October 18th, 2019"
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
                   icon={<Favorite />}
                 >
-                  <h3 className="vertical-timeline-element-title">John proposes</h3>
+                  <h3 className="vertical-timeline-element-title">John Proposes</h3>
                   <h4 className="vertical-timeline-element-subtitle">Universal Studios, Orlando</h4>
-                  <p className="vertical-timeline-element-copy">
-                    Timeline point copy
-                  </p>
+                  <img
+                    className="vertical-timeline-element-image"
+                    src={proposal}
+                    alt=""
+                  />
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="June 19th, 2020"
+                  iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+                  icon={<Favorite />}
+                >
+                  <h3 className="vertical-timeline-element-title">First House</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Edwardsville, Illinois</h4>
+                  <img
+                    className="vertical-timeline-element-image"
+                    src={house}
+                    alt=""
+                  />
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="September 12th, 2021"
+                  iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+                  icon={<Favorite />}
+                >
+                  <h3 className="vertical-timeline-element-title">Engagement Photoshoot</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Forest Park, St. Louis</h4>
+                  <img
+                    className="vertical-timeline-element-image"
+                    src={laurenJohn}
+                    alt=""
+                  />
+                </VerticalTimelineElement>
+                <VerticalTimelineElement
+                  className="vertical-timeline-element--work"
+                  date="October 15th, 2022"
+                  iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
+                  icon={<Favorite />}
+                >
+                  <h3 className="vertical-timeline-element-title">Coming Soon, Wedding Day</h3>
+                  <h4 className="vertical-timeline-element-subtitle">Willow, St. Louis</h4>
                   <img
                     className="vertical-timeline-element-image"
                     src={laurenJohn}
