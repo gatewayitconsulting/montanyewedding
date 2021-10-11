@@ -25,7 +25,7 @@ import SectionPhotographer from "./Sections/SectionPhotographer.js";
 
 // Makeup artist Set by Dren
 
-import backgroundImage from "../../assets/img/laurenjohn/vendors-preview.jpeg";
+import backgroundImage from "../../assets/img/vendors.jpeg";
 
 // import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";

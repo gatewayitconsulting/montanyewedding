@@ -32,7 +32,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
-import backgroundImage from "../../assets/img/stock-photo-rsvp.jpeg";
+import backgroundImage from "../../assets/img/rsvp.jpeg";
 
 import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
@@ -82,110 +82,110 @@ export default function ContactUsPage() {
             </h2>
             <GridContainer>
               <GridItem xs={12}>
-              <Card className={classes.card1}>
-                <form>
-                  <CardBody>
-                    <GridContainer>
-                      <GridItem xs={12} sm={6} md={6}>
-                        <CustomInput
-                          labelText="First Name"
-                          id="first"
-                          formControlProps={{
-                            fullWidth: true
-                          }}
-                        />
-                      </GridItem>
-                      <GridItem xs={12} sm={6} md={6}>
-                        <CustomInput
-                          labelText="Last Name"
-                          id="last"
-                          formControlProps={{
-                            fullWidth: true
-                          }}
-                        />
-                      </GridItem>
-                    </GridContainer>
-                    <CustomInput
-                      labelText="Email Address"
-                      id="email-address"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                    <div
-                      className={
-                        classes.checkboxAndRadio +
-                        " " +
-                        classes.checkboxAndRadioHorizontal
-                      }
-                      style={{ marginTop: ".15em" }}
-                    >
-                      <FormControlLabel
-                        control={
-                          <Checkbox
-                            tabIndex={-1}
-                            onClick={() => handleGuest(21)}
-                            checkedIcon={<Check className={classes.checkedIcon} />}
-                            icon={<Check className={classes.uncheckedIcon} />}
-                            classes={{
-                              checked: classes.checked,
-                              root: classes.checkRoot
-                            }}
-                          />
-                        }
-                        classes={{ label: classes.label, root: classes.labelRoot }}
-                        label="Bringing a guest?"
-                      />
-                    </div>
-                    <div id="guestInformation" className={classes.guestComing}>
+                <Card className={classes.card1}>
+                  <form>
+                    <CardBody>
                       <GridContainer>
-                        <GridItem
-                          xs={12}
-                          sm={6}
-                        >
+                        <GridItem xs={12} sm={6} md={6}>
                           <CustomInput
-                            labelText="Guest First Name"
-                            id="guest-first-name"
+                            labelText="First Name"
+                            id="first"
                             formControlProps={{
                               fullWidth: true
                             }}
                           />
                         </GridItem>
-                        <GridItem
-                          xs={12}
-                          sm={6}
-                        >
+                        <GridItem xs={12} sm={6} md={6}>
                           <CustomInput
-                            labelText="Guest Last Name"
-                            id="guest-last-name"
+                            labelText="Last Name"
+                            id="last"
                             formControlProps={{
                               fullWidth: true
                             }}
                           />
                         </GridItem>
                       </GridContainer>
-                    </div>
-                    <CustomInput
-                      labelText="Food allergies or alternative diets?"
-                      id="food-information"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Extra notes?"
-                      id="message"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        multiline: true,
-                        rows: 5
-                      }}
-                    />
-                  </CardBody>
-                  <CardFooter className={classes.justifyContentBetween}>
-                    {/* <FormControlLabel
+                      <CustomInput
+                        labelText="Email Address"
+                        id="email-address"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                      />
+                      <div
+                        className={
+                          classes.checkboxAndRadio +
+                          " " +
+                          classes.checkboxAndRadioHorizontal
+                        }
+                        style={{ marginTop: ".15em" }}
+                      >
+                        <FormControlLabel
+                          control={
+                            <Checkbox
+                              tabIndex={-1}
+                              onClick={() => handleGuest(21)}
+                              checkedIcon={<Check className={classes.checkedIcon} />}
+                              icon={<Check className={classes.uncheckedIcon} />}
+                              classes={{
+                                checked: classes.checked,
+                                root: classes.checkRoot
+                              }}
+                            />
+                          }
+                          classes={{ label: classes.label, root: classes.labelRoot }}
+                          label="Bringing a guest?"
+                        />
+                      </div>
+                      <div id="guestInformation" className={classes.guestComing}>
+                        <GridContainer>
+                          <GridItem
+                            xs={12}
+                            sm={6}
+                          >
+                            <CustomInput
+                              labelText="Guest First Name"
+                              id="guest-first-name"
+                              formControlProps={{
+                                fullWidth: true
+                              }}
+                            />
+                          </GridItem>
+                          <GridItem
+                            xs={12}
+                            sm={6}
+                          >
+                            <CustomInput
+                              labelText="Guest Last Name"
+                              id="guest-last-name"
+                              formControlProps={{
+                                fullWidth: true
+                              }}
+                            />
+                          </GridItem>
+                        </GridContainer>
+                      </div>
+                      <CustomInput
+                        labelText="Food allergies or alternative diets?"
+                        id="food-information"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                      />
+                      <CustomInput
+                        labelText="Extra notes?"
+                        id="message"
+                        formControlProps={{
+                          fullWidth: true
+                        }}
+                        inputProps={{
+                          multiline: true,
+                          rows: 5
+                        }}
+                      />
+                    </CardBody>
+                    <CardFooter className={classes.justifyContentBetween}>
+                      {/* <FormControlLabel
                       control={
                         <Checkbox
                           tabIndex={-1}
@@ -203,18 +203,18 @@ export default function ContactUsPage() {
                       classes={{ label: classes.label }}
                       label="I'm not a robot"
                     /> */}
-                    <Button color="dark" className={classes.pullRight}>
-                      Send RSVP
-                    </Button>
-                  </CardFooter>
-                </form>
-              </Card>
-            </GridItem>
-          </GridContainer>
+                      <Button color="dark" className={classes.pullRight}>
+                        Send RSVP
+                      </Button>
+                    </CardFooter>
+                  </form>
+                </Card>
+              </GridItem>
+            </GridContainer>
+          </div>
         </div>
       </div>
-    </div>
-    <Footer
+      <Footer
         theme="dark"
         content={
           <div>
@@ -231,7 +231,7 @@ export default function ContactUsPage() {
             </div>
             <div className="footer-privacy-policy">
               <Link to="/privacy-policy" title="To privacy policy page">
-                  Privacy Policy
+                Privacy Policy
               </Link>
             </div>
           </div>
@@ -253,6 +253,6 @@ export default function ContactUsPage() {
           </GridItem>
         </GridContainer>
       </Footer>
-  </div>
+    </div>
   );
 }
