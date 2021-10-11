@@ -26,7 +26,10 @@ import {
 const buttonStyle = {
   button: {
     minHeight: "auto",
-    minWidth: "auto",
+    minWidth: "100%",
+    "@media (min-width: 576px)": {
+      minWidth: "auto",
+    },
     backgroundColor: grayColor[0],
     color: whiteColor,
     boxShadow:

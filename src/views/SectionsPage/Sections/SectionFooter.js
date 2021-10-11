@@ -19,24 +19,25 @@ export default function SectionFooter() {
   return (
     <div className={classes.section}>
       <div>
-      <Footer
+        <Footer
           theme="dark"
           content={
             <div>
               <div className="footer-brand">
                 Copyright &copy; {1900 + new Date().getYear()}{" "}
                 <a
-                  href="https://gatewayitconsulting.com"
+                  href="https://montanyewedding.com"
                   target="_blank"
                   className={classes.aClasses}
+                  title="To Montanye Wedding website"
                 >
-                  Gateway IT Consulting
+                  Montanye Wedding
                 </a>{" "}
                 All Rights Reserved.
               </div>
               <div className="footer-privacy-policy">
                 <Link to="/privacy-policy" title="To privacy policy page">
-                    Privacy Policy
+                  Privacy Policy
                 </Link>
               </div>
             </div>

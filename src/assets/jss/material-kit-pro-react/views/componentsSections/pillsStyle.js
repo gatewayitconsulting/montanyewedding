@@ -1,6 +1,6 @@
-import { 
+import {
   container,
-  title 
+  title
 } from "assets/jss/material-kit-pro-react.js";
 
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
@@ -21,7 +21,14 @@ const pillsStyle = {
     textAlign: "center"
   },
   imageTitle: {
-    textAlign: "center"
+    textAlign: "center",
+    marginTop: ".75em",
+    marginBottom: "2em",
+    fontSize: "1.5rem",
+    "@media (min-width: 576px)": {
+      marginBottom: "inherit",
+      fontSize: "inherit"
+    }
   },
   ...imagesStyles
 };
