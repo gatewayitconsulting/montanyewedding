@@ -25,7 +25,7 @@ import vendorsStyle from "assets/jss/material-kit-pro-react/views/vendorsStyle.j
 
 const useStyles = makeStyles(vendorsStyle);
 
-export default function SectionFlorist({ ...rest }) {
+export default function SectionMakeup({ ...rest }) {
     const classes = useStyles();
     const settings = {
         dots: true,
@@ -54,7 +54,7 @@ export default function SectionFlorist({ ...rest }) {
                                     }
                                 >
                                     <h2 className={classes.title + " " + classes.customTitle}>
-                                        Florist - Twisted Willow Design
+                                        Makeup Artist - Set by Dren
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
@@ -67,29 +67,22 @@ export default function SectionFlorist({ ...rest }) {
                                     <h3>Socials</h3>
                                 </GridItem>
                                 <GridItem xs={12} sm={2}>
-                                    <a href="https://www.facebook.com/TwistedWillow/" target="_blank" rel="noopener" title="To Twisted Willow's Facebook">
+                                    <a href="https://www.facebook.com/SetbyDren/" target="_blank" rel="noopener" title="To Set by Dren's Facebook">
                                         <Button color="facebook" className={classes.facebookColor}>
                                             <FacebookIcon /> Connect
                                         </Button>
                                     </a>
                                 </GridItem>
                                 <GridItem xs={12} sm={2}>
-                                    <a href="https://www.instagram.com/TwistedWillowDesign/" target="_blank" rel="noopener" title="To Twisted Willow's Instagram">
+                                    <a href="https://www.instagram.com/setbydren/" target="_blank" rel="noopener" title="To Set by Dren's Instagram">
                                         <Button className={classes.instagramColor}>
                                             <InstagramIcon /> Connect
                                         </Button>
                                     </a>
                                 </GridItem>
                                 <GridItem xs={12} sm={2}>
-                                    <a href="https://www.pinterest.com/twistedwillowco/_created/" target="_blank" rel="noopener" title="To Twisted Willow's Pinterest">
-                                        <Button className={classes.pinterestColor}>
-                                            <PinterestIcon /> Connect
-                                        </Button>
-                                    </a>
-                                </GridItem>
-                                <GridItem xs={12} sm={2}>
-                                    <a href="https://twistedwillow.co/" target="_blank" rel="noopener">
-                                        <Button className={classes.websiteColor} title="To Twisted Willow's website">
+                                    <a href="https://www.setbydren.com/" target="_blank" rel="noopener">
+                                        <Button className={classes.websiteColor} title="To Set by Dren's website">
                                             <ExploreIcon /> See website
                                         </Button>
                                     </a>

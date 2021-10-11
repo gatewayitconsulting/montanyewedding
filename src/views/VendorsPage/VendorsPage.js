@@ -21,7 +21,8 @@ import Footer from "components/Footer/Footer.js";
 
 import SectionFlorist from "./Sections/SectionFlorist.js";
 import SectionPhotographer from "./Sections/SectionPhotographer.js";
-// import SectionDJ from "./Sections/SectionDJ.js";
+import SectionMakeup from "./Sections/SectionMakeup.js";
+import SectionDJ from "./Sections/SectionDJ.js";
 
 // Makeup artist Set by Dren
 
@@ -64,8 +65,11 @@ export default function VendorsPage() {
                             <GridItem xs={12}>
                                 <SectionFlorist style={{ marginBottom: "4rem" }} />
                                 <hr />
-                                <SectionPhotographer />
-                                {/* <SectionDJ /> */}
+                                <SectionPhotographer style={{ marginBottom: "4rem" }} />
+                                <hr />
+                                <SectionMakeup style={{ marginBottom: "4rem" }} />
+                                <hr />
+                                <SectionDJ />
                             </GridItem>
                         </GridContainer>
                     </div>

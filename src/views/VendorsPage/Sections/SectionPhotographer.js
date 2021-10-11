@@ -57,7 +57,7 @@ export default function SectionFlorist({ ...rest }) {
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
-                                        Twisted Willow Design is a luxury St. Louis wedding florist that provides a personalized approach to floral design that gets to the essence of who you are, and what you envision for the most amazing day of your life. Then we bring it to life for you!
+                                        About Copy
                                     </p>
                                 </GridItem>
                             </GridContainer>
