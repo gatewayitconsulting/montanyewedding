@@ -9,6 +9,9 @@ import {
 
 import customCheckboxRadioSwitch from "assets/jss/material-kit-pro-react/customCheckboxRadioSwitchStyle.js";
 
+import buttonInput from "assets/jss/material-kit-pro-react/components/buttonStyle.js";
+import dark from "assets/jss/material-kit-pro-react/components/buttonStyle.js";
+
 const contactUsStyle = {
   main,
   mainRaised,
@@ -16,6 +19,8 @@ const contactUsStyle = {
   mlAuto,
   description,
   ...customCheckboxRadioSwitch,
+  ...buttonInput,
+  ...dark,
   container: {
     ...container,
     maxWidth: "970px !important"

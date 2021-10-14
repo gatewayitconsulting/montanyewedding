@@ -2,43 +2,35 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
-// react components used to create a google map
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker
-} from "react-google-maps";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-
 import Check from "@material-ui/icons/Check";
-
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { TextField } from "@material-ui/core";
 
+// plugins
+import { useForm } from "react-hook-form";
+
+// core components
 import Parallax from "components/Parallax/Parallax.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
-import Button from "components/CustomButtons/Button.js";
-
-// core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
+// images
 import backgroundImage from "../../assets/img/rsvp.jpeg";
 
-import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
+// styles
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
 
 const useStyles = makeStyles(contactUsStyle);
-
 
 export default function ContactUsPage() {
   const [checked, setChecked] = React.useState([24, 22]);
@@ -47,6 +39,22 @@ export default function ContactUsPage() {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = data => console.log(data);
+
+  const intialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    diet: "",
+    notes: "",
+    guestFirstName: "",
+    guestLastName: ""
+  };
+
   const handleGuest = value => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -83,129 +91,130 @@ export default function ContactUsPage() {
             <GridContainer>
               <GridItem xs={12}>
                 <Card className={classes.card1}>
-                  <form>
+                  <form onSubmit={handleSubmit(onSubmit)}>
                     <CardBody>
                       <GridContainer>
                         <GridItem xs={12} sm={6} md={6}>
-                          <CustomInput
-                            labelText="First Name"
+                          <TextField
+                            defaultValue={intialValues.firstName}
                             id="first"
-                            formControlProps={{
-                              fullWidth: true
-                            }}
+                            label="First Name"
+                            type="text"
+                            {...register("firstName", { required: true })}
+                            style={{ width: '100%' }}
                           />
+                          {errors.firstName && <span>This field is required</span>}
                         </GridItem>
                         <GridItem xs={12} sm={6} md={6}>
-                          <CustomInput
-                            labelText="Last Name"
+                          <TextField
+                            defaultValue={intialValues.lastName}
                             id="last"
-                            formControlProps={{
-                              fullWidth: true
-                            }}
+                            label="Last Name"
+                            type="text"
+                            {...register("lastName", { required: true })}
+                            style={{ width: '100%' }}
+                          />
+                          {errors.lastName && <p>This field is required</p>}
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <TextField
+                            defaultValue={intialValues.email}
+                            id="email-address"
+                            label="Email Address"
+                            type="email"
+                            {...register("email", { required: true })}
+                            style={{ width: '100%' }}
+                          />
+                          {errors.email && <p>This field is required</p>}
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <TextField
+                            defaultValue={intialValues.phone}
+                            id="phone-number"
+                            label="Phone Number"
+                            type="phone"
+                            {...register("phone", { required: true })}
+                            style={{ width: '100%' }}
+                          />
+                          {errors.phone && <p>This field is required</p>}
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '1em' }}>
+                          <div
+                            className={
+                              classes.checkboxAndRadio +
+                              " " +
+                              classes.checkboxAndRadioHorizontal
+                            }
+                            style={{ marginTop: ".15em" }}
+                          >
+                            <FormControlLabel
+                              control={
+                                <Checkbox
+                                  tabIndex={-1}
+                                  onClick={() => handleGuest(21)}
+                                  checkedIcon={<Check className={classes.checkedIcon} />}
+                                  icon={<Check className={classes.uncheckedIcon} />}
+                                  classes={{
+                                    checked: classes.checked,
+                                    root: classes.checkRoot
+                                  }}
+                                />
+                              }
+                              classes={{ label: classes.label, root: classes.labelRoot }}
+                              label="Bringing a guest?"
+                            />
+                          </div>
+                        </GridItem>
+                        <GridItem xs={12}>
+                          <div id="guestInformation" className={classes.guestComing}>
+                            <GridContainer>
+                              <GridItem xs={12} sm={6}>
+                                <TextField
+                                  defaultValue={intialValues.guestFirstName}
+                                  id="guestFirst"
+                                  label="Guest First Name"
+                                  type="text"
+                                  {...register("guestFirstName")}
+                                  style={{ width: '100%' }}
+                                />
+                              </GridItem>
+                              <GridItem xs={12} sm={6}>
+                                <TextField
+                                  defaultValue={intialValues.guestLastName}
+                                  id="guestLast"
+                                  label="Guest Last Name"
+                                  type="text"
+                                  {...register("guestLastName")}
+                                  style={{ width: '100%' }}
+                                />
+                              </GridItem>
+                            </GridContainer>
+                          </div>
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <TextField
+                            defaultValue={intialValues.diet}
+                            id="diet"
+                            label="Food allergies or alternative diets?"
+                            type="text"
+                            {...register("diet")}
+                            style={{ width: '100%' }}
+                          />
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <TextField
+                            defaultValue={intialValues.notes}
+                            id="notes"
+                            label="Anything else you'd like to tell us?"
+                            type="text"
+                            {...register("notes")}
+                            style={{ width: '100%' }}
                           />
                         </GridItem>
                       </GridContainer>
-                      <CustomInput
-                        labelText="Email Address"
-                        id="email-address"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                      />
-                      <div
-                        className={
-                          classes.checkboxAndRadio +
-                          " " +
-                          classes.checkboxAndRadioHorizontal
-                        }
-                        style={{ marginTop: ".15em" }}
-                      >
-                        <FormControlLabel
-                          control={
-                            <Checkbox
-                              tabIndex={-1}
-                              onClick={() => handleGuest(21)}
-                              checkedIcon={<Check className={classes.checkedIcon} />}
-                              icon={<Check className={classes.uncheckedIcon} />}
-                              classes={{
-                                checked: classes.checked,
-                                root: classes.checkRoot
-                              }}
-                            />
-                          }
-                          classes={{ label: classes.label, root: classes.labelRoot }}
-                          label="Bringing a guest?"
-                        />
-                      </div>
-                      <div id="guestInformation" className={classes.guestComing}>
-                        <GridContainer>
-                          <GridItem
-                            xs={12}
-                            sm={6}
-                          >
-                            <CustomInput
-                              labelText="Guest First Name"
-                              id="guest-first-name"
-                              formControlProps={{
-                                fullWidth: true
-                              }}
-                            />
-                          </GridItem>
-                          <GridItem
-                            xs={12}
-                            sm={6}
-                          >
-                            <CustomInput
-                              labelText="Guest Last Name"
-                              id="guest-last-name"
-                              formControlProps={{
-                                fullWidth: true
-                              }}
-                            />
-                          </GridItem>
-                        </GridContainer>
-                      </div>
-                      <CustomInput
-                        labelText="Food allergies or alternative diets?"
-                        id="food-information"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                      />
-                      <CustomInput
-                        labelText="Extra notes?"
-                        id="message"
-                        formControlProps={{
-                          fullWidth: true
-                        }}
-                        inputProps={{
-                          multiline: true,
-                          rows: 5
-                        }}
-                      />
                     </CardBody>
-                    <CardFooter className={classes.justifyContentBetween}>
-                      {/* <FormControlLabel
-                      control={
-                        <Checkbox
-                          tabIndex={-1}
-                          onClick={() => handleToggle(1)}
-                          checkedIcon={
-                            <Check className={classes.checkedIcon} />
-                          }
-                          icon={<Check className={classes.uncheckedIcon} />}
-                          classes={{
-                            checked: classes.checked,
-                            root: classes.checkRoot
-                          }}
-                        />
-                      }
-                      classes={{ label: classes.label }}
-                      label="I'm not a robot"
-                    /> */}
-                      <Button color="dark" className={classes.pullRight}>
-                        Send RSVP
-                      </Button>
+                    <CardFooter className={classes.justifyContentBetween} style={{ marginTop: '.5em' }}>
+                      <input type="submit" className={classes.buttonInput} />
                     </CardFooter>
                   </form>
                 </Card>

@@ -73,6 +73,7 @@ export default function SectionFeatures({ ...rest }) {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className={
+                    // eslint-disable-next-line
                     classes.rightAligned + "vertical-timeline-element--work" + "vertical-3"
                   }
                   date="October 18th, 2019"
@@ -103,6 +104,7 @@ export default function SectionFeatures({ ...rest }) {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className={
+                    // eslint-disable-next-line
                     "vertical-timeline-element--work" + "vertical-5"
                   }
                   date="September 12th, 2021"
