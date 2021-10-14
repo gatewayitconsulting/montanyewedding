@@ -21,8 +21,10 @@ const useStyles = makeStyles(sectionsPageStyle);
 
 export default function SectionsPage() {
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.addEventListener('load', (event) => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    });
   });
   const classes = useStyles();
   return (

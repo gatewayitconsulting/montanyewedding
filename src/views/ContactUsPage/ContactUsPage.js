@@ -1,14 +1,14 @@
 /*eslint-disable*/
 import React from "react";
+import { useState } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
-import Check from "@material-ui/icons/Check";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
+import { Switch } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 // plugins
 import { useForm } from "react-hook-form";
@@ -33,10 +33,11 @@ import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsSty
 const useStyles = makeStyles(contactUsStyle);
 
 export default function ContactUsPage() {
-  const [checked, setChecked] = React.useState([24, 22]);
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.addEventListener('load', (event) => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    });
   });
   const classes = useStyles();
 
@@ -55,21 +56,8 @@ export default function ContactUsPage() {
     guestLastName: ""
   };
 
-  const handleGuest = value => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+  const [isChecked, setIsChecked] = useState(false);
 
-    if (currentIndex === -1) {
-      newChecked.push(value);
-      var guestInformation = document.getElementById("guestInformation");
-      guestInformation.style.display = "block";
-    } else {
-      newChecked.splice(currentIndex, 1);
-      var guestInformation = document.getElementById("guestInformation");
-      guestInformation.style.display = "none";
-    }
-    // setChecked(newChecked);
-  };
   return (
     <div>
       <Header
@@ -138,60 +126,39 @@ export default function ContactUsPage() {
                           />
                           {errors.phone && <p>This field is required</p>}
                         </GridItem>
-                        <GridItem xs={12} style={{ marginTop: '1em' }}>
-                          <div
-                            className={
-                              classes.checkboxAndRadio +
-                              " " +
-                              classes.checkboxAndRadioHorizontal
-                            }
-                            style={{ marginTop: ".15em" }}
-                          >
-                            <FormControlLabel
-                              control={
-                                <Checkbox
-                                  tabIndex={-1}
-                                  onClick={() => handleGuest(21)}
-                                  checkedIcon={<Check className={classes.checkedIcon} />}
-                                  icon={<Check className={classes.uncheckedIcon} />}
-                                  classes={{
-                                    checked: classes.checked,
-                                    root: classes.checkRoot
-                                  }}
-                                />
-                              }
-                              classes={{ label: classes.label, root: classes.labelRoot }}
-                              label="Bringing a guest?"
-                            />
-                          </div>
-                        </GridItem>
-                        <GridItem xs={12}>
-                          <div id="guestInformation" className={classes.guestComing}>
-                            <GridContainer>
-                              <GridItem xs={12} sm={6}>
-                                <TextField
-                                  defaultValue={intialValues.guestFirstName}
-                                  id="guestFirst"
-                                  label="Guest First Name"
-                                  type="text"
-                                  {...register("guestFirstName")}
-                                  style={{ width: '100%' }}
-                                />
-                              </GridItem>
-                              <GridItem xs={12} sm={6}>
-                                <TextField
-                                  defaultValue={intialValues.guestLastName}
-                                  id="guestLast"
-                                  label="Guest Last Name"
-                                  type="text"
-                                  {...register("guestLastName")}
-                                  style={{ width: '100%' }}
-                                />
-                              </GridItem>
-                            </GridContainer>
-                          </div>
-                        </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <Typography style={{ display: 'inline' }}>Guest Coming?</Typography>
+                          <Switch style={{ display: 'inline' }} checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                          {isChecked &&
+                            <GridItem xs={12}>
+                              <div id="guestInformation" className={classes.guestComing}>
+                                <GridContainer>
+                                  <GridItem xs={12} sm={6} style={{ paddingLeft: '0' }}>
+                                    <TextField
+                                      defaultValue={intialValues.guestFirstName}
+                                      id="guestFirst"
+                                      label="Guest First Name"
+                                      type="text"
+                                      {...register("guestFirstName")}
+                                      style={{ width: '100%' }}
+                                    />
+                                  </GridItem>
+                                  <GridItem xs={12} sm={6} style={{ paddingRight: '0' }}>
+                                    <TextField
+                                      defaultValue={intialValues.guestLastName}
+                                      id="guestLast"
+                                      label="Guest Last Name"
+                                      type="text"
+                                      {...register("guestLastName")}
+                                      style={{ width: '100%' }}
+                                    />
+                                  </GridItem>
+                                </GridContainer>
+                              </div>
+                            </GridItem>
+                          }
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '1em' }}>
                           <TextField
                             defaultValue={intialValues.diet}
                             id="diet"

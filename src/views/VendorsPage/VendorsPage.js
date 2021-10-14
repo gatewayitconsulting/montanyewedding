@@ -36,8 +36,10 @@ const useStyles = makeStyles(contactUsStyle);
 
 export default function VendorsPage() {
     React.useEffect(() => {
-        window.scrollTo(0, 0);
-        document.body.scrollTop = 0;
+        window.addEventListener('load', (event) => {
+            window.scrollTo(0, 0);
+            document.body.scrollTop = 0;
+        });
     });
     const classes = useStyles();
     return (

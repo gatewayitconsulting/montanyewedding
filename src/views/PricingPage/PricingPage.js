@@ -17,8 +17,10 @@ const useStyles = makeStyles(styles, pricingStyle);
 
 export default function PricingPage() {
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.addEventListener('load', (event) => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    });
   });
   const classes = useStyles();
   return (

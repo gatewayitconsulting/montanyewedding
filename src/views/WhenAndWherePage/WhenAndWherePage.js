@@ -109,8 +109,10 @@ const API_KEY = process.env.MAPS_API_KEY;
 
 export default function WhenAndWherePage() {
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
+    window.addEventListener('load', (event) => {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    });
   });
   const classes = useStyles();
   return (
