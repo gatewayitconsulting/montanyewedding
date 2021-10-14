@@ -11,8 +11,8 @@ import Button from "components/CustomButtons/Button.js";
 import Carousel from "react-slick";
 
 // images
-import image1 from "assets/img/vendors/flowers1.jpeg";
-import image2 from "assets/img/vendors/flowers2.jpeg";
+import image1 from "assets/img/vendors/tawny1final.jpg";
+import image2 from "assets/img/vendors/tawny2final.jpg";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -57,7 +57,7 @@ export default function SectionFlorist({ ...rest }) {
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
-                                        About Copy
+                                        Tawny Ballard is a St. Louis-based traveling wedding photographer who documents genuine moments for couples, no matter who they love. Her photography style is artful, emotive, and intimate. She offers the perfect mix of posed (but never stiff) portraits that will be returned to time and time again, and honest, intentional photojournalism style documentation of wedding day stories.
                                     </p>
                                 </GridItem>
                             </GridContainer>
@@ -92,11 +92,6 @@ export default function SectionFlorist({ ...rest }) {
                                     <Carousel {...settings}>
                                         <div>
                                             <img src={image1} alt="First slide" className="slick-image" />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Yellowstone National Park, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                         <div>
                                             <img
@@ -104,11 +99,6 @@ export default function SectionFlorist({ ...rest }) {
                                                 alt="Second slide"
                                                 className="slick-image"
                                             />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Somewhere Beyond, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                     </Carousel>
                                 </GridItem>

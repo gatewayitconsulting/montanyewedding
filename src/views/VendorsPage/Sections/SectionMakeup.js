@@ -11,13 +11,12 @@ import Button from "components/CustomButtons/Button.js";
 import Carousel from "react-slick";
 
 // images
-import image1 from "assets/img/vendors/flowers1.jpeg";
-import image2 from "assets/img/vendors/flowers2.jpeg";
+import image1 from "assets/img/vendors/dren1final.jpg";
+import image2 from "assets/img/vendors/dren2final.jpg";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
 import ExploreIcon from '@material-ui/icons/Explore';
 
 // Styles
@@ -93,11 +92,6 @@ export default function SectionMakeup({ ...rest }) {
                                     <Carousel {...settings}>
                                         <div>
                                             <img src={image1} alt="First slide" className="slick-image" />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Yellowstone National Park, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                         <div>
                                             <img
@@ -105,11 +99,6 @@ export default function SectionMakeup({ ...rest }) {
                                                 alt="Second slide"
                                                 className="slick-image"
                                             />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Somewhere Beyond, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                     </Carousel>
                                 </GridItem>

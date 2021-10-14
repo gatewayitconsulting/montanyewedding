@@ -11,11 +11,12 @@ import featuresStyle from "assets/jss/material-kit-pro-react/views/sectionsSecti
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import laurenJohn from "assets/img/laurenjohn/timeline/lauren-john.jpg";
-import artMuseum from "assets/img/laurenjohn/timeline/art-musuem.jpg";
-import proposal from "assets/img/laurenjohn/timeline/proposal.jpg";
-import house from "assets/img/laurenjohn/timeline/house.jpg";
-import johnAsksLaurenOut from "assets/img/laurenjohn/timeline/johnAsksLaurenOut.jpg";
+import laurenJohn from "assets/img/timeline/lauren-john.jpg";
+import artMuseum from "assets/img/timeline/art-musuem.jpg";
+import proposal from "assets/img/timeline/proposal.jpg";
+import house from "assets/img/timeline/house.jpg";
+import johnAsksLaurenOut from "assets/img/timeline/johnAsksLaurenOut.jpg";
+import engagement from "assets/img/timeline/engagement1.jpg";
 
 const useStyles = makeStyles(featuresStyle);
 
@@ -72,7 +73,7 @@ export default function SectionFeatures({ ...rest }) {
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
                   className={
-                    classes.rightAligned + "vertical-timeline-element--work"
+                    classes.rightAligned + "vertical-timeline-element--work" + "vertical-3"
                   }
                   date="October 18th, 2019"
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
@@ -101,16 +102,18 @@ export default function SectionFeatures({ ...rest }) {
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
-                  className="vertical-timeline-element--work"
+                  className={
+                    "vertical-timeline-element--work" + "vertical-5"
+                  }
                   date="September 12th, 2021"
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
                   icon={<Favorite />}
                 >
                   <h3 className="vertical-timeline-element-title">Engagement Photoshoot</h3>
-                  <h4 className="vertical-timeline-element-subtitle">Forest Park, St. Louis</h4>
+                  <h4 className="vertical-timeline-element-subtitle">Blueprint Coffee &amp; Forest Park, St. Louis</h4>
                   <img
                     className="vertical-timeline-element-image"
-                    src={laurenJohn}
+                    src={engagement}
                     alt=""
                   />
                 </VerticalTimelineElement>

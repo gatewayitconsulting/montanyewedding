@@ -11,7 +11,8 @@ import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-import fallImage from "assets/img/laurenjohn/fall-image.jpg";
+// import fallImage from "assets/img/laurenjohn/fall-image.jpg";
+import engagement from "assets/img/laurenjohn/engagement1.jpg";
 import proposalImage from "assets/img/laurenjohn/proposal.JPG";
 import engagementImage from "assets/img/laurenjohn/engagement2.jpg";
 
@@ -39,7 +40,7 @@ export default function SectionHeaders({ ...rest }) {
           <div>
             <div
               className={classes.pageHeader}
-              style={{ backgroundImage: `url("${fallImage}")` }}
+              style={{ backgroundImage: `url("${engagement}")` }}
             >
               <div className={classes.container}>
                 <GridContainer>

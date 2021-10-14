@@ -21,3 +21,30 @@
         margin-top: 1em;
     }
 }
+
+.vertical-timeline-element-content {
+    border-radius: unset !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+    padding: 0 !important;
+    .vertical-timeline-element-image {
+        border-radius: .25em !important;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .undefinedvertical-timeline-element--workvertical-3 {
+        .vertical-timeline-element-content {
+            .vertical-timeline-element-date {
+                left: 93% !important;
+            }
+        }
+    }
+    .vertical-timeline-element--workvertical-5 {
+        .vertical-timeline-element-content {
+            .vertical-timeline-element-date {
+                left: 96% !important;
+            }
+        }
+    }
+}

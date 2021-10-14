@@ -147,6 +147,20 @@
   to {
     -webkit-transform: translate(0, 0px); } }
 
+.footer-brand {
+  text-align: left;
+  float: left; }
+
+.footer-privacy-policy {
+  text-align: left;
+  float: left;
+  margin-top: .5em; }
+  @media (min-width: 768px) {
+    .footer-privacy-policy {
+      text-align: right;
+      float: right;
+      margin-top: 0; } }
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1721,29 +1735,38 @@ button.slick-arrow.slick-next {
   .react-tagsinput .react-tagsinput-tag.default {
     background-color: #999; }
 
-.vertical-timeline-element-date:first-child,
+.vertical-timeline-element:first-child .vertical-timeline-element-date {
+  text-align: left !important; }
+
 .vertical-timeline-element-date:nth-child(even) {
   text-align: left !important; }
 
-.vertical-timeline-element-title,
-.vertical-timeline-element-subtitle,
-.vertical-timeline-element-copy,
-.vertical-timeline-element-date {
-  color: #000000; }
+.vertical-timeline-element .vertical-timeline-element-title,
+.vertical-timeline-element .vertical-timeline-element-subtitle,
+.vertical-timeline-element .vertical-timeline-element-copy,
+.vertical-timeline-element .vertical-timeline-element-date {
+  color: #000000;
+  opacity: 1; }
 
-.vertical-timeline-element-image {
-  width: 80%;
-  margin-left: 2em;
-  margin-top: 2em; }
-  @media (min-width: 768px) {
-    .vertical-timeline-element-image {
-      margin-left: 5em;
-      margin-top: 3em;
-      width: 75%; } }
-  @media (min-width: 960px) {
-    .vertical-timeline-element-image {
-      margin-top: 0;
-      width: 100%; } }
+.vertical-timeline-element .vertical-timeline-element-image {
+  width: 100%;
+  margin-top: 1em; }
+
+.vertical-timeline-element-content {
+  border-radius: unset !important;
+  -webkit-box-shadow: unset !important;
+  box-shadow: unset !important;
+  padding: 0 !important; }
+  .vertical-timeline-element-content .vertical-timeline-element-image {
+    border-radius: .25em !important; }
+
+@media only screen and (min-width: 1170px) {
+  .undefinedvertical-timeline-element--workvertical-3 .vertical-timeline-element-content .vertical-timeline-element-date {
+    left: 93% !important; }
+  .vertical-timeline-element--workvertical-5 .vertical-timeline-element-content .vertical-timeline-element-date {
+    left: 96% !important; } }
 
 .d-none {
   display: none !important; }
+
+/*# sourceMappingURL=material-kit-pro-react.css.map */
