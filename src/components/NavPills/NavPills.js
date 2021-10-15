@@ -26,7 +26,7 @@ export default function NavPills(props) {
   const handleChangeIndex = index => {
     setActive(index);
   };
-  const { tabs, direction, color, horizontal, alignCenter } = props;
+  const { tabs, direction, color, horizontal } = props;
   const classes = useStyles();
   const flexContainerClasses = classNames({
     [classes.flexContainer]: true,
@@ -42,7 +42,7 @@ export default function NavPills(props) {
       }}
       value={active}
       onChange={handleChange}
-      centered={alignCenter}
+      centered={true}
     >
       {tabs.map((prop, key) => {
         var icon = {};
@@ -127,6 +127,5 @@ NavPills.propTypes = {
   horizontal: PropTypes.shape({
     tabsGrid: PropTypes.object,
     contentGrid: PropTypes.object
-  }),
-  alignCenter: PropTypes.bool
+  })
 };

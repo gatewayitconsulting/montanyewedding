@@ -9,6 +9,7 @@ import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
 import pillsStyle from "assets/jss/material-kit-pro-react/views/componentsSections/pillsStyle.js";
 
+// images
 import bobbyImage from "assets/img/faces/bobby.jpg";
 import seanImage from "assets/img/faces/sean.jpg";
 import amandaImage from "assets/img/faces/amanda.jpg";
@@ -38,7 +39,6 @@ export default function SectionWeddingParty() {
               </h2>
               <NavPills
                 color="dark"
-                alignCenter="true"
                 tabs={[
                   {
                     tabButton: "Bridesmaids",
