@@ -85,6 +85,29 @@ const contactUsStyle = {
   label: {
     color: "#585858",
     fontSize: ".85rem"
+  },
+  last: {
+    marginTop: "1em",
+    "@media (min-width: 992px)": {
+      marginTop: "0"
+    }
+  },
+  guestFirst: {
+    paddingLeft: "0",
+    paddingRight: "0",
+    "@media (min-width: 992px)": {
+      marginTop: "0",
+      paddingRight: "15px"
+    }
+  },
+  guestLast: {
+    marginTop: "1em",
+    paddingLeft: "0",
+    paddingRight: "0",
+    "@media (min-width: 992px)": {
+      marginTop: "0",
+      paddingLeft: "15px"
+    }
   }
 };
 

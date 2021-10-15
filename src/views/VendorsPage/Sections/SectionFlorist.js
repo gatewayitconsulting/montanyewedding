@@ -11,8 +11,8 @@ import Button from "components/CustomButtons/Button.js";
 import Carousel from "react-slick";
 
 // images
-import image1 from "assets/img/vendors/twisted1.jpg";
-import image2 from "assets/img/vendors/twisted2.jpg";
+import image1 from "assets/img/vendors/twisted2.jpg";
+import image2 from "assets/img/vendors/twisted1.jpg";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';

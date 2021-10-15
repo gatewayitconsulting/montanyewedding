@@ -93,7 +93,7 @@ export default function ContactUsPage() {
                           />
                           {errors.firstName && <span style={{ color: 'red' }}>This field is required</span>}
                         </GridItem>
-                        <GridItem xs={12} sm={6} md={6}>
+                        <GridItem xs={12} sm={6} md={6} className={classes.last}>
                           <TextField
                             defaultValue={intialValues.lastName}
                             id="last"
@@ -144,7 +144,7 @@ export default function ContactUsPage() {
                             <GridItem xs={12}>
                               <div id="guestInformation" className={classes.guestComing}>
                                 <GridContainer>
-                                  <GridItem xs={12} sm={6} style={{ paddingLeft: '0' }}>
+                                  <GridItem xs={12} sm={6} className={classes.guestFirst}>
                                     <TextField
                                       defaultValue={intialValues.guestFirstName}
                                       id="guestFirst"
@@ -154,7 +154,7 @@ export default function ContactUsPage() {
                                       style={{ width: '100%' }}
                                     />
                                   </GridItem>
-                                  <GridItem xs={12} sm={6} style={{ paddingRight: '0' }}>
+                                  <GridItem xs={12} sm={6} className={classes.guestLast}>
                                     <TextField
                                       defaultValue={intialValues.guestLastName}
                                       id="guestLast"
