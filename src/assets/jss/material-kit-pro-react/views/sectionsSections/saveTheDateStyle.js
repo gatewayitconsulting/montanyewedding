@@ -67,13 +67,7 @@ const saveTheDateStyle = {
     display: "block"
   },
   socialLine: {
-    padding: ".9375rem 0px",
-    "& $border": {
-      borderRight: "1px solid rgba(" + hexToRgb(whiteColor) + ",0.12)"
-    },
-    "& $border:last-child": {
-      border: 0
-    }
+    padding: ".9375rem 0px"
   },
   marginTop20: {
     marginTop: "20px"

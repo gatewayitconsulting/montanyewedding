@@ -34,15 +34,15 @@ export default function SectionSaveTheDate({ ...rest }) {
           <div className={classes.container}>
             <GridContainer>
               <GridItem
-                  xs={12}
-                  sm={12}
-                  md={12}
-                  className={classNames(
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textCenter
-                  )}
-                >
+                xs={12}
+                sm={12}
+                md={12}
+                className={classNames(
+                  classes.mlAuto,
+                  classes.mrAuto,
+                  classes.textCenter
+                )}
+              >
                 <img
                   src={branchGraphic}
                   alt="Branch graphic."
@@ -67,18 +67,18 @@ export default function SectionSaveTheDate({ ...rest }) {
                   rel="noopener"
                   title="Directions to Willow Wedding Venue"
                   aria-label="Directions to Willow Wedding Venue">
-                    Willow Wedding Venue
-                  <br/>
+                  Willow Wedding Venue
+                  <br />
                   321 N 10th St, St. Louis, MO 63101
                 </a>
                 <h3 className={classes.title}>
-                  <DateCountdown 
+                  <DateCountdown
                     dateTo='October 15, 2022 00:00:00 GMT-06:00'
                     mostSignificantFigure="day"
                     numberOfFigures={4}>
                   </DateCountdown>
                 </h3>
-                </GridItem>
+              </GridItem>
             </GridContainer>
             <div
               className={classNames(
@@ -112,11 +112,11 @@ export default function SectionSaveTheDate({ ...rest }) {
                         placement="bottom"
                         classes={{ tooltip: classes.tooltip }}
                       >
-                      <i className="fab fa-microsoft" />
+                        <i className="fab fa-microsoft" />
                       </Tooltip>
                     </Button>
                   </GridItem>
-                  <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <GridItem xs={12} sm={2} md={2}>
                     <Button
                       color="white"
                       justIcon
@@ -133,11 +133,11 @@ export default function SectionSaveTheDate({ ...rest }) {
                         placement="bottom"
                         classes={{ tooltip: classes.tooltip }}
                       >
-                      <i className="fab fa-apple" />
+                        <i className="fab fa-apple" />
                       </Tooltip>
                     </Button>
                   </GridItem>
-                  <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <GridItem xs={12} sm={2} md={2}>
                     <Button
                       color="white"
                       justIcon
@@ -157,7 +157,7 @@ export default function SectionSaveTheDate({ ...rest }) {
                       </Tooltip>
                     </Button>
                   </GridItem>
-                  <GridItem xs={12} sm={2} md={2} className={classes.border}>
+                  <GridItem xs={12} sm={2} md={2}>
                     <Button
                       color="white"
                       justIcon
