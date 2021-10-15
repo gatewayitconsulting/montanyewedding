@@ -7,16 +7,20 @@ import Favorite from "@material-ui/icons/Favorite";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 
-import featuresStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/featuresStyle.js";
+// plugins
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import laurenJohn from "assets/img/timeline/lauren-john.jpg";
+// images
+import blackAndWhite from "assets/img/timeline/black-and-white.jpg";
 import artMuseum from "assets/img/timeline/art-musuem.jpg";
 import proposal from "assets/img/timeline/proposal.jpg";
 import house from "assets/img/timeline/house.jpg";
 import johnAsksLaurenOut from "assets/img/timeline/johnAsksLaurenOut.jpg";
 import engagement from "assets/img/timeline/engagement1.jpg";
+
+// styles
+import featuresStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/featuresStyle.js";
 
 const useStyles = makeStyles(featuresStyle);
 
@@ -129,7 +133,7 @@ export default function SectionFeatures({ ...rest }) {
                   <h4 className="vertical-timeline-element-subtitle">Willow, St. Louis</h4>
                   <img
                     className="vertical-timeline-element-image"
-                    src={laurenJohn}
+                    src={blackAndWhite}
                     alt=""
                   />
                 </VerticalTimelineElement>

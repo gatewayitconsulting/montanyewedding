@@ -11,8 +11,8 @@ import Button from "components/CustomButtons/Button.js";
 import Carousel from "react-slick";
 
 // images
-import image1 from "assets/img/vendors/flowers1.jpeg";
-import image2 from "assets/img/vendors/flowers2.jpeg";
+import image1 from "assets/img/vendors/twisted1.jpg";
+import image2 from "assets/img/vendors/twisted2.jpg";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -58,7 +58,7 @@ export default function SectionFlorist({ ...rest }) {
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
-                                        About Copy
+                                        Twisted Willow Design is a luxury St. Louis wedding florist that provides a bespoke approach to floral design that gets to the essence of who our clients are, and what they envision for the most amazing day of their lives.
                                     </p>
                                 </GridItem>
                             </GridContainer>
@@ -100,11 +100,6 @@ export default function SectionFlorist({ ...rest }) {
                                     <Carousel {...settings}>
                                         <div>
                                             <img src={image1} alt="First slide" className="slick-image" />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Yellowstone National Park, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                         <div>
                                             <img
@@ -112,11 +107,6 @@ export default function SectionFlorist({ ...rest }) {
                                                 alt="Second slide"
                                                 className="slick-image"
                                             />
-                                            <div className="slick-caption">
-                                                <h4>
-                                                    Somewhere Beyond, United States
-                                                </h4>
-                                            </div>
                                         </div>
                                     </Carousel>
                                 </GridItem>

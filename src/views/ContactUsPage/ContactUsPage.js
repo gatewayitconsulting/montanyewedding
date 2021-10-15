@@ -91,7 +91,7 @@ export default function ContactUsPage() {
                             {...register("firstName", { required: true })}
                             style={{ width: '100%' }}
                           />
-                          {errors.firstName && <span>This field is required</span>}
+                          {errors.firstName && <span style={{ color: 'red' }}>This field is required</span>}
                         </GridItem>
                         <GridItem xs={12} sm={6} md={6}>
                           <TextField
@@ -102,7 +102,7 @@ export default function ContactUsPage() {
                             {...register("lastName", { required: true })}
                             style={{ width: '100%' }}
                           />
-                          {errors.lastName && <p>This field is required</p>}
+                          {errors.lastName && <p style={{ color: 'red' }}>This field is required</p>}
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
                           <TextField
@@ -113,22 +113,33 @@ export default function ContactUsPage() {
                             {...register("email", { required: true })}
                             style={{ width: '100%' }}
                           />
-                          {errors.email && <p>This field is required</p>}
+                          {errors.email && <p style={{ color: 'red' }}>This field is required</p>}
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
                           <TextField
                             defaultValue={intialValues.phone}
                             id="phone-number"
-                            label="Phone Number"
+                            label="Phone Number - (###-###-####)"
                             type="phone"
-                            {...register("phone", { required: true })}
+                            {...register("phone", {
+                              required: true,
+                              pattern: {
+                                value: /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/,
+                                message: '',
+                              },
+                            })}
                             style={{ width: '100%' }}
                           />
-                          {errors.phone && <p>This field is required</p>}
+                          {errors.phone && <p style={{ color: 'red' }}>Please enter a correct phone number</p>}
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
                           <Typography style={{ display: 'inline' }}>Guest Coming?</Typography>
-                          <Switch style={{ display: 'inline' }} checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                          <Switch
+                            style={{ display: 'inline' }}
+                            color="secondary"
+                            checked={isChecked}
+                            onChange={() => setIsChecked(!isChecked)}
+                          />
                           {isChecked &&
                             <GridItem xs={12}>
                               <div id="guestInformation" className={classes.guestComing}>

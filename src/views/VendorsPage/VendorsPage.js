@@ -57,12 +57,18 @@ export default function VendorsPage() {
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.contactContent}>
                     <div className={classes.container}>
-                        <h2 className={classes.title + " " + classes.customTitle}>
-                            Vendors
-                        </h2>
-                        <p style={{ textAlign: "center" }}>
-                            Without these wonderful teams of people, we would have never been able to plan for or <br />celebrate our big day. Please go show them some love if you enjoyed their work!
-                        </p>
+                        <GridContainer>
+                            <GridItem xs={12}>
+                                <h2 className={classes.title + " " + classes.customTitle}>
+                                    Vendors
+                                </h2>
+                            </GridItem>
+                            <GridItem xs={12} md={9} style={{ marginLeft: "auto", marginRight: "auto" }}>
+                                <p style={{ textAlign: "center" }}>
+                                    Without these wonderful teams of people, we would have never been able to plan for or celebrate our big day. Please go show them some love if you enjoyed their work!
+                                </p>
+                            </GridItem>
+                        </GridContainer>
                         <GridContainer>
                             <GridItem xs={12}>
                                 <SectionFlorist style={{ marginBottom: "4rem" }} />

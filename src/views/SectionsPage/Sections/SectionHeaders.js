@@ -11,10 +11,9 @@ import GridItem from "components/Grid/GridItem.js";
 
 import headersStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/headersStyle.js";
 
-// import fallImage from "assets/img/laurenjohn/fall-image.jpg";
 import engagement from "assets/img/laurenjohn/engagement1.jpg";
 import proposalImage from "assets/img/laurenjohn/proposal.JPG";
-import engagementImage from "assets/img/laurenjohn/engagement2.jpg";
+import engagementImage from "assets/img/laurenjohn/bridge.jpg";
 
 const useStyles = makeStyles(headersStyle);
 

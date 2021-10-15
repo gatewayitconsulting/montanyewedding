@@ -57,7 +57,7 @@ export default function SectionMakeup({ ...rest }) {
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
-                                        About Copy
+                                        My name is Adrienne, also known as Dren, and being a makeup artist is my passion! I started first doing makeup on my friends and family when I was 16 and have built a freelance makeup artist business from there. I have faced big obstacles in my life and, through it all, I always had makeup as an escape to de-stress and focus on myself. My goal is to provide that same relaxing experience to my clients each and every time they sit in my makeup chair. Wanting to make my clients feel as confident and beautiful as possible is what drives me to be successful.
                                     </p>
                                 </GridItem>
                             </GridContainer>
