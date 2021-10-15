@@ -56,7 +56,7 @@ export default function SectionFeatures({ ...rest }) {
                   <img
                     className="vertical-timeline-element-image"
                     src={artMuseum}
-                    alt=""
+                    alt="Art museum on at the top of Art Hill in St. Louis, Missouri with purple, orange, and pink sunset in the background."
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -72,7 +72,7 @@ export default function SectionFeatures({ ...rest }) {
                   <img
                     className="vertical-timeline-element-image"
                     src={johnAsksLaurenOut}
-                    alt=""
+                    alt="John and Lauren standing next to each other, smiling in front of wall."
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -89,7 +89,7 @@ export default function SectionFeatures({ ...rest }) {
                   <img
                     className="vertical-timeline-element-image"
                     src={proposal}
-                    alt=""
+                    alt="John proposes to Lauren in front of Hogwarts Castle in Orlando, Florida."
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -103,7 +103,7 @@ export default function SectionFeatures({ ...rest }) {
                   <img
                     className="vertical-timeline-element-image"
                     src={house}
-                    alt=""
+                    alt="John and Lauren standing in front of their first purchased home."
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -116,11 +116,11 @@ export default function SectionFeatures({ ...rest }) {
                   icon={<Favorite />}
                 >
                   <h3 className="vertical-timeline-element-title">Engagement Photoshoot</h3>
-                  <h4 className="vertical-timeline-element-subtitle">Blueprint Coffee &amp; Forest Park, St. Louis</h4>
+                  <h4 className="vertical-timeline-element-subtitle">Blueprint Coffee &amp; Forest Park, <br />St. Louis</h4>
                   <img
                     className="vertical-timeline-element-image"
                     src={engagement}
-                    alt=""
+                    alt="John kissing Lauren's head as she lays her head on John's shoulder in front of Blueprint Coffee shop."
                   />
                 </VerticalTimelineElement>
                 <VerticalTimelineElement
@@ -129,12 +129,12 @@ export default function SectionFeatures({ ...rest }) {
                   iconStyle={{ background: 'rgb(0, 0, 0)', color: '#fff' }}
                   icon={<Favorite />}
                 >
-                  <h3 className="vertical-timeline-element-title">Coming Soon, Wedding Day</h3>
+                  <h3 className="vertical-timeline-element-title">Coming Soon, <br className={classes.widowRemover} />Wedding Day</h3>
                   <h4 className="vertical-timeline-element-subtitle">Willow, St. Louis</h4>
                   <img
                     className="vertical-timeline-element-image"
                     src={blackAndWhite}
-                    alt=""
+                    alt="John and Lauren walking across bridge, smiling at each other."
                   />
                 </VerticalTimelineElement>
               </VerticalTimeline>

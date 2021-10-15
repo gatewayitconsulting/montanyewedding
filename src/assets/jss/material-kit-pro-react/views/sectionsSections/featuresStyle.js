@@ -6,7 +6,8 @@ import {
   description,
   blackColor,
   whiteColor,
-  hexToRgb
+  hexToRgb,
+  widowRemover
 } from "assets/jss/material-kit-pro-react.js";
 
 const features = {
@@ -15,6 +16,7 @@ const features = {
   mrAuto,
   title,
   description,
+  ...widowRemover,
   features1: {
     textAlign: "center",
     padding: "80px 0"

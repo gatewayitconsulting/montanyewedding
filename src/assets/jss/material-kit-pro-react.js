@@ -478,6 +478,13 @@ const coloredShadow = {
   opacity: "0"
 };
 
+const widowRemover = {
+  display: "inline",
+  "@media (min-width: 400px)": {
+    display: "none"
+  }
+};
+
 export {
   //variables
   drawerWidth,
@@ -542,5 +549,6 @@ export {
   mrAuto,
   btnLink,
   coloredShadow,
+  widowRemover,
   hexToRgb
 };
