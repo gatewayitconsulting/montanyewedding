@@ -14,7 +14,7 @@ import bobbyImage from "assets/img/faces/bobby.jpg";
 import seanImage from "assets/img/faces/sean.jpg";
 import amandaImage from "assets/img/faces/amanda.jpg";
 import saraImage from "assets/img/faces/sara.jpg";
-import stevenImage from "assets/img/faces/avatar.jpg";
+import stevenImage from "assets/img/faces/steven.jpg";
 import cameronImage from "assets/img/faces/cameron.jpg";
 import benImage from "assets/img/faces/ben.jpg";
 import michaelImage from "assets/img/faces/michael.jpg";
