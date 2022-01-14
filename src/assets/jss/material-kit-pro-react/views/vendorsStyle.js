@@ -83,6 +83,9 @@ const vendorsStyle = {
     websiteColor: {
         backgroundColor: "#222"
     },
+    vimeoColor: {
+        backgroundColor: "#13B8EB"
+    },
     ...imagesStyles
 };
 
