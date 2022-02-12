@@ -51,6 +51,7 @@ export default function ContactUsPage() {
     email: "",
     phone: "",
     diet: "",
+    songRequest: "",
     notes: "",
     guestFirstName: "",
     guestLastName: ""
@@ -176,6 +177,16 @@ export default function ContactUsPage() {
                             label="Food allergies or alternative diets?"
                             type="text"
                             {...register("diet")}
+                            style={{ width: '100%' }}
+                          />
+                        </GridItem>
+                        <GridItem xs={12} style={{ marginTop: '1em' }}>
+                          <TextField
+                            defaultValue={intialValues.songRequest}
+                            id="songRequest"
+                            label="Dance floor song requests"
+                            type="text"
+                            {...register("songRequest")}
                             style={{ width: '100%' }}
                           />
                         </GridItem>
