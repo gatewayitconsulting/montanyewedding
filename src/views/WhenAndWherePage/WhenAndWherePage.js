@@ -105,7 +105,6 @@ const CustomSkinMap = withScriptjs(
 );
 
 const useStyles = makeStyles(whenAndWhereStyle);
-const API_KEY = process.env.MAPS_API_KEY;
 
 export default function WhenAndWherePage() {
   React.useEffect(() => {

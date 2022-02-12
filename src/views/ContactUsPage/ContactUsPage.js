@@ -43,7 +43,19 @@ export default function ContactUsPage() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    console.log(`Submitting RSVP with data: ${JSON.stringify(data)}`);
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://jmdesignsioapi.herokuapp.com' : 'http://localhost:8000';
+    fetch(`${baseUrl}/test/rsvps`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+      .then(res => console.log(`Sucessfully sent RSVP: ${JSON.stringify(res)}`))
+      .catch(err => console.log(`Error submitting RSVP: ${JSON.stringify(err)}`));
+  };
 
   const intialValues = {
     firstName: "",
