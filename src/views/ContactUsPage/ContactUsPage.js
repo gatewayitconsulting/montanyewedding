@@ -101,7 +101,7 @@ export default function ContactUsPage() {
               classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
             }
             >
-              Please do not use Internet Explorer to fill out this form, this application does not support it.
+              We are so excited to have you be a part of our special day! Please fill out this form to let us know you are coming.
             </p>
             <GridContainer>
               <GridItem xs={12}>
