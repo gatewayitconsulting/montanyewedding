@@ -69,7 +69,7 @@ Parallax.propTypes = {
     "danger"
   ]),
   children: PropTypes.node,
-  style: PropTypes.string,
+  style: PropTypes.object || PropTypes.string,
   image: PropTypes.string,
   small: PropTypes.bool
 };

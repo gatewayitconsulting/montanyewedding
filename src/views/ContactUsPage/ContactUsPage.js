@@ -41,11 +41,11 @@ export default function ContactUsPage() {
   });
   const classes = useStyles();
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
   const onSubmit = data => {
     console.log(`Submitting RSVP with data: ${JSON.stringify(data)}`);
-    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://jmdesignsioapi.herokuapp.com' : 'http://localhost:8000';
+    const baseUrl = process.env.NODE_ENV === 'production' ? 'https://jmdesignsioapi.herokuapp.com' : 'http://localhost:5000';
     fetch(`${baseUrl}/test/rsvps`, {
       method: 'POST',
       headers: {
@@ -53,8 +53,16 @@ export default function ContactUsPage() {
       },
       body: JSON.stringify(data)
     })
-      .then(res => console.log(`Sucessfully sent RSVP: ${JSON.stringify(res)}`))
-      .catch(err => console.log(`Error submitting RSVP: ${JSON.stringify(err)}`));
+      .then(res => {
+        console.log(`Sucessfully sent RSVP: ${JSON.stringify(res)}`);
+        reset();
+        window.location.href = '/rsvp-success';
+      })
+      .catch(err => {
+        console.log(`Error submitting RSVP: ${JSON.stringify(err)}`);
+        reset();
+        window.location.href = '/rsvp-error';
+      });
   };
 
   const intialValues = {
@@ -89,6 +97,12 @@ export default function ContactUsPage() {
             <h2 className={classes.title + " " + classes.customTitle}>
               RSVP
             </h2>
+            <p className={
+              classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
+            }
+            >
+              Please do not use Internet Explorer to fill out this form, this application does not support it.
+            </p>
             <GridContainer>
               <GridItem xs={12}>
                 <Card className={classes.card1}>

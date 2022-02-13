@@ -26,6 +26,8 @@ import VendorsPage from "views/VendorsPage/VendorsPage.js";
 import PricingPage from "views/PricingPage/PricingPage.js";
 import SectionsPage from "views/SectionsPage/SectionsPage.js";
 import ErrorPage from "views/ErrorPage/ErrorPage.js";
+import FormSuccessPage from "views/FormSuccessPage/FormSuccessPage.js";
+import FormErrorPage from "views/FormErrorPage/FormErrorPage.js";
 
 var hist = createBrowserHistory();
 
@@ -35,6 +37,8 @@ ReactDOM.render(
       <Route path="/vendors" component={VendorsPage} />
       <Route path="/whenAndWhere" component={WhenAndWherePage} />
       <Route path="/rsvp" component={ContactUsPage} />
+      <Route path="/rsvp-success" component={FormSuccessPage} />
+      <Route path="/rsvp-error" component={FormErrorPage} />
       <Route path="/privacy-policy" component={PricingPage} />
       <Route path="/404" component={ErrorPage} />
       <Route path="/" component={SectionsPage} />
