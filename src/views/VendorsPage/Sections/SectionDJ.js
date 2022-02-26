@@ -11,8 +11,10 @@ import Button from "components/CustomButtons/Button.js";
 import Carousel from "react-slick";
 
 // images
-import image1 from "assets/img/vendors/flowers1.jpeg";
-import image2 from "assets/img/vendors/flowers2.jpeg";
+// import image1 from "assets/img/vendors/flowers1.jpeg";
+// import image2 from "assets/img/vendors/flowers2.jpeg";
+const video = "https://www.millenniumproductions.com/wp-content/uploads/2017/04/DJ-BANNER-DJ-PAGE-HUBER-web.mp4";
+// import video from "https://www.millenniumproductions.com/wp-content/uploads/2017/04/DJ-BANNER-DJ-PAGE-HUBER-web.mp4";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -58,7 +60,7 @@ export default function SectionDJ({ ...rest }) {
                                     </h2>
                                     <h3 style={{ marginTop: "0", fontSize: "1.25rem" }}>St. Louis, MO</h3>
                                     <p>
-                                        Copy
+                                        Millennium Productions is the premier St. Louis wedding DJ, videography, lighting, drape and decor company in the STL metro area. Our award winning services are recognized in the industry as innovative, creative and professional. We specialize in making your celebration one of a kind and one to remember! At Millennium, we strive to make the planning process simple and easy. We aim to keep things FUN while taking great care of you along the way!
                                     </p>
                                 </GridItem>
                             </GridContainer>
@@ -95,11 +97,11 @@ export default function SectionDJ({ ...rest }) {
                                     </a>
                                 </GridItem>
                             </GridContainer>
-                            {/* <GridContainer>
+                            <GridContainer>
                                 <GridItem xs={12}>
-                                    <Carousel {...settings}>
+                                    {/* <Carousel {...settings}>
                                         <div>
-                                            <img src={image1} alt="First slide" className="slick-image" />
+                                            <img src={video} alt="First slide" className="slick-image" />
                                         </div>
                                         <div>
                                             <img
@@ -108,9 +110,32 @@ export default function SectionDJ({ ...rest }) {
                                                 className="slick-image"
                                             />
                                         </div>
-                                    </Carousel>
+                                    </Carousel> */}
+                                    <div style={{
+                                        overflow: 'hidden',
+                                        paddingBottom: '56.25%',
+                                        position: 'relative',
+                                        height: 0
+                                    }}>
+                                        <iframe
+                                            width="853"
+                                            height="480"
+                                            src={`${video}`}
+                                            frameBorder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                            title="Embedded youtube"
+                                            style={{
+                                                left: 0,
+                                                top: 0,
+                                                height: '100%',
+                                                width: '100%',
+                                                position: 'absolute'
+                                            }}
+                                        />
+                                    </div>
                                 </GridItem>
-                            </GridContainer> */}
+                            </GridContainer>
                         </div>
                     </div>
                 </div>
