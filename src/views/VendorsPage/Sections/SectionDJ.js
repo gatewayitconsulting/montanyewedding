@@ -7,14 +7,8 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 
-// plugins
-import Carousel from "react-slick";
-
 // images
-// import image1 from "assets/img/vendors/flowers1.jpeg";
-// import image2 from "assets/img/vendors/flowers2.jpeg";
 const video = "https://www.millenniumproductions.com/wp-content/uploads/2017/04/DJ-BANNER-DJ-PAGE-HUBER-web.mp4";
-// import video from "https://www.millenniumproductions.com/wp-content/uploads/2017/04/DJ-BANNER-DJ-PAGE-HUBER-web.mp4";
 
 // @material-ui/icons
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -29,15 +23,6 @@ const useStyles = makeStyles(vendorsStyle);
 
 export default function SectionDJ({ ...rest }) {
     const classes = useStyles();
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 1000,
-        autoplaySpeed: 5000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true
-    };
     return (
         <div className="cd-section" {...rest}>
             <div
@@ -99,18 +84,6 @@ export default function SectionDJ({ ...rest }) {
                             </GridContainer>
                             <GridContainer>
                                 <GridItem xs={12}>
-                                    {/* <Carousel {...settings}>
-                                        <div>
-                                            <img src={video} alt="First slide" className="slick-image" />
-                                        </div>
-                                        <div>
-                                            <img
-                                                src={image2}
-                                                alt="Second slide"
-                                                className="slick-image"
-                                            />
-                                        </div>
-                                    </Carousel> */}
                                     <div style={{
                                         overflow: 'hidden',
                                         paddingBottom: '56.25%',
@@ -122,9 +95,9 @@ export default function SectionDJ({ ...rest }) {
                                             height="480"
                                             src={`${video}`}
                                             frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
-                                            title="Embedded youtube"
+                                            title="Millennium Productions highlight embedded video"
                                             style={{
                                                 left: 0,
                                                 top: 0,
