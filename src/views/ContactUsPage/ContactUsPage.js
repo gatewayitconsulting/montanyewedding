@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 import { Switch } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import { Typography } from "@material-ui/core";
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
 
 // plugins
 import { useForm } from "react-hook-form";
@@ -109,7 +111,7 @@ export default function ContactUsPage() {
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <CardBody>
                       <GridContainer>
-                        <GridItem xs={12} sm={6} md={6}>
+                        <GridItem xs={12} md={6}>
                           <TextField
                             defaultValue={intialValues.firstName}
                             id="first"
@@ -120,7 +122,7 @@ export default function ContactUsPage() {
                           />
                           {errors.firstName && <span style={{ color: 'red' }}>This field is required</span>}
                         </GridItem>
-                        <GridItem xs={12} sm={6} md={6} className={classes.last}>
+                        <GridItem xs={12} md={6} className={classes.last}>
                           <TextField
                             defaultValue={intialValues.lastName}
                             id="last"
@@ -160,11 +162,11 @@ export default function ContactUsPage() {
                           {errors.phone && <p style={{ color: 'red' }}>Please enter a correct phone number</p>}
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
-                          <Typography style={{ display: 'inline' }}>Guest Coming?</Typography>
+                          <Typography style={{ display: 'inline' }}>Are you bringing a guest?</Typography>
                           <GridItem xs={12}>
                             <div id="guestInformation" className={classes.guestComing}>
                               <GridContainer>
-                                <GridItem xs={12} sm={6} className={classes.guestFirst}>
+                                <GridItem xs={12} md={6} className={classes.guestFirst}>
                                   <TextField
                                     defaultValue={intialValues.guestFirstName}
                                     id="guestFirst"
@@ -174,7 +176,7 @@ export default function ContactUsPage() {
                                     style={{ width: '100%' }}
                                   />
                                 </GridItem>
-                                <GridItem xs={12} sm={6} className={classes.guestLast}>
+                                <GridItem xs={12} md={6} className={classes.guestLast}>
                                   <TextField
                                     defaultValue={intialValues.guestLastName}
                                     id="guestLast"
@@ -218,18 +220,25 @@ export default function ContactUsPage() {
                             style={{ width: '100%' }}
                           />
                         </GridItem>
-                        {/* <GridItem xs={12} style={{ marginTop: '2em' }}>
-                          <Switch
-                            style={{ display: 'inline' }}
-                            color="secondary"
-                            checked={isChecked}
-                            onChange={() => setIsChecked(!isChecked)}
+                        <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <FormControlLabel
+                            value="Agreed to form checkbox"
+                            control={
+                              <Switch
+                                style={{ display: 'inline' }}
+                                color="secondary"
+                                checked={isChecked}
+                                onChange={() => setIsChecked(!isChecked)}
+                              />
+                            }
+                            label="I have read this statement and agree to wear my best funeral attire (if I have something in my closet) to the wedding."
+                            style={{ color: '#222' }}
                           />
-                        </GridItem> */}
+                        </GridItem>
                       </GridContainer>
                     </CardBody>
                     <CardFooter className={classes.justifyContentBetween} style={{ marginTop: '.5em' }}>
-                      <input type="submit" className={classes.buttonInput + `${isChecked ? "active" : ""}`} />
+                      <input type="submit" className={`${!isChecked ? classes.disabled : classes.buttonInput}`} disabled={!isChecked} value="Submit" />
                     </CardFooter>
                   </form>
                 </Card>
