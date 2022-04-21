@@ -161,40 +161,32 @@ export default function ContactUsPage() {
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '2em' }}>
                           <Typography style={{ display: 'inline' }}>Guest Coming?</Typography>
-                          <Switch
-                            style={{ display: 'inline' }}
-                            color="secondary"
-                            checked={isChecked}
-                            onChange={() => setIsChecked(!isChecked)}
-                          />
-                          {isChecked &&
-                            <GridItem xs={12}>
-                              <div id="guestInformation" className={classes.guestComing}>
-                                <GridContainer>
-                                  <GridItem xs={12} sm={6} className={classes.guestFirst}>
-                                    <TextField
-                                      defaultValue={intialValues.guestFirstName}
-                                      id="guestFirst"
-                                      label="Guest First Name"
-                                      type="text"
-                                      {...register("guestFirstName")}
-                                      style={{ width: '100%' }}
-                                    />
-                                  </GridItem>
-                                  <GridItem xs={12} sm={6} className={classes.guestLast}>
-                                    <TextField
-                                      defaultValue={intialValues.guestLastName}
-                                      id="guestLast"
-                                      label="Guest Last Name"
-                                      type="text"
-                                      {...register("guestLastName")}
-                                      style={{ width: '100%' }}
-                                    />
-                                  </GridItem>
-                                </GridContainer>
-                              </div>
-                            </GridItem>
-                          }
+                          <GridItem xs={12}>
+                            <div id="guestInformation" className={classes.guestComing}>
+                              <GridContainer>
+                                <GridItem xs={12} sm={6} className={classes.guestFirst}>
+                                  <TextField
+                                    defaultValue={intialValues.guestFirstName}
+                                    id="guestFirst"
+                                    label="Guest First Name"
+                                    type="text"
+                                    {...register("guestFirstName")}
+                                    style={{ width: '100%' }}
+                                  />
+                                </GridItem>
+                                <GridItem xs={12} sm={6} className={classes.guestLast}>
+                                  <TextField
+                                    defaultValue={intialValues.guestLastName}
+                                    id="guestLast"
+                                    label="Guest Last Name"
+                                    type="text"
+                                    {...register("guestLastName")}
+                                    style={{ width: '100%' }}
+                                  />
+                                </GridItem>
+                              </GridContainer>
+                            </div>
+                          </GridItem>
                         </GridItem>
                         <GridItem xs={12} style={{ marginTop: '1em' }}>
                           <TextField
@@ -226,10 +218,18 @@ export default function ContactUsPage() {
                             style={{ width: '100%' }}
                           />
                         </GridItem>
+                        {/* <GridItem xs={12} style={{ marginTop: '2em' }}>
+                          <Switch
+                            style={{ display: 'inline' }}
+                            color="secondary"
+                            checked={isChecked}
+                            onChange={() => setIsChecked(!isChecked)}
+                          />
+                        </GridItem> */}
                       </GridContainer>
                     </CardBody>
                     <CardFooter className={classes.justifyContentBetween} style={{ marginTop: '.5em' }}>
-                      <input type="submit" className={classes.buttonInput} />
+                      <input type="submit" className={classes.buttonInput + `${isChecked ? "active" : ""}`} />
                     </CardFooter>
                   </form>
                 </Card>
