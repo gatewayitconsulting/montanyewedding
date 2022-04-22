@@ -77,6 +77,19 @@ const whenAndWhereStyle = {
   customTitle: {
     fontSize: "3rem !important"
   },
+  customHotelTitle: {
+    fontSize: "1.75rem !important",
+    fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+    marginBottom: ".5em"
+  },
+  websiteColor: {
+    backgroundColor: "#222"
+  },
+  distanceChip: {
+    marginTop: '30px',
+    minHeight: '32px',
+    display: 'flex'
+  },
   ...imagesStyles
 };
 

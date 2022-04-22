@@ -26,7 +26,6 @@ import SectionParking from "../WhenAndWherePage/Sections/SectionParking.js";
 import SectionFAQs from "../FAQsPage/Sections/SectionFAQs.js";
 import image from "assets/img/willow-event-venue.jpeg";
 
-// import styles from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle.js";
 import whenAndWhereStyle from "assets/jss/material-kit-pro-react/views/whenAndWhereStyle.js";
 
 const CustomSkinMap = withScriptjs(
@@ -165,7 +164,7 @@ export default function WhenAndWherePage() {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionFAQs />
-          {/* <SectionHotel /> */}
+          <SectionHotel />
           {/* <SectionParking /> */}
         </div>
       </div>
