@@ -231,7 +231,7 @@ export default function ContactUsPage() {
                                 onChange={() => setIsChecked(!isChecked)}
                               />
                             }
-                            label="I have read this statement and agree to wear my best black outfit (if I have something in my closet) to the wedding."
+                            label="I have read this statement and agree to wear my best black attire to the wedding."
                             style={{ color: '#222' }}
                           />
                         </GridItem>
