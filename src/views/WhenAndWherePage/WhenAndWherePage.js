@@ -20,11 +20,16 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
+// sections
 import SectionSaveTheDate from "../SectionsPage/Sections/SectionSaveTheDate.js";
 import SectionHotel from "../WhenAndWherePage/Sections/SectionHotel.js";
 import SectionParking from "../WhenAndWherePage/Sections/SectionParking.js";
 import SectionFAQs from "../FAQsPage/Sections/SectionFAQs.js";
+
+// images/icons
 import image from "assets/img/willow-event-venue.jpeg";
+import MapIcon from '@material-ui/icons/Map';
+
 
 import whenAndWhereStyle from "assets/jss/material-kit-pro-react/views/whenAndWhereStyle.js";
 
@@ -164,6 +169,24 @@ export default function WhenAndWherePage() {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionFAQs />
+          <GridItem
+            xs={12}
+          >
+            <h4 className={classes.title + " " + classes.customTitle4} style={{ textAlign: "center" }}>
+              Where are you registered?
+            </h4>
+            <p style={{ textAlign: "center", marginBottom: "25px" }}>
+              We appreciate anything you would like to get us, but if you would like some ideas, we're registered at
+              <br />
+              <a href="https://www.bedbathandbeyond.com/store/giftregistry/viewregistryguest/551228459?eventType=Wedding" target="_blank" rel="noopener" title="To Bed Bath &amp; Beyond wedding registry">
+                Bed Bath &amp; Beyond
+              </a>
+              &nbsp;and&nbsp;
+              <a href="https://www.amazon.com/wedding/lauren-bolt-john-montanye-st-louis-october-2022/registry/3386059UU6T0P" target="_blank" rel="noopener" title="To Amazon wedding registry">
+                Amazon.
+              </a>
+            </p>
+          </GridItem>
           <SectionHotel />
           {/* <SectionParking /> */}
         </div>

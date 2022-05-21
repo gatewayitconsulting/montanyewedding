@@ -82,6 +82,11 @@ const whenAndWhereStyle = {
     fontFamily: "Roboto, Helvetica, Arial, sans-serif",
     marginBottom: ".5em"
   },
+  customTitle4: {
+    fontSize: "3rem !important",
+    marginTop: "0",
+    lineHeight: "1"
+  },
   websiteColor: {
     backgroundColor: "#222"
   },
